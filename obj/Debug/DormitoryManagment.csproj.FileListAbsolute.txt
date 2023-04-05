@@ -1,0 +1,16 @@
+D:\Dormitory_Management-master\obj\Debug\DormitoryManagment.csproj.AssemblyReference.cache
+D:\Dormitory_Management-master\obj\Debug\DormitoryManagment.csproj.SuggestedBindingRedirects.cache
+D:\Dormitory_Management-master\bin\Debug\DormitoryManagment.exe.config
+D:\Dormitory_Management-master\bin\Debug\DormitoryManagment.exe
+D:\Dormitory_Management-master\bin\Debug\DormitoryManagment.pdb
+D:\Dormitory_Management-master\obj\Debug\DormitoryManagment.Manager.resources
+D:\Dormitory_Management-master\obj\Debug\DormitoryManagment.StartScreen.resources
+D:\Dormitory_Management-master\obj\Debug\DormitoryManagment.Properties.Resources.resources
+D:\Dormitory_Management-master\obj\Debug\DormitoryManagment.csproj.GenerateResource.cache
+D:\Dormitory_Management-master\obj\Debug\DormitoryManagment.csproj.CoreCompileInputs.cache
+D:\Dormitory_Management-master\obj\Debug\DormitoryManagment.exe
+D:\Dormitory_Management-master\obj\Debug\DormitoryManagment.pdb
+D:\Dormitory_Management-master\obj\Debug\DormitoryManagment.StudentMana.resources
+D:\Dormitory_Management-master\obj\Debug\DormitoryManagment.BillsMana.resources
+D:\Dormitory_Management-master\obj\Debug\DormitoryManagment.Changepass.resources
+D:\Dormitory_Management-master\obj\Debug\DormitoryManagment.Information.resources

@@ -46,6 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BillsMana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BillsMana.Designer.cs">
+      <DependentUpon>BillsMana.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Changepass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Changepass.Designer.cs">
+      <DependentUpon>Changepass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Information.Designer.cs">
+      <DependentUpon>Information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager.Designer.cs">
+      <DependentUpon>Manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="StartScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,18 +83,35 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StudentMana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentMana.Designer.cs">
+      <DependentUpon>StudentMana.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BillsMana.resx">
+      <DependentUpon>BillsMana.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Changepass.resx">
+      <DependentUpon>Changepass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Information.resx">
+      <DependentUpon>Information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager.resx">
+      <DependentUpon>Manager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StartScreen.resx">
       <DependentUpon>StartScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="StudentMana.resx">
+      <DependentUpon>StudentMana.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -78,6 +124,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="btnIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="profile.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bg.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
