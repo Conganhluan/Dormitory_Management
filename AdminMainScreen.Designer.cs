@@ -1,6 +1,6 @@
 ﻿namespace DormitoryManagment
 {
-    partial class StartScreen
+    partial class AdminMainScreen
     {
         /// <summary>
         /// Required designer variable.
@@ -28,18 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // StartScreen
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "StartScreen";
-            this.Text = "StartScreen";
-            this.Load += new System.EventHandler(this.StartScreen_Load);
-            this.ResumeLayout(false);
-
+            this.Text = "AdminMainScreen";
         }
 
         #endregion
