@@ -53,11 +53,11 @@ namespace DormitoryManagment
                 while (reader.Read())
                 {
                     Personal.School = reader.GetString("School");
-                    Personal.CitizenID = reader.GetString("CitizenID");
-                    Personal.StudentID = reader.GetString("StudentID");
-                    Personal.PhoneNumber = reader.GetString("PhoneNumber");
-                    Personal.Vehice = reader.GetString("Vehice");
-                    Personal.HomeAddress = reader.GetString("HomeAddress");
+                    Personal.CitizenID = reader.GetString("Citizen ID");
+                    Personal.StudentID = reader.GetString("Student ID");
+                    Personal.PhoneNumber = reader.GetString("Phone number");
+                    Personal.Vehice = reader.GetString("Vehicle plate num");
+                    Personal.HomeAddress = reader.GetString("Home address");
                 }
                 reader.Close();
                 sql = "SELECT * FROM Rooms WHERE Username = '" + Username + "'";
@@ -66,10 +66,10 @@ namespace DormitoryManagment
                 while (reader.Read())
                 {
                     Room.Building = reader.GetString("Building");
-                    Room.RoomNum = reader.GetString("RoomNum");
+                    Room.RoomNum = reader.GetString("Number");
                     Room.Type = reader.GetByte("Type");
                     Room.Bill = reader.GetUInt32("Bill");
-                    Room.Late = reader.GetTimeSpan("Late");
+                    Room.Late = reader.GetTimeSpan("Last bill Time");
                 }
                 reader.Close();
             }
