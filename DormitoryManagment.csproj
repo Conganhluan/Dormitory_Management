@@ -81,12 +81,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin.cs" />
+    <Compile Include="AdminMainScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminMainScreen.Designer.cs">
+      <DependentUpon>AdminMainScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Manager.cs" />
     <Compile Include="ManagerMainScreen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ManagerMainScreen.Designer.cs">
       <DependentUpon>ManagerMainScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student.cs" />
+    <Compile Include="StudentMainScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentMainScreen.Designer.cs">
+      <DependentUpon>StudentMainScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
     <Compile Include="Program.cs" />
