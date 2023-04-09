@@ -15,22 +15,25 @@ namespace DormitoryManagment
         {
             private struct Room
             {
-                string Building;
-                string RoomNum;
-                byte Type;
-                uint Bill;
-                TimeSpan Late;
+                public string Building;
+                public string RoomNum;
+                public byte Type;
+                public uint Bill;
+                public TimeSpan Late;
             }
 
             private struct Personal
             {
-                string School;
-                string CitizenID;
-                string StudentID;
-                string PhoneNumber;
-                string Vehice;
-                string HomeAddress;
+                public string School;
+                public string CitizenID;
+                public string StudentID;
+                public string PhoneNumber;
+                public string Vehice;
+                public string HomeAddress;
             }
+
+            Room r = new Room();
+            Personal p = new Personal();
 
             public Student(string username)
             {
@@ -52,12 +55,12 @@ namespace DormitoryManagment
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    Personal.School = reader.GetString("School");
-                    Personal.CitizenID = reader.GetString("Citizen ID");
-                    Personal.StudentID = reader.GetString("Student ID");
-                    Personal.PhoneNumber = reader.GetString("Phone number");
-                    Personal.Vehice = reader.GetString("Vehicle plate num");
-                    Personal.HomeAddress = reader.GetString("Home address");
+                    p.School = reader.GetString("School");
+                    p.CitizenID = reader.GetString("Citizen ID");
+                    p.StudentID = reader.GetString("Student ID");
+                    p.PhoneNumber = reader.GetString("Phone number");
+                    p.Vehice = reader.GetString("Vehicle plate num");
+                    p.HomeAddress = reader.GetString("Home address");
                 }
                 reader.Close();
                 sql = "SELECT * FROM Rooms WHERE Username = '" + Username + "'";
@@ -65,11 +68,11 @@ namespace DormitoryManagment
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    Room.Building = reader.GetString("Building");
-                    Room.RoomNum = reader.GetString("Number");
-                    Room.Type = reader.GetByte("Type");
-                    Room.Bill = reader.GetUInt32("Bill");
-                    Room.Late = reader.GetTimeSpan("Last bill Time");
+                    r.Building = reader.GetString("Building");
+                    r.RoomNum = reader.GetString("Number");
+                    r.Type = reader.GetByte("Type");
+                    r.Bill = reader.GetUInt32("Bill");
+                    r.Late = reader.GetTimeSpan("Last bill Time");
                 }
                 reader.Close();
             }
@@ -84,9 +87,9 @@ namespace DormitoryManagment
             public void PayRequest()
             {
                 /* Add a request string formatted as below:
-                 *      "building roomNum"
+                 *      "building rNum"
                  * to the table Requests */
-                string sql = "INSERT INTO Requests (Username, Request) VALUES ('" + Username + "', '" + Room.Building + " " + Room.RoomNum + "')";
+                string sql = "INSERT INTO Requests (Username, Request) VALUES ('" + Username + "', '" + r.Building + " " + r.RoomNum + "')";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 cmd.ExecuteNonQuery();
             }
