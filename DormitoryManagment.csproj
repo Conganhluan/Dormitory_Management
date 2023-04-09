@@ -88,6 +88,11 @@
     <Compile Include="ManagerMainScreen.Designer.cs">
       <DependentUpon>ManagerMainScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManagerMainScreen1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManagerMainScreen.resx</DependentUpon>
+    </Compile>
     <Compile Include="User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -97,6 +102,11 @@
     <Compile Include="StartScreen.Designer.cs">
       <DependentUpon>StartScreen.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ManagerMainScreen.resx">
+      <DependentUpon>ManagerMainScreen.cs</DependentUpon>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ManagerMainScreen1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
