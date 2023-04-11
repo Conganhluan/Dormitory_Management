@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -125,7 +125,9 @@ namespace DormitoryManagment
                  * However, the bill listed in pending list above will be consider "unpaid"
                  * -> Don't update these bills and don't delete them from table Requests    
                  * **The format of the strings in pending list will be at your own choice** */
-                
+                conn.Open();
+                String sql = "'SELECT Request FROM Requests WHERE Request IN ('paid') ' ";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
             }
 
             public void StudentModify(string field, string value)
@@ -151,4 +153,3 @@ namespace DormitoryManagment
         }
     }
 }
-
