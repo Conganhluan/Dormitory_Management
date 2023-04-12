@@ -88,7 +88,7 @@ namespace DormitoryManagment
             public void PayRequest()
             {
                 /* Add a request string formatted as below:
-                 *      "building rNum"
+                 *      "building roomNum"
                  * to the table Requests */
                 string sql = "INSERT INTO Requests (Username, Request) VALUES ('" + Username + "', '" + r.Building + " " + r.RoomNum + "')";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
