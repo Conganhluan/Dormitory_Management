@@ -17,12 +17,14 @@ namespace DormitoryManagment
         // The program starts here
         static void Main(string[] args)
         {
-
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new StudentMainScreen());
         }
 
         // Static users
         static Manager manager = null;
-        static Student student = null;
+        public static Student student = null;
         static Admin admin = null;
         static User root = new User();
 
@@ -40,7 +42,7 @@ namespace DormitoryManagment
             // Login using table Users
         }
 
-        static void LogOut()
+        public static void LogOut()
         {
             root.MainScreen();
             manager = null;
