@@ -4,7 +4,6 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//using Microsoft.VisualBasic.FileIO;
 using System.Windows.Forms;
 using MySql.Data;
 using MySql.Data.MySqlClient;
@@ -55,6 +54,8 @@ namespace DormitoryManagment
                         fs.Read(rawData, 0, FileSize);
                         fs.Close();
 
+                        conn.Open();
+
                         MySqlCommand cmd = new MySqlCommand();
 
                         SQL = "INSERT INTO file VALUES(NULL, @FileName, @FileSize, @File)";
@@ -69,6 +70,8 @@ namespace DormitoryManagment
 
                         MessageBox.Show("File Inserted into database successfully!",
                             "Success!");
+
+                        conn.Close();
                     }
                     catch (MySqlException ex)
                     {
@@ -156,6 +159,7 @@ namespace DormitoryManagment
                  *     building_2, roomNum_2, bill_2, lateTime_2,...
                  * the data will be from the DataTable.
                  * If existing the file LateBills.csv, then notify the user and write over it */
+                conn.Open();
                 string sql = "'SELECT EXISTS ( '" + "' FROM '" + lateBills + "')'";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 cmd.Prepare();
@@ -165,7 +169,8 @@ namespace DormitoryManagment
                 }
                 else
                 {
-
+                    lateBills = new DataTable();
+                    //string sql1 = "'SELECT ";
                 }
             }
 
@@ -183,10 +188,10 @@ namespace DormitoryManagment
             {
                 /* Modify the value of wanted field 
                  * Update the table Users */
+                conn.Open();
                 string sql = "'UPDATE Users SET " + field + " = " + value + "'";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 cmd.ExecuteNonQuery();
-                conn.Close();
             }
 
             public override void SaveData()
@@ -195,7 +200,6 @@ namespace DormitoryManagment
                 string sql = "'UPDATE Users SET Password = '" + Password + "' WHERE Name = '" + Name + "' WHERE Email = '" + Email + "'";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 cmd.ExecuteNonQuery();
-                conn.Close();
             }
         }
     }
