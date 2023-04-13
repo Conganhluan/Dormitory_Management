@@ -78,13 +78,6 @@ namespace DormitoryManagment
                 reader.Close();
             }
 
-            public override void MainScreen()
-            {
-                previousForm = null;
-                currentForm = new StudentMainScreen();
-                currentForm.Show();
-            }
-
             public void PayRequest()
             {
                 /* Add a request string formatted as below:

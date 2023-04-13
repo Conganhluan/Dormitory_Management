@@ -22,6 +22,8 @@ namespace DormitoryManagment
                 Password = password;
             }
 
+<<<<<<< HEAD
+=======
             private class Room
             {
                 private string _Building;
@@ -55,6 +57,7 @@ namespace DormitoryManagment
                 currentForm.Show();
             }
 
+>>>>>>> 5bb73dcdc23bbe145ceae671046f668b422984b3
             public void AddBuilding(string name, string gender, byte numOfFloor)
             {
                 /* Add a new building to the table Buildings
@@ -192,7 +195,7 @@ namespace DormitoryManagment
                     }
                 }
             }
-
+        
             public override void SaveData()
             {
                 // Save the changes of Password into table Users

@@ -25,25 +25,20 @@ namespace DormitoryManagment
                 Password = "";
             }
 
-            public virtual void MainScreen()
-            {
-                previousForm = null;
-                currentForm = new StartScreen();
-                currentForm.Show();
-            }
+            public string GetName() { return Name; }
 
-            public void changePassword(string oldPass, string newPass, string checkSame)
+            public void ChangePassword(string oldPass, string newPass, string checkSame)
             {
                 if (oldPass != Password)
                 {
                     MessageBox.Show("The old password is incorrect, please re-input!", "Update failed",
-                                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MessageBoxButtons.OK);
                     return;
                 }
                 if (newPass != checkSame)
                 {
                     MessageBox.Show("The 2 new password isn't the same, please re-input!", "Update failed",
-                                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MessageBoxButtons.OK);
                     return;
                 }
                 Password = newPass;

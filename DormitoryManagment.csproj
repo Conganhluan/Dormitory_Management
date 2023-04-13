@@ -82,6 +82,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin.cs" />
+<<<<<<< HEAD
+    <Compile Include="Admin_MainScreen.cs">
+=======
     <Compile Include="AdminMainScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,10 +93,88 @@
     </Compile>
     <Compile Include="Manager.cs" />
     <Compile Include="ManagerMainScreen.cs">
+>>>>>>> 5bb73dcdc23bbe145ceae671046f668b422984b3
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManagerMainScreen.Designer.cs">
-      <DependentUpon>ManagerMainScreen.cs</DependentUpon>
+    <Compile Include="Admin_MainScreen.Designer.cs">
+      <DependentUpon>Admin_MainScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program_ForgetPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Program_ForgetPass.Designer.cs">
+      <DependentUpon>Program_ForgetPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager.cs" />
+    <Compile Include="Manager_MainScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager_MainScreen.Designer.cs">
+      <DependentUpon>Manager_MainScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program_DMForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student.cs" />
+    <Compile Include="Student_MainScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student_MainScreen.Designer.cs">
+      <DependentUpon>Student_MainScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_AddBuilding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_AddBuilding.Designer.cs">
+      <DependentUpon>Admin_AddBuilding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_AddFloor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_AddFloor.Designer.cs">
+      <DependentUpon>Admin_AddFloor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_ModifyBuilding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_ModifyBuilding.Designer.cs">
+      <DependentUpon>Admin_ModifyBuilding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_AddUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_AddUsers.Designer.cs">
+      <DependentUpon>Admin_AddUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_UpdateData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_UpdateData.Designer.cs">
+      <DependentUpon>Admin_UpdateData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_RemoveUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_RemoveUsers.Designer.cs">
+      <DependentUpon>Admin_RemoveUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program_ChangePass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Program_ChangePass.Designer.cs">
+      <DependentUpon>Program_ChangePass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student_ViewInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student_ViewInformation.Designer.cs">
+      <DependentUpon>Student_ViewInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template.Designer.cs">
+      <DependentUpon>Template.cs</DependentUpon>
     </Compile>
     <Compile Include="ManagerMainScreen1.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -116,16 +197,30 @@
     <Compile Include="User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StartScreen.cs">
+    <Compile Include="Program_StartScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StartScreen.Designer.cs">
-      <DependentUpon>StartScreen.cs</DependentUpon>
+    <Compile Include="Program_StartScreen.Designer.cs">
+      <DependentUpon>Program_StartScreen.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+    <EmbeddedResource Include="Admin_MainScreen.resx">
+      <DependentUpon>Admin_MainScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Program_DMForm.resx">
+      <DependentUpon>Program_DMForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Program_ForgetPass.resx">
+      <DependentUpon>Program_ForgetPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager_MainScreen.resx">
+      <DependentUpon>Manager_MainScreen.cs</DependentUpon>
+=======
     <EmbeddedResource Include="ManagerMainScreen.resx">
       <DependentUpon>ManagerMainScreen.cs</DependentUpon>
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>ManagerMainScreen1.Designer.cs</LastGenOutput>
+>>>>>>> 5bb73dcdc23bbe145ceae671046f668b422984b3
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -137,8 +232,38 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="StartScreen.resx">
-      <DependentUpon>StartScreen.cs</DependentUpon>
+    <EmbeddedResource Include="Program_StartScreen.resx">
+      <DependentUpon>Program_StartScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student_MainScreen.resx">
+      <DependentUpon>Student_MainScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_AddBuilding.resx">
+      <DependentUpon>Admin_AddBuilding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_AddFloor.resx">
+      <DependentUpon>Admin_AddFloor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_ModifyBuilding.resx">
+      <DependentUpon>Admin_ModifyBuilding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_AddUsers.resx">
+      <DependentUpon>Admin_AddUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_UpdateData.resx">
+      <DependentUpon>Admin_UpdateData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_RemoveUsers.resx">
+      <DependentUpon>Admin_RemoveUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Program_ChangePass.resx">
+      <DependentUpon>Program_ChangePass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student_ViewInformation.resx">
+      <DependentUpon>Student_ViewInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template.resx">
+      <DependentUpon>Template.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StudentMainScreen.resx">
       <DependentUpon>StudentMainScreen.cs</DependentUpon>
