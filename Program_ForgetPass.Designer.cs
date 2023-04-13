@@ -92,6 +92,7 @@
             // 
             this.EmailInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmailInput.Location = new System.Drawing.Point(273, 322);
+            this.EmailInput.MaxLength = 50;
             this.EmailInput.Multiline = false;
             this.EmailInput.Name = "EmailInput";
             this.EmailInput.RightToLeft = System.Windows.Forms.RightToLeft.No;

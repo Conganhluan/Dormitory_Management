@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Numerics;
 using System.Text;
@@ -14,16 +15,16 @@ namespace DormitoryManagment
     {
         internal class Student : User
         {
-            private struct Room
+            public struct Room
             {
                 public string Building;
                 public string RoomNum;
                 public byte Type;
                 public uint Bill;
-                public TimeSpan Late;
+                public DateTime BillTime;
             }
 
-            private struct Personal
+            public struct Personal
             {
                 public string School;
                 public string CitizenID;
@@ -33,47 +34,45 @@ namespace DormitoryManagment
                 public string HomeAddress;
             }
 
-            Room r = new Room();
-            Personal p = new Personal();
+            public Room r;
+            public Personal p;
 
             public Student(string username)
             {
                 Username = username;
-                //Get the data for Name, Password, and Email from table Users
-                string sql = "SELECT * FROM Users WHERE Username = '" + Username + "'";
+                string sql = "SELECT * FROM Users " +
+                             "CROSS JOIN Students ON Students.Email = Users.Email " +
+                             "WHERE Username = '" + Username + "'";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 MySqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
+                    //Get the data for Name, Password, and Email from table Users
                     Name = reader.GetString("Name");
                     Password = reader.GetString("Password");
                     Email = reader.GetString("Email");
-                }
-                reader.Close();
-                //Get the data for struct Room and Personal from table Students and Rooms
-                sql = "SELECT * FROM Students WHERE Username = '" + Username + "'";
-                cmd = new MySqlCommand(sql, conn);
-                reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
+
+                    //Get the data for struct Personal
                     p.School = reader.GetString("School");
                     p.CitizenID = reader.GetString("Citizen ID");
                     p.StudentID = reader.GetString("Student ID");
                     p.PhoneNumber = reader.GetString("Phone number");
-                    p.Vehice = reader.GetString("Vehicle plate num");
+                    p.Vehice = reader.GetString("Vehicle plate number");
                     p.HomeAddress = reader.GetString("Home address");
+                    r.Building = reader.GetString("Building name");
+                    r.RoomNum = reader.GetString("Room number");
                 }
                 reader.Close();
-                sql = "SELECT * FROM Rooms WHERE Username = '" + Username + "'";
+
+                sql = "SELECT * FROM Rooms WHERE Building = '" + r.Building + "' AND Number = '" + r.RoomNum + "'";
                 cmd = new MySqlCommand(sql, conn);
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    r.Building = reader.GetString("Building");
-                    r.RoomNum = reader.GetString("Number");
+                    //Get the data for struct Rooms
                     r.Type = reader.GetByte("Type");
                     r.Bill = reader.GetUInt32("Bill");
-                    r.Late = reader.GetTimeSpan("Last bill Time");
+                    r.BillTime = reader.GetDateTime("Last bill Time");
                 }
                 reader.Close();
             }
@@ -83,9 +82,9 @@ namespace DormitoryManagment
                 /* Add a request string formatted as below:
                  *      "building roomNum"
                  * to the table Requests */
-                string sql = "INSERT INTO Requests (Username, Request) VALUES ('" + Username + "', '" + r.Building + " " + r.RoomNum + "')";
+                /*string sql = "INSERT INTO Requests (Username, Request) VALUES ('" + Username + "', '" + r.Building + " " + r.RoomNum + "')";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
-                cmd.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();*/
             }
 
             public override void SaveData()
@@ -94,11 +93,6 @@ namespace DormitoryManagment
                 string sql = "UPDATE Users SET Password = '" + Password + "' WHERE Username = '" + Username + "'";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 cmd.ExecuteNonQuery();
-            }
-
-            public string getName()
-            { 
-                return Name;
             }
 
         }

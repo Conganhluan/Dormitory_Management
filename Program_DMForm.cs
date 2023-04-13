@@ -22,17 +22,9 @@ namespace DormitoryManagment
             Application.Run((DMForm)obj);
         }
 
-        private void InitializeComponent()
+        private void OnFormClosing(object sender, FormClosingEventArgs e)
         {
-            this.SuspendLayout();
-            // 
-            // DMForm
-            // 
-            this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Name = "DMForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.ResumeLayout(false);
-
+            Program.conn.Close();
         }
     }
 }

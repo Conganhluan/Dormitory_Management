@@ -1,6 +1,6 @@
 ﻿namespace DormitoryManagment
 {
-    partial class ViewInformation
+    partial class ViewInfoStudent
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewInformation));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewInfoStudent));
             this.SuspendLayout();
             // 
             // ViewInformation

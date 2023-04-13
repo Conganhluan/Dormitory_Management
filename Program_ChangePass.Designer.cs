@@ -46,6 +46,7 @@
             // 
             this.OldPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OldPassword.Location = new System.Drawing.Point(410, 266);
+            this.OldPassword.MaxLength = 20;
             this.OldPassword.Multiline = false;
             this.OldPassword.Name = "OldPassword";
             this.OldPassword.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -68,6 +69,7 @@
             // 
             this.NewPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NewPassword.Location = new System.Drawing.Point(410, 350);
+            this.NewPassword.MaxLength = 20;
             this.NewPassword.Multiline = false;
             this.NewPassword.Name = "NewPassword";
             this.NewPassword.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -80,6 +82,7 @@
             // 
             this.ConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConfirmPassword.Location = new System.Drawing.Point(410, 426);
+            this.ConfirmPassword.MaxLength = 20;
             this.ConfirmPassword.Multiline = false;
             this.ConfirmPassword.Name = "ConfirmPassword";
             this.ConfirmPassword.RightToLeft = System.Windows.Forms.RightToLeft.No;

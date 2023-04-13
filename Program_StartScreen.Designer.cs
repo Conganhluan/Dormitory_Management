@@ -71,6 +71,7 @@
             // 
             this.UsernameInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsernameInput.Location = new System.Drawing.Point(262, 320);
+            this.UsernameInput.MaxLength = 15;
             this.UsernameInput.Multiline = false;
             this.UsernameInput.Name = "UsernameInput";
             this.UsernameInput.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -84,6 +85,7 @@
             // 
             this.PasswordInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordInput.Location = new System.Drawing.Point(262, 408);
+            this.PasswordInput.MaxLength = 20;
             this.PasswordInput.Multiline = false;
             this.PasswordInput.Name = "PasswordInput";
             this.PasswordInput.RightToLeft = System.Windows.Forms.RightToLeft.No;

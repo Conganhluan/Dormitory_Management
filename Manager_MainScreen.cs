@@ -17,10 +17,5 @@ namespace DormitoryManagment
         {
             InitializeComponent();
         }
-
-        public ManagerMainScreen(string name)
-        {
-            InitializeComponent();
-        }
     }
 }

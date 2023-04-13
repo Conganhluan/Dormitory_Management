@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DormitoryManagment
 {
-    public partial class AdminMainScreen : Form
+    public partial class ViewInfoManager : DMForm
     {
-        public AdminMainScreen()
+        public ViewInfoManager()
         {
             InitializeComponent();
         }

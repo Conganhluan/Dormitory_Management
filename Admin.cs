@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Microsoft.VisualBasic.FileIO;
+//using Microsoft.VisualBasic.FileIO;
 using MySql.Data;
 using MySql.Data.MySqlClient;
 
@@ -21,9 +21,6 @@ namespace DormitoryManagment
                 Email = "";
                 Password = password;
             }
-
-<<<<<<< HEAD
-=======
             private class Room
             {
                 private string _Building;
@@ -50,14 +47,6 @@ namespace DormitoryManagment
                 }
             }
 
-            public override void MainScreen()
-            {
-                previousForm = null;
-                currentForm = new AdminMainScreen();
-                currentForm.Show();
-            }
-
->>>>>>> 5bb73dcdc23bbe145ceae671046f668b422984b3
             public void AddBuilding(string name, string gender, byte numOfFloor)
             {
                 /* Add a new building to the table Buildings
@@ -117,7 +106,7 @@ namespace DormitoryManagment
                  *      username_2, name_2, email_2,...
                  * Create new Manager users whose password will be "manager" and add them to table Users */
 
-                using (TextFieldParser parser = new TextFieldParser(filepath))
+                /*using (TextFieldParser parser = new TextFieldParser(filepath))
                 {
                     parser.TextFieldType = FieldType.Delimited;
                     parser.SetDelimiters(",");
@@ -135,7 +124,7 @@ namespace DormitoryManagment
                         MySqlCommand cmd = new MySqlCommand(sqlQuerry, conn);
                         cmd.ExecuteNonQuery();
                     }
-                }
+                }*/
             }
 
             public void AddStudents(string filepath)
@@ -145,7 +134,7 @@ namespace DormitoryManagment
                  *      username_2, name_2, email_2,...
                  * Create new Student users whose password will be "student" and add them to table Users */
 
-                using (TextFieldParser parser = new TextFieldParser(filepath))
+                /* using (TextFieldParser parser = new TextFieldParser(filepath))
                 {
                     parser.TextFieldType = FieldType.Delimited;
                     parser.SetDelimiters(",");
@@ -163,7 +152,7 @@ namespace DormitoryManagment
                         MySqlCommand cmd = new MySqlCommand(sqlQuerry, conn);
                         cmd.ExecuteNonQuery();
                     }
-                }
+                } */
             }
 
             public void RemoveUsers(string filepath)
@@ -171,7 +160,7 @@ namespace DormitoryManagment
                 /* Remove any users whose username are listed in the file
                  * If there is non-exist user, notify the current user this error and continue after he/she is "Ok" */
 
-                using (TextFieldParser parser = new TextFieldParser(filepath))
+                /*using (TextFieldParser parser = new TextFieldParser(filepath))
                 {
                     parser.TextFieldType = FieldType.Delimited;
                     parser.SetDelimiters(",");
@@ -193,7 +182,7 @@ namespace DormitoryManagment
                             MessageBox.Show("Error! Non-exist user!\nClick OK to continue!");
                         }
                     }
-                }
+                } */
             }
         
             public override void SaveData()

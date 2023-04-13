@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -82,18 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin.cs" />
-<<<<<<< HEAD
     <Compile Include="Admin_MainScreen.cs">
-=======
-    <Compile Include="AdminMainScreen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AdminMainScreen.Designer.cs">
-      <DependentUpon>AdminMainScreen.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Manager.cs" />
-    <Compile Include="ManagerMainScreen.cs">
->>>>>>> 5bb73dcdc23bbe145ceae671046f668b422984b3
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Admin_MainScreen.Designer.cs">
@@ -170,29 +159,17 @@
     <Compile Include="Student_ViewInformation.Designer.cs">
       <DependentUpon>Student_ViewInformation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manager_ViewInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager_ViewInformation.Designer.cs">
+      <DependentUpon>Manager_ViewInformation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Template.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Template.Designer.cs">
       <DependentUpon>Template.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ManagerMainScreen1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ManagerMainScreen.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Student.cs" />
-    <Compile Include="Studentinfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Studentinfo.Designer.cs">
-      <DependentUpon>Studentinfo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="StudentMainScreen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="StudentMainScreen.Designer.cs">
-      <DependentUpon>StudentMainScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
     <Compile Include="Program.cs" />
@@ -203,7 +180,6 @@
     <Compile Include="Program_StartScreen.Designer.cs">
       <DependentUpon>Program_StartScreen.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <EmbeddedResource Include="Admin_MainScreen.resx">
       <DependentUpon>Admin_MainScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -215,12 +191,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Manager_MainScreen.resx">
       <DependentUpon>Manager_MainScreen.cs</DependentUpon>
-=======
-    <EmbeddedResource Include="ManagerMainScreen.resx">
-      <DependentUpon>ManagerMainScreen.cs</DependentUpon>
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>ManagerMainScreen1.Designer.cs</LastGenOutput>
->>>>>>> 5bb73dcdc23bbe145ceae671046f668b422984b3
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -262,11 +232,11 @@
     <EmbeddedResource Include="Student_ViewInformation.resx">
       <DependentUpon>Student_ViewInformation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Manager_ViewInformation.resx">
+      <DependentUpon>Manager_ViewInformation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Template.resx">
       <DependentUpon>Template.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="StudentMainScreen.resx">
-      <DependentUpon>StudentMainScreen.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

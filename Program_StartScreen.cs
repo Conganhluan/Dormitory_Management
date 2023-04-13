@@ -26,7 +26,7 @@ namespace DormitoryManagment
 
         private void StartScreen_Load(object sender, EventArgs e)
         {
-
+    
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -43,12 +43,11 @@ namespace DormitoryManagment
             string sql = "SELECT * FROM Users WHERE Username = '" + UsernameInput.Text + "'";
             MySqlCommand cmd = new MySqlCommand(sql, Program.conn);
             MySqlDataReader rdr = cmd.ExecuteReader();
-            string password = null, role = null, name = null;
+            string password = null, role = null;
             while (rdr.Read())
             {
                 password = rdr.GetString("Password");
                 role = rdr.GetString("Role");
-                name = rdr.GetString("Name");
             }
             rdr.Close();
             if (password == null)
@@ -73,12 +72,12 @@ namespace DormitoryManagment
                     else if (role == "Manager")
                     {
                         Program.manager = new Program.Manager(UsernameInput.Text);
-                        mainScreen = new ManagerMainScreen(name);
+                        mainScreen = new ManagerMainScreen();
                     }
                     else if (role == "Student")
                     {
                         Program.student = new Program.Student(UsernameInput.Text);
-                        mainScreen = new StudentMainScreen(name);
+                        mainScreen = new StudentMainScreen();
                     }
                     this.Hide();
                     Navigate(ref mainScreen);

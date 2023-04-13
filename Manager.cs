@@ -34,16 +34,6 @@ namespace DormitoryManagment
                 reader.Close();
             }
 
-<<<<<<< HEAD
-=======
-            public override void MainScreen()
-            {
-                previousForm = null;
-                currentForm = new ManagerMainScreen();
-                currentForm.Show();
-            }
-
->>>>>>> 5bb73dcdc23bbe145ceae671046f668b422984b3
             public void AddStudentList(string filepath)
             {
                 /* You should see the file format in advance on the Figma - Interface diagram
