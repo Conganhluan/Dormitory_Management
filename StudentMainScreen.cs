@@ -16,5 +16,22 @@ namespace DormitoryManagment
         {
             InitializeComponent();
         }
+
+        private void usericon_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Studentinfo stinfo = new Studentinfo();
+            stinfo.Show();
+        }
+
+        private void logout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Program.LogOut();
+        }
+
+        private void paybill_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Program.student.PayRequest();
+        }
     }
 }

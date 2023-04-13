@@ -81,12 +81,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin.cs" />
+    <Compile Include="AdminMainScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminMainScreen.Designer.cs">
+      <DependentUpon>AdminMainScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Manager.cs" />
     <Compile Include="ManagerMainScreen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ManagerMainScreen.Designer.cs">
       <DependentUpon>ManagerMainScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerMainScreen1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManagerMainScreen.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Student.cs" />
+    <Compile Include="Studentinfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Studentinfo.Designer.cs">
+      <DependentUpon>Studentinfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentMainScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentMainScreen.Designer.cs">
+      <DependentUpon>StudentMainScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
     <Compile Include="Program.cs" />
@@ -97,6 +122,11 @@
     <Compile Include="StartScreen.Designer.cs">
       <DependentUpon>StartScreen.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ManagerMainScreen.resx">
+      <DependentUpon>ManagerMainScreen.cs</DependentUpon>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ManagerMainScreen1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -105,9 +135,13 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="StartScreen.resx">
       <DependentUpon>StartScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentMainScreen.resx">
+      <DependentUpon>StudentMainScreen.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -122,6 +156,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dorm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usericon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
