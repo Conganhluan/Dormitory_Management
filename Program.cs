@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -19,7 +19,7 @@ namespace DormitoryManagment
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StudentMainScreen());
+            Application.Run(new startScreen());
         }
 
         // Static users
@@ -31,24 +31,5 @@ namespace DormitoryManagment
         // Static needed attributes for connection
         static MySqlConnection conn = new MySqlConnection(
             "server=103.200.22.212;user=luanapco_admin;database=luanapco_Database;port=3306;password=AWb@8AzpaqzH9Ev");
-        static MySqlCommand command = new MySqlCommand("",conn);
-
-        // Static needed attributes for navigating between forms
-        static Form currentForm = null;
-        static Stack<Form> previousForm = null;
-
-        static void LogIn(string username, string password)
-        {
-            // Login using table Users
-        }
-
-        public static void LogOut()
-        {
-            root.MainScreen();
-            manager = null;
-            student = null;
-            admin = null;
-            conn.Close();
-        }
     }
 }
