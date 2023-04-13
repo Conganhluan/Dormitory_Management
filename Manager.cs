@@ -178,8 +178,7 @@ namespace DormitoryManagment
                 }
                 else
                 {
-                    lateBills = new DataTable();
-                    string sql1 = "'SELECT "
+
                 }
             }
 
@@ -208,7 +207,7 @@ namespace DormitoryManagment
             {
                 //Save the changes of Password, Name and Email to table Users
                 conn.Open();
-                string sql = "'UPDATE Users SET Password = '" + Password + "' SET Name = '" + Name + "' SET Email = '" + Email + "' WHERE Username = '" + Username + "'";
+                string sql = "'UPDATE Users SET Password = '" + Password + "' WHERE Name = '" + Name + "' WHERE Email = '" + Email + "'";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 cmd.ExecuteNonQuery();
                 conn.Close();
