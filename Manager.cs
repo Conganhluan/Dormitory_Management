@@ -21,7 +21,6 @@ namespace DormitoryManagment
             {
                 Username = username;
                 // Complete the Password, Name and Email from table Users
-                conn.Open();
                 string sql = "SELECT * FROM Users WHERE Username = '" + Username + "'";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 MySqlDataReader reader = cmd.ExecuteReader();
@@ -56,8 +55,6 @@ namespace DormitoryManagment
                         fs.Read(rawData, 0, FileSize);
                         fs.Close();
 
-                        conn.Open();
-
                         MySqlCommand cmd = new MySqlCommand();
 
                         SQL = "INSERT INTO file VALUES(NULL, @FileName, @FileSize, @File)";
@@ -72,8 +69,6 @@ namespace DormitoryManagment
 
                         MessageBox.Show("File Inserted into database successfully!",
                             "Success!");
-
-                        conn.Close();
                     }
                     catch (MySqlException ex)
                     {
@@ -161,7 +156,6 @@ namespace DormitoryManagment
                  *     building_2, roomNum_2, bill_2, lateTime_2,...
                  * the data will be from the DataTable.
                  * If existing the file LateBills.csv, then notify the user and write over it */
-                conn.Open();
                 string sql = "'SELECT EXISTS ( '" + "' FROM '" + lateBills + "')'";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 cmd.Prepare();
@@ -189,7 +183,6 @@ namespace DormitoryManagment
             {
                 /* Modify the value of wanted field 
                  * Update the table Users */
-                conn.Open();
                 string sql = "'UPDATE Users SET " + field + " = " + value + "'";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 cmd.ExecuteNonQuery();
@@ -199,7 +192,6 @@ namespace DormitoryManagment
             public override void SaveData()
             {
                 //Save the changes of Password, Name and Email to table Users
-                conn.Open();
                 string sql = "'UPDATE Users SET Password = '" + Password + "' WHERE Name = '" + Name + "' WHERE Email = '" + Email + "'";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 cmd.ExecuteNonQuery();

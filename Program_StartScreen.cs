@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace DormitoryManagment
 {
@@ -44,10 +45,12 @@ namespace DormitoryManagment
             MySqlCommand cmd = new MySqlCommand(sql, Program.conn);
             MySqlDataReader rdr = cmd.ExecuteReader();
             string password = null, role = null;
+            bool onlineStatus = false;
             while (rdr.Read())
             {
                 password = rdr.GetString("Password");
                 role = rdr.GetString("Role");
+                onlineStatus = rdr.GetBoolean("Online");
             }
             rdr.Close();
             if (password == null)
@@ -61,6 +64,7 @@ namespace DormitoryManagment
             else
             {
                 if (role == "") { MessageBox.Show("Cannot specify the role for this user!", "Error"); }
+                else if (onlineStatus) { MessageBox.Show("You can't login into 1 account many times simultaneously", "Warning"); }
                 else
                 {
                     DMForm mainScreen = null;
@@ -79,6 +83,9 @@ namespace DormitoryManagment
                         Program.student = new Program.Student(UsernameInput.Text);
                         mainScreen = new StudentMainScreen();
                     }
+                    sql = "UPDATE Users SET Online = 1 WHERE Username = '" + UsernameInput.Text + "'";
+                    cmd = new MySqlCommand(sql, Program.conn);
+                    cmd.ExecuteNonQuery();
                     this.Hide();
                     Navigate(ref mainScreen);
                 }

@@ -49,8 +49,14 @@ namespace DormitoryManagment
 
         private void LogOut_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            Program.admin.LogOut();
             DMForm startScreen = new StartScreen();
             Navigate(ref startScreen);
+        }
+
+        private void AdminMainScreen_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -126,7 +126,7 @@
             this.linkLabel1.TabIndex = 26;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Pay bill";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.PAYBILL_LinkClicked);
             // 
             // label2
             // 
@@ -164,7 +164,7 @@
             this.Number.AutoSize = true;
             this.Number.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Number.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.Number.Location = new System.Drawing.Point(571, 378);
+            this.Number.Location = new System.Drawing.Point(579, 378);
             this.Number.Name = "Number";
             this.Number.Size = new System.Drawing.Size(91, 37);
             this.Number.TabIndex = 30;

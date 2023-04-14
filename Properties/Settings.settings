@@ -1,7 +1,22 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="DormitoryManagment.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="luanapco_DatabaseConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;ConnectionString&gt;provider=MySQL;User Id=luanapco_admin;Host=103.200.22.212;Database=luanapco_Database&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;Devart.Data.Universal&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">provider=MySQL;User Id=luanapco_admin;Host=103.200.22.212;Database=luanapco_Database</Value>
+    </Setting>
+    <Setting Name="DatabaseConnection" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;ConnectionString&gt;provider=MySQL;User Id=luanapco_admin;Password=AWb@8AzpaqzH9Ev;Host=103.200.22.212;Database=luanapco_Database;Persist Security Info=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;Devart.Data.Universal&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">provider=MySQL;User Id=luanapco_admin;Password=AWb@8AzpaqzH9Ev;Host=103.200.22.212;Database=luanapco_Database;Persist Security Info=True</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>

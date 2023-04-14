@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using Microsoft.VisualBasic.FileIO;
+using System.IO;
 using MySql.Data;
 using MySql.Data.MySqlClient;
 
@@ -21,6 +21,7 @@ namespace DormitoryManagment
                 Email = "";
                 Password = password;
             }
+
             private class Room
             {
                 private string _Building;
@@ -64,7 +65,7 @@ namespace DormitoryManagment
 
                     foreach (Room room in rooms)
                     {
-                        string sqlQuerry = "INSERT INTO Rooms VALUES('" + name + "', '" + room.Number 
+                        string sqlQuerry = "INSERT INTO Rooms VALUES('" + name + "', '" + room.Number
                             + "', " + room.Type + ", " + room.Bill + ", '" + room.LastBillTime + "', '" + room.Reviewer + "')";
 
                         cmd = new MySqlCommand(sqlQuerry, conn);
@@ -93,7 +94,7 @@ namespace DormitoryManagment
                 // Save the changes of wanted field to table Buildings
                 // need a name to know update which building
 
-                string sqlUpdate = "UPDATE Buildings SET " + field + " = " + newValue + 
+                string sqlUpdate = "UPDATE Buildings SET " + field + " = " + newValue +
                     "WHERE Name = '" + name + "'";
                 MySqlCommand cmd = new MySqlCommand(sqlUpdate, conn);
                 cmd.ExecuteNonQuery();
@@ -106,25 +107,23 @@ namespace DormitoryManagment
                  *      username_2, name_2, email_2,...
                  * Create new Manager users whose password will be "manager" and add them to table Users */
 
-                /*using (TextFieldParser parser = new TextFieldParser(filepath))
+                using (StreamReader reader = new StreamReader(filepath))
                 {
-                    parser.TextFieldType = FieldType.Delimited;
-                    parser.SetDelimiters(",");
-
                     // ignore header
-                    string[] columnHeader = parser.ReadFields();
+                    string columnHeader = reader.ReadLine();
 
-                    while (!parser.EndOfData)
+                    while (!reader.EndOfStream)
                     {
-                        string[] manager = parser.ReadFields();
+                        string line = reader.ReadLine();
+                        string[] manager = line.Split(',');
 
                         // set default password and role = 'manager'
-                        string sqlQuerry = "INSERT INTO Users VALUES('" + manager[1] + "', '" 
+                        string sqlQuerry = "INSERT INTO Users VALUES('" + manager[1] + "', '"
                             + manager[0] + "', 'manager', '" + manager[2] + "', 'manager')";
                         MySqlCommand cmd = new MySqlCommand(sqlQuerry, conn);
                         cmd.ExecuteNonQuery();
                     }
-                }*/
+                }
             }
 
             public void AddStudents(string filepath)
@@ -134,17 +133,15 @@ namespace DormitoryManagment
                  *      username_2, name_2, email_2,...
                  * Create new Student users whose password will be "student" and add them to table Users */
 
-                /* using (TextFieldParser parser = new TextFieldParser(filepath))
+                using (StreamReader reader = new StreamReader(filepath))
                 {
-                    parser.TextFieldType = FieldType.Delimited;
-                    parser.SetDelimiters(",");
-
                     // ignore header
-                    string[] columnHeader = parser.ReadFields();
+                    string columnHeader = reader.ReadLine();
 
-                    while (!parser.EndOfData)
+                    while (!reader.EndOfStream)
                     {
-                        string[] student = parser.ReadFields();
+                        string line = reader.ReadLine();
+                        string[] student = line.Split(',');
 
                         // set default password and role = 'student'
                         string sqlQuerry = "INSERT INTO Users VALUES('" + student[1] + "', '"
@@ -152,7 +149,7 @@ namespace DormitoryManagment
                         MySqlCommand cmd = new MySqlCommand(sqlQuerry, conn);
                         cmd.ExecuteNonQuery();
                     }
-                } */
+                }
             }
 
             public void RemoveUsers(string filepath)
@@ -160,17 +157,15 @@ namespace DormitoryManagment
                 /* Remove any users whose username are listed in the file
                  * If there is non-exist user, notify the current user this error and continue after he/she is "Ok" */
 
-                /*using (TextFieldParser parser = new TextFieldParser(filepath))
+                using (StreamReader reader = new StreamReader(filepath))
                 {
-                    parser.TextFieldType = FieldType.Delimited;
-                    parser.SetDelimiters(",");
-
                     // ignore header
-                    string[] columnHeader = parser.ReadFields();
+                    string columnHeader = reader.ReadLine();
 
-                    while (!parser.EndOfData)
+                    while (!reader.EndOfStream)
                     {
-                        string[] user = parser.ReadFields();
+                        string line = reader.ReadLine();
+                        string[] user = line.Split(',');
 
                         // set default password and role = 'student'
                         string sqlQuerry = "DELETE FROM Users WHERE Username = " + user[0];
@@ -182,9 +177,9 @@ namespace DormitoryManagment
                             MessageBox.Show("Error! Non-exist user!\nClick OK to continue!");
                         }
                     }
-                } */
+                }
             }
-        
+
             public override void SaveData()
             {
                 // Save the changes of Password into table Users

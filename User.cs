@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
@@ -42,9 +43,18 @@ namespace DormitoryManagment
                     return;
                 }
                 Password = newPass;
+                MessageBox.Show("Update the new password successfully!", "Update success");
+                SaveData();
             }
 
             virtual public void SaveData() { }
+
+            public void LogOut()
+            {
+                string sql = "UPDATE Users SET Online = 0 WHERE Username = '" + Username + "'";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                Console.WriteLine(cmd.ExecuteNonQuery());
+            }
         }
     }
 }

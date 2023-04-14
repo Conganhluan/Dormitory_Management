@@ -38,6 +38,9 @@ namespace DormitoryManagment
         private void Confirm_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             currentUser.ChangePassword(OldPassword.Text, NewPassword.Text, ConfirmPassword.Text);
+            OldPassword.Text = "";
+            NewPassword.Text = "";
+            ConfirmPassword.Text = "";
         }
 
         private void Return_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
