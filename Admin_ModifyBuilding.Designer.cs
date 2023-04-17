@@ -28,10 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModifyBuilding));
             this.Table = new System.Windows.Forms.DataGridView();
             this.Crucial = new System.Windows.Forms.Label();
@@ -44,25 +43,18 @@
             this.RemoveUsers = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.AddBuilding = new System.Windows.Forms.Button();
-            this.dataSet = new DormitoryManagment.DataSet();
-            this.buildingsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.buildingsTableAdapter = new DormitoryManagment.DataSetTableAdapters.BuildingsTableAdapter();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Gender = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.NameInput = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.NameBox = new System.Windows.Forms.GroupBox();
+            this.NameInput = new System.Windows.Forms.RichTextBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.UsernameInput = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Table)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HomePic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Background)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BigLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buildingsBindingSource)).BeginInit();
             this.Gender.SuspendLayout();
-            this.NameInput.SuspendLayout();
+            this.NameBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // Table
@@ -71,34 +63,29 @@
             this.Table.AllowUserToDeleteRows = false;
             this.Table.AllowUserToResizeColumns = false;
             this.Table.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Table.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.Table.AutoGenerateColumns = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Table.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.Table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.Table.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Table.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Table.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nameDataGridViewTextBoxColumn,
-            this.genderDataGridViewTextBoxColumn});
-            this.Table.DataSource = this.buildingsBindingSource;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Table.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Table.DefaultCellStyle = dataGridViewCellStyle3;
             this.Table.Location = new System.Drawing.Point(372, 132);
             this.Table.Name = "Table";
             this.Table.ReadOnly = true;
@@ -219,36 +206,6 @@
             this.AddBuilding.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.AddBuilding.UseVisualStyleBackColor = true;
             // 
-            // dataSet
-            // 
-            this.dataSet.DataSetName = "DataSet";
-            this.dataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // buildingsBindingSource
-            // 
-            this.buildingsBindingSource.DataMember = "Buildings";
-            this.buildingsBindingSource.DataSource = this.dataSet;
-            // 
-            // buildingsTableAdapter
-            // 
-            this.buildingsTableAdapter.ClearBeforeFill = true;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameDataGridViewTextBoxColumn.Width = 146;
-            // 
-            // genderDataGridViewTextBoxColumn
-            // 
-            this.genderDataGridViewTextBoxColumn.DataPropertyName = "Gender";
-            this.genderDataGridViewTextBoxColumn.HeaderText = "Gender";
-            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
-            this.genderDataGridViewTextBoxColumn.ReadOnly = true;
-            this.genderDataGridViewTextBoxColumn.Width = 174;
-            // 
             // Gender
             // 
             this.Gender.Controls.Add(this.button2);
@@ -259,6 +216,17 @@
             this.Gender.TabIndex = 44;
             this.Gender.TabStop = false;
             this.Gender.Text = "Filter by Gender";
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(152, 17);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(115, 41);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Filter";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // comboBox1
             // 
@@ -274,27 +242,29 @@
             this.comboBox1.TabIndex = 0;
             this.comboBox1.Text = "All";
             // 
-            // button2
+            // NameBox
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(152, 17);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(115, 41);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Filter";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.NameBox.Controls.Add(this.NameInput);
+            this.NameBox.Controls.Add(this.button3);
+            this.NameBox.Location = new System.Drawing.Point(719, 410);
+            this.NameBox.Name = "NameBox";
+            this.NameBox.Size = new System.Drawing.Size(283, 65);
+            this.NameBox.TabIndex = 45;
+            this.NameBox.TabStop = false;
+            this.NameBox.Text = "Find by Name";
             // 
             // NameInput
             // 
-            this.NameInput.Controls.Add(this.UsernameInput);
-            this.NameInput.Controls.Add(this.button3);
-            this.NameInput.Location = new System.Drawing.Point(719, 410);
+            this.NameInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NameInput.Location = new System.Drawing.Point(6, 19);
+            this.NameInput.MaxLength = 15;
+            this.NameInput.Multiline = false;
             this.NameInput.Name = "NameInput";
-            this.NameInput.Size = new System.Drawing.Size(283, 65);
-            this.NameInput.TabIndex = 45;
-            this.NameInput.TabStop = false;
-            this.NameInput.Text = "Find by Name";
+            this.NameInput.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.NameInput.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.NameInput.Size = new System.Drawing.Size(128, 41);
+            this.NameInput.TabIndex = 3;
+            this.NameInput.Text = "";
             // 
             // button3
             // 
@@ -307,25 +277,12 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // UsernameInput
-            // 
-            this.UsernameInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsernameInput.Location = new System.Drawing.Point(6, 19);
-            this.UsernameInput.MaxLength = 15;
-            this.UsernameInput.Multiline = false;
-            this.UsernameInput.Name = "UsernameInput";
-            this.UsernameInput.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.UsernameInput.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.UsernameInput.Size = new System.Drawing.Size(128, 41);
-            this.UsernameInput.TabIndex = 3;
-            this.UsernameInput.Text = "A10";
-            // 
             // ModifyBuilding
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1034, 661);
-            this.Controls.Add(this.NameInput);
+            this.Controls.Add(this.NameBox);
             this.Controls.Add(this.Gender);
             this.Controls.Add(this.AddUsers);
             this.Controls.Add(this.RemoveUsers);
@@ -348,10 +305,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.HomePic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Background)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BigLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buildingsBindingSource)).EndInit();
             this.Gender.ResumeLayout(false);
-            this.NameInput.ResumeLayout(false);
+            this.NameBox.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -370,16 +325,11 @@
         private System.Windows.Forms.Button RemoveUsers;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button AddBuilding;
-        private DataSet dataSet;
-        private System.Windows.Forms.BindingSource buildingsBindingSource;
-        private DataSetTableAdapters.BuildingsTableAdapter buildingsTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
         private System.Windows.Forms.GroupBox Gender;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.GroupBox NameInput;
+        private System.Windows.Forms.GroupBox NameBox;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.RichTextBox UsernameInput;
+        private System.Windows.Forms.RichTextBox NameInput;
     }
 }

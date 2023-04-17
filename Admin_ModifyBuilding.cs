@@ -8,6 +8,9 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql;
+using MySql.Data;
+using MySql.Data.MySqlClient;
 
 namespace DormitoryManagment
 {
@@ -20,21 +23,23 @@ namespace DormitoryManagment
 
         private void ModifyBuilding_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dataSet.Buildings' table. You can move, or remove it, as needed.
-            this.buildingsTableAdapter.Fill(this.dataSet.Buildings);
-
+            Table.DataSource = DataBase.GetDataSouce("SELECT * FROM Buildings");
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            /*if (comboBox1.Text == "All") { dataSet.Buildings.DefaultView.};
-            dataSet.Buildings.DefaultView.RowFilter = "Gender = '" + comboBox1.Text + "'";
-            Table.DataSource = dataSet.Buildings.DefaultView;*/
+            /*if (comboBox1.Text == "All") { dataSet.Buildings.DefaultView.RowFilter = "Gender LIKE '*'"; }
+            else { dataSet.Buildings.DefaultView.RowFilter = "Gender = '" + comboBox1.Text + "'"; }
+            Table.DataSource = dataSet.Buildings.DefaultView;
+            NameInput.Text = "";*/
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //dataSet.Buildings.DefaultView.RowFilter = "Gender";
+            /*if (NameInput.Text == "") { dataSet.Buildings.DefaultView.RowFilter = "Name LIKE '*'"; }
+            else { dataSet.Buildings.DefaultView.RowFilter = "Name LIKE '*" + NameInput.Text + "*'"; }
+            Table.DataSource = dataSet.Buildings.DefaultView;
+            comboBox1.Text = "All";*/
         }
     }
 }
