@@ -103,5 +103,19 @@ namespace DormitoryManagment
         {
 
         }
+
+        private void UsernameInput_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (UsernameInput.Text != "")
+                if (e.KeyCode == Keys.Enter)
+                    this.pictureBox1_Click(this, null);
+        }
+
+        private void PasswordInput_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (PasswordInput.Text != "")
+                if (e.KeyCode == Keys.Enter)
+                    this.pictureBox1_Click(this, null);
+        }
     }
 }

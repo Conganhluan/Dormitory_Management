@@ -80,6 +80,7 @@
             this.UsernameInput.TabIndex = 2;
             this.UsernameInput.Text = "";
             this.UsernameInput.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+            this.UsernameInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this.UsernameInput_KeyDown);
             // 
             // PasswordInput
             // 
@@ -93,6 +94,7 @@
             this.PasswordInput.Size = new System.Drawing.Size(544, 50);
             this.PasswordInput.TabIndex = 3;
             this.PasswordInput.Text = "";
+            this.PasswordInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PasswordInput_KeyDown);
             // 
             // UsernamePic
             // 

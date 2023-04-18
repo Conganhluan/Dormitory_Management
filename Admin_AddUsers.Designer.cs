@@ -39,8 +39,8 @@
             this.save = new System.Windows.Forms.LinkLabel();
             this.form = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.studentrb = new System.Windows.Forms.RadioButton();
-            this.managerrb = new System.Windows.Forms.RadioButton();
+            this.studentcb = new System.Windows.Forms.CheckBox();
+            this.managercb = new System.Windows.Forms.CheckBox();
             classing = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -84,8 +84,9 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(70, 145);
+            this.pictureBox2.Location = new System.Drawing.Point(70, 138);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(40, 40);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -95,6 +96,7 @@
             // RETURN
             // 
             this.RETURN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.RETURN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.RETURN.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RETURN.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.RETURN.LinkColor = System.Drawing.Color.Black;
@@ -111,21 +113,22 @@
             // 
             this.filepath.AcceptsTab = true;
             this.filepath.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.filepath.BackColor = System.Drawing.SystemColors.Menu;
+            this.filepath.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.filepath.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.filepath.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.filepath.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.filepath.ForeColor = System.Drawing.SystemColors.GrayText;
             this.filepath.Location = new System.Drawing.Point(50, 139);
             this.filepath.Name = "filepath";
-            this.filepath.Size = new System.Drawing.Size(800, 50);
-            this.filepath.TabIndex = 0;
-            this.filepath.Text = "Path/to/file.csv";
+            this.filepath.Size = new System.Drawing.Size(800, 37);
+            this.filepath.TabIndex = 2;
             this.filepath.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.filepath.WordWrap = false;
+            this.filepath.Enter += new System.EventHandler(this.filepath_Enter);
+            this.filepath.Leave += new System.EventHandler(this.filepath_Leave);
             // 
             // Title
             // 
-            this.Title.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Title.BackColor = System.Drawing.SystemColors.Control;
             this.Title.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Title.ForeColor = System.Drawing.Color.Black;
@@ -139,6 +142,7 @@
             // save
             // 
             this.save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.save.Cursor = System.Windows.Forms.Cursors.Hand;
             this.save.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.save.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.save.LinkColor = System.Drawing.Color.Black;
@@ -165,44 +169,48 @@
             // panel1
             // 
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel1.Controls.Add(this.studentrb);
-            this.panel1.Controls.Add(this.managerrb);
+            this.panel1.Controls.Add(this.studentcb);
+            this.panel1.Controls.Add(this.managercb);
             this.panel1.Location = new System.Drawing.Point(218, 404);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(513, 72);
             this.panel1.TabIndex = 7;
             // 
-            // studentrb
+            // studentcb
             // 
-            this.studentrb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.studentrb.AutoSize = true;
-            this.studentrb.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.studentrb.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.studentrb.Location = new System.Drawing.Point(305, 2);
-            this.studentrb.Name = "studentrb";
-            this.studentrb.Size = new System.Drawing.Size(140, 35);
-            this.studentrb.TabIndex = 3;
-            this.studentrb.Text = "Students";
-            this.studentrb.UseVisualStyleBackColor = true;
+            this.studentcb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.studentcb.AutoSize = true;
+            this.studentcb.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.studentcb.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.studentcb.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studentcb.Location = new System.Drawing.Point(305, 2);
+            this.studentcb.Name = "studentcb";
+            this.studentcb.Size = new System.Drawing.Size(141, 35);
+            this.studentcb.TabIndex = 3;
+            this.studentcb.Text = "Students";
+            this.studentcb.UseVisualStyleBackColor = true;
+            this.studentcb.CheckedChanged += new System.EventHandler(this.studentrb_CheckedChanged);
             // 
-            // managerrb
+            // managercb
             // 
-            this.managerrb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.managerrb.AutoSize = true;
-            this.managerrb.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.managerrb.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.managerrb.Location = new System.Drawing.Point(58, 2);
-            this.managerrb.Name = "managerrb";
-            this.managerrb.Size = new System.Drawing.Size(152, 35);
-            this.managerrb.TabIndex = 2;
-            this.managerrb.Text = "Managers";
-            this.managerrb.UseVisualStyleBackColor = true;
+            this.managercb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.managercb.AutoSize = true;
+            this.managercb.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.managercb.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.managercb.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.managercb.Location = new System.Drawing.Point(58, 2);
+            this.managercb.Name = "managercb";
+            this.managercb.Size = new System.Drawing.Size(153, 35);
+            this.managercb.TabIndex = 2;
+            this.managercb.Text = "Managers";
+            this.managercb.UseVisualStyleBackColor = true;
+            this.managercb.CheckedChanged += new System.EventHandler(this.managerrb_CheckedChanged);
             // 
             // AddUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(900, 600);
             this.Controls.Add(this.panel1);
             this.Controls.Add(classing);
@@ -238,7 +246,7 @@
         private System.Windows.Forms.LinkLabel save;
         private System.Windows.Forms.Label form;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.RadioButton managerrb;
-        private System.Windows.Forms.RadioButton studentrb;
+        private System.Windows.Forms.CheckBox managercb;
+        private System.Windows.Forms.CheckBox studentcb;
     }
 }
