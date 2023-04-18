@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RemoveUsers));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.form = new System.Windows.Forms.Label();
             this.rmall = new System.Windows.Forms.LinkLabel();
             this.Title = new System.Windows.Forms.TextBox();
@@ -38,8 +39,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.filepath = new System.Windows.Forms.TextBox();
             this.rmlsted = new System.Windows.Forms.LinkLabel();
+            this.userdata = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userdata)).BeginInit();
             this.SuspendLayout();
             // 
             // form
@@ -165,12 +168,35 @@
             this.rmlsted.Text = "Remove chosen users";
             this.rmlsted.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // userdata
+            // 
+            this.userdata.AllowUserToAddRows = false;
+            this.userdata.AllowUserToDeleteRows = false;
+            this.userdata.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.userdata.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.userdata.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            this.userdata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.userdata.Location = new System.Drawing.Point(16, 118);
+            this.userdata.Name = "userdata";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ScrollBar;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.userdata.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.userdata.Size = new System.Drawing.Size(450, 360);
+            this.userdata.TabIndex = 9;
+            this.userdata.DataSource = DormitoryManagment.DataBase.GetDataSouce("SELECT Name,Username,Role FROM Users");
+            // 
             // RemoveUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(900, 600);
+            this.Controls.Add(this.userdata);
             this.Controls.Add(this.rmlsted);
             this.Controls.Add(this.form);
             this.Controls.Add(this.rmall);
@@ -187,6 +213,7 @@
             this.Text = "Remove Users";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userdata)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,5 +229,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox filepath;
         private System.Windows.Forms.LinkLabel rmlsted;
+        private System.Windows.Forms.DataGridView userdata;
     }
 }
