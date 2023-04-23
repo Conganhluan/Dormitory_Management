@@ -141,10 +141,10 @@
             this.SendReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SendReport.Location = new System.Drawing.Point(118, 476);
             this.SendReport.Name = "SendReport";
-            this.SendReport.Size = new System.Drawing.Size(342, 42);
+            this.SendReport.Size = new System.Drawing.Size(343, 42);
             this.SendReport.TabIndex = 43;
             this.SendReport.TabStop = true;
-            this.SendReport.Text = "Wrong information?";
+            this.SendReport.Text = "Change information";
             this.SendReport.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.SendReport_LinkClicked);
             // 
             // ChangePass

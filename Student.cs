@@ -121,6 +121,16 @@ namespace DormitoryManagment
                 string sql = "UPDATE Users SET Password = '" + Password + "' WHERE Username = '" + Username + "'";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 cmd.ExecuteNonQuery();
+
+                //Save the personal information into table Students
+                sql = "UPDATE Students SET `Date of birth` = '" + p.BirthDate.ToString() + "', " +
+                                          "`Citizen ID` = '" + p.CitizenID + "', " +
+                                          "`Phone number` = '" + p.PhoneNumber + "', " +
+                                          "`Vehicle plate number` = '" + p.Vehice + "', " +
+                                          "`Home address` = '" + p.HomeAddress + "' " +
+                      "WHERE Username = '" + Username + "'";
+                cmd = new MySqlCommand(sql, conn);
+                cmd.ExecuteNonQuery();
                 conn.Close();
             }
         }

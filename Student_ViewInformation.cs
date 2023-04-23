@@ -17,7 +17,7 @@ namespace DormitoryManagment
             InitializeComponent();
             Values.Text = Program.student.GetName() + "\n" +
                           Program.student.GetEmail() + "\n" +
-                          Program.student.p.BirthDate.ToString() + "\n" +
+                          Program.student.p.BirthDate.ToString("d") + "\n" +
                           Program.student.p.CitizenID + "\n" +
                           Program.student.p.PhoneNumber + "\n" +
                           Program.student.p.Vehice + "\n" +

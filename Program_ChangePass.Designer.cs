@@ -39,6 +39,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Confirm = new System.Windows.Forms.LinkLabel();
+            this.LogOut = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.BigLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,10 +109,10 @@
             this.Return.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Return.Location = new System.Drawing.Point(12, 610);
             this.Return.Name = "Return";
-            this.Return.Size = new System.Drawing.Size(130, 42);
+            this.Return.Size = new System.Drawing.Size(212, 42);
             this.Return.TabIndex = 19;
             this.Return.TabStop = true;
-            this.Return.Text = "Return";
+            this.Return.Text = "Mainscreen";
             this.Return.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Return_LinkClicked);
             // 
             // label1
@@ -157,11 +158,23 @@
             this.Confirm.Text = "Confirm to change password";
             this.Confirm.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Confirm_LinkClicked);
             // 
+            // LogOut
+            // 
+            this.LogOut.AutoSize = true;
+            this.LogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LogOut.Location = new System.Drawing.Point(879, 17);
+            this.LogOut.Name = "LogOut";
+            this.LogOut.Size = new System.Drawing.Size(143, 42);
+            this.LogOut.TabIndex = 25;
+            this.LogOut.TabStop = true;
+            this.LogOut.Text = "Log out";
+            // 
             // ChangePass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1034, 661);
+            this.Controls.Add(this.LogOut);
             this.Controls.Add(this.Confirm);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -174,6 +187,7 @@
             this.Controls.Add(this.OldPassword);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Location = new System.Drawing.Point(879, 17);
             this.Name = "ChangePass";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dormitory Management";
@@ -195,5 +209,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.LinkLabel Confirm;
+        private System.Windows.Forms.LinkLabel LogOut;
     }
 }
