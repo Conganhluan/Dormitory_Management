@@ -41,6 +41,7 @@ namespace DormitoryManagment
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            Program.conn.Open();
             string sql = "SELECT * FROM Users WHERE Username = '" + UsernameInput.Text + "'";
             MySqlCommand cmd = new MySqlCommand(sql, Program.conn);
             MySqlDataReader rdr = cmd.ExecuteReader();
@@ -53,18 +54,19 @@ namespace DormitoryManagment
                 onlineStatus = rdr.GetBoolean("Online");
             }
             rdr.Close();
+            Program.conn.Close();
             if (password == null)
             {
-                MessageBox.Show("The username is not found!", "Login failed", MessageBoxButtons.OK);
+                MessageBox.Show("The username is not found!", "Login failed", MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
             } 
             else if (password != PasswordInput.Text)
             {
-                MessageBox.Show("The password is incorrect!", "Login failed", MessageBoxButtons.OK);
+                MessageBox.Show("The password is incorrect!", "Login failed", MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
             }
             else
             {
-                if (role == "") { MessageBox.Show("Cannot specify the role for this user!", "Error"); }
-                else if (onlineStatus) { MessageBox.Show("You can't login into 1 account many times simultaneously", "Warning"); }
+                if (role == "") { MessageBox.Show("Cannot specify the role for this user!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                else if (onlineStatus) { MessageBox.Show("You can't login into 1 account many times simultaneously", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
                 else
                 {
                     DMForm mainScreen = null;
@@ -83,10 +85,11 @@ namespace DormitoryManagment
                         Program.student = new Program.Student(UsernameInput.Text);
                         mainScreen = new StudentMainScreen();
                     }
+                    Program.conn.Open();
                     sql = "UPDATE Users SET Online = 1 WHERE Username = '" + UsernameInput.Text + "'";
                     cmd = new MySqlCommand(sql, Program.conn);
                     cmd.ExecuteNonQuery();
-                    this.Hide();
+                    Program.conn.Close();
                     Navigate(ref mainScreen);
                 }
                 

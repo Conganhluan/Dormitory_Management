@@ -33,17 +33,17 @@ namespace DormitoryManagment
                 if (oldPass != Password)
                 {
                     MessageBox.Show("The old password is incorrect, please re-input!", "Update failed",
-                                    MessageBoxButtons.OK);
+                                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
                 if (newPass != checkSame)
                 {
                     MessageBox.Show("The 2 new password isn't the same, please re-input!", "Update failed",
-                                    MessageBoxButtons.OK);
+                                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
                 Password = newPass;
-                MessageBox.Show("Update the new password successfully!", "Update success");
+                MessageBox.Show("Update the new password successfully!", "Update success",MessageBoxButtons.OK, MessageBoxIcon.Information);
                 SaveData();
             }
 
@@ -51,9 +51,11 @@ namespace DormitoryManagment
 
             public void LogOut()
             {
+                conn.Open();
                 string sql = "UPDATE Users SET Online = 0 WHERE Username = '" + Username + "'";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 Console.WriteLine(cmd.ExecuteNonQuery());
+                conn.Close();
             }
         }
     }

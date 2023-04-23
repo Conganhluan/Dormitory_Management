@@ -14,7 +14,6 @@ namespace DormitoryManagment
 {
     public partial class StudentMainScreen : DMForm
     {
-        private int payCount = 0;
         public StudentMainScreen()
         {
             InitializeComponent();
@@ -37,16 +36,6 @@ namespace DormitoryManagment
         private void PAYBILL_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Program.student.PayRequest();
-            if (payCount==0)
-            {
-                MessageBox.Show("Request to pay the bill is sent\nWhen the manager accept your request, the bill will be updated!",
-                            "Request Sent", MessageBoxButtons.OK);
-            }
-            else
-            {
-                MessageBox.Show("Your request to pay is sent\nIt's not necessary to pay anymore!", "Caution");
-            }
-            payCount++;
         }
 
         private void HomePic_Click(object sender, EventArgs e)

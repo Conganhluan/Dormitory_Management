@@ -49,7 +49,11 @@ namespace DormitoryManagment
             if (userRole == "Admin") { mainScreen = new AdminMainScreen(); }
             else if (userRole == "Manager") { mainScreen = new ManagerMainScreen(); }
             else if (userRole == "Student") { mainScreen = new StudentMainScreen(); }
-            else MessageBox.Show("Cannot specify the user's role!", "Error");
+            else
+            {
+                MessageBox.Show("Cannot specify the user's role!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             Navigate(ref mainScreen);
         }
     }

@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using System.IO;
 using MySql.Data;
 using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace DormitoryManagment
 {
@@ -36,57 +37,36 @@ namespace DormitoryManagment
                 public DateTime LastBillTime { get => _LastBillTime; set => _LastBillTime = value; }
                 private string _Reviewer;
                 public string Reviewer { get => _Reviewer; set => _Reviewer = value; }
-
-                public Room(string buil, string num, byte type, byte bill, DateTime last, string rev)
-                {
-                    Building = buil;
-                    Number = num;
-                    Type = type;
-                    Bill = bill;
-                    LastBillTime = last;
-                    Reviewer = rev;
-                }
             }
 
-            public void AddBuilding(string name, string gender, byte numOfFloor)
+            public void AddBuilding(string name, string gender, DataTable dataTable)
             {
                 /* Add a new building to the table Buildings
                  * Use AddFloor() below to create rooms for this building */
 
-                for (byte floorIndex = 1; floorIndex <= numOfFloor; floorIndex++)
-                {
-                    //add building first to avoid foreign key
-                    string querry = "INSERT INTO Buildings VALUES('" + name + "', '" + gender + "')";
-                    MySqlCommand cmd = new MySqlCommand(querry, conn);
-                    cmd.ExecuteNonQuery();
 
-                    //add room after add building
-                    List<Room> rooms = AddFloor(floorIndex, 24, 1);
-
-                    foreach (Room room in rooms)
+                // Add building first to avoid foreign key
+                conn.Open();
+                string querry = "INSERT INTO Buildings VALUES('" + name + "', '" + gender + "')";
+                MySqlCommand cmd = new MySqlCommand(querry, conn);
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                // Add rooms for the building
+                string numberFloor = "", numberRoom = "", typeRoom = "";
+                foreach (DataRow row in dataTable.Rows) {
+                    typeRoom = row[1].ToString();
+                    numberFloor = row[0].ToString();
+                    for (int i = 1; i <= Convert.ToInt32(row[2]); i++)
                     {
-                        string sqlQuerry = "INSERT INTO Rooms VALUES('" + name + "', '" + room.Number
-                            + "', " + room.Type + ", " + room.Bill + ", '" + room.LastBillTime + "', '" + room.Reviewer + "')";
-
-                        cmd = new MySqlCommand(sqlQuerry, conn);
+                        if (i < 10) { numberRoom = "0" + i.ToString(); }
+                        else { numberRoom = i.ToString(); }
+                        conn.Open();
+                        querry = "INSERT INTO Rooms VALUES('" + name + "', '" + numberFloor + numberRoom + "', " + typeRoom + ", 0, now(), '')";
+                        cmd.CommandText = querry;
                         cmd.ExecuteNonQuery();
+                        conn.Close();
                     }
                 }
-            }
-
-            private List<Room> AddFloor(byte floorNum, byte numOfRoom, byte typeOfRoom)
-            {
-                /* Supporting the AddBuilding() above (which already has the building's name)
-                 * Create rooms for the floor, room number will be formatted as: <floorNum>+<num>[2]
-                 *      Ex: floor 1, number 2 -> 102
-                 *      Ex: floor 13, number 4 -> 1304 */
-
-                List<Room> rooms = new List<Room>();
-                for (int roomIndex = 1; roomIndex <= numOfRoom; roomIndex++)
-                {
-                    rooms.Add(new Room("", (floorNum + roomIndex).ToString(), typeOfRoom, 0, DateTime.Now, ""));
-                }
-                return rooms;
             }
 
             public void ModifyBuilding(string name, string field, string newValue)
@@ -94,10 +74,12 @@ namespace DormitoryManagment
                 // Save the changes of wanted field to table Buildings
                 // need a name to know update which building
 
+                conn.Open();
                 string sqlUpdate = "UPDATE Buildings SET " + field + " = " + newValue +
                     "WHERE Name = '" + name + "'";
                 MySqlCommand cmd = new MySqlCommand(sqlUpdate, conn);
                 cmd.ExecuteNonQuery();
+                conn.Close();
             }
 
             public void AddManagers(string filepath)
@@ -107,22 +89,29 @@ namespace DormitoryManagment
                  *      username_2, name_2, email_2,...
                  * Create new Manager users whose password will be "manager" and add them to table Users */
 
-                using (StreamReader reader = new StreamReader(filepath))
+                try
                 {
-                    // ignore header
-                    string columnHeader = reader.ReadLine();
-
-                    while (!reader.EndOfStream)
+                    using (StreamReader reader = new StreamReader(filepath))
                     {
-                        string line = reader.ReadLine();
-                        string[] manager = line.Split(',');
+                        while (!reader.EndOfStream)
+                        {
+                            string line = reader.ReadLine();
+                            string[] manager = line.Split(',');
 
-                        // set default password and role = 'manager'
-                        string sqlQuerry = "INSERT INTO Users VALUES('" + manager[1] + "', '"
-                            + manager[0] + "', 'manager', '" + manager[2] + "', 'manager')";
-                        MySqlCommand cmd = new MySqlCommand(sqlQuerry, conn);
-                        cmd.ExecuteNonQuery();
+                            // set default password and role = 'manager'
+                            conn.Open();
+                            string sqlQuerry = "INSERT INTO Users VALUES('" + manager[1] + "', '"
+                                + manager[0] + "', 'manager', '" + manager[2] + "', 'manager', 0)";
+                            MySqlCommand cmd = new MySqlCommand(sqlQuerry, conn);
+                            cmd.ExecuteNonQuery();
+                            conn.Close();
+                        }
+                        MessageBox.Show("Add new managers successfully!", "Update successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 
@@ -133,22 +122,29 @@ namespace DormitoryManagment
                  *      username_2, name_2, email_2,...
                  * Create new Student users whose password will be "student" and add them to table Users */
 
-                using (StreamReader reader = new StreamReader(filepath))
+                try
                 {
-                    // ignore header
-                    string columnHeader = reader.ReadLine();
-
-                    while (!reader.EndOfStream)
+                    using (StreamReader reader = new StreamReader(filepath))
                     {
-                        string line = reader.ReadLine();
-                        string[] student = line.Split(',');
+                        while (!reader.EndOfStream)
+                        {
+                            string line = reader.ReadLine();
+                            string[] student = line.Split(',');
 
-                        // set default password and role = 'student'
-                        string sqlQuerry = "INSERT INTO Users VALUES('" + student[1] + "', '"
-                            + student[0] + "', 'student', '" + student[2] + "', 'student')";
-                        MySqlCommand cmd = new MySqlCommand(sqlQuerry, conn);
-                        cmd.ExecuteNonQuery();
+                            // set default password and role = 'student'
+                            conn.Open();
+                            string sqlQuerry = "INSERT INTO Users VALUES('" + student[1] + "', '"
+                                + student[0] + "', 'student', '" + student[2] + "', 'student', 0)";
+                            MySqlCommand cmd = new MySqlCommand(sqlQuerry, conn);
+                            cmd.ExecuteNonQuery();
+                            conn.Close();
+                        }
+                        MessageBox.Show("Add new students successfully!", "Update successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 
@@ -159,23 +155,20 @@ namespace DormitoryManagment
 
                 using (StreamReader reader = new StreamReader(filepath))
                 {
-                    // ignore header
-                    string columnHeader = reader.ReadLine();
-
                     while (!reader.EndOfStream)
                     {
                         string line = reader.ReadLine();
                         string[] user = line.Split(',');
 
                         // set default password and role = 'student'
+                        conn.Open();
                         string sqlQuerry = "DELETE FROM Users WHERE Username = " + user[0];
                         MySqlCommand cmd = new MySqlCommand(sqlQuerry, conn);
                         int success = cmd.ExecuteNonQuery();
+                        conn.Close();
 
-                        if (success == 0)
-                        {
-                            MessageBox.Show("Error! Non-exist user!\nClick OK to continue!");
-                        }
+                        if (success == 0) { MessageBox.Show("Error! Non-exist user!\nClick OK to continue!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                        else { MessageBox.Show("Remove listed users successfully!", "Remove successfully", MessageBoxButtons.OK, MessageBoxIcon.Information); }
                     }
                 }
             }
@@ -183,9 +176,11 @@ namespace DormitoryManagment
             public override void SaveData()
             {
                 // Save the changes of Password into table Users
+                conn.Open();
                 string sql = "UPDATE Users SET Password = '" + Password + "' WHERE Username = '" + Username + "'";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 cmd.ExecuteNonQuery();
+                conn.Close();
             }
         }
     }

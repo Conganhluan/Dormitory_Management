@@ -27,12 +27,13 @@ namespace DormitoryManagment
 
         private void Send_Click(object sender, EventArgs e)
         {
+            Program.conn.Open();
             string sql = "SELECT * FROM Users WHERE Email = '" + EmailInput.Text + "'";
             MySqlCommand cmd = new MySqlCommand(sql, Program.conn);
             MySqlDataReader rdr = cmd.ExecuteReader();
             if (rdr.HasRows)
             {
-                if (sentCount >= 1 && sentEmail == EmailInput.Text) MessageBox.Show("I have sent again!\nCheck your email before click SEND more","Caution",MessageBoxButtons.OK);
+                if (sentCount >= 1 && sentEmail == EmailInput.Text) MessageBox.Show("I have sent again!\nCheck your email before click SEND more","Caution",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
                 else if (sentEmail != EmailInput.Text) sentCount = 0;
                 NotFound.Visible = false;
                 Sent.Visible = true;
@@ -44,6 +45,7 @@ namespace DormitoryManagment
                 Sent.Visible = false;
             }
             rdr.Close();
+            Program.conn.Close();
             sentEmail = EmailInput.Text;
         }
 

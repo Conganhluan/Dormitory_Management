@@ -20,6 +20,7 @@ namespace DormitoryManagment
             {
                 Username = username;
                 // Complete the Password, Name and Email from table Users
+                conn.Open();
                 string sql = "SELECT * FROM Users WHERE Username = '" + Username + "'";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 MySqlDataReader reader = cmd.ExecuteReader();
@@ -30,6 +31,7 @@ namespace DormitoryManagment
                     Email = reader.GetString("Email");
                 }
                 reader.Close();
+                conn.Close();
             }
 
             public void AddStudentList(string filepath)
@@ -37,77 +39,66 @@ namespace DormitoryManagment
                 /* You should see the file format in advance on the Figma - Interface diagram
                  * Use AddStudent() below to support this method
                  * Create a file formatted as:
-                 *      name, email, <name>+<citizenID> for every student each line */
-                //string SQL;
-                //UInt32 FileSize;
-                //byte[] rawData;
-                
-
-                if (File.Exists(filepath))
+                 *      name, email, <name>+<studentID> for every student each line */
+                try
                 {
-                    /*
-                    try
+                    using (StreamReader reader = new StreamReader(filepath))
                     {
-                        FileSize = fs.Length;
-
-                        rawData = new byte[FileSize];
-                        fs.Read(rawData, 0, FileSize);
-                        fs.Close();
-
-                        conn.Open();
-
-                        MySqlCommand cmd = new MySqlCommand();
-
-                        SQL = "INSERT INTO file VALUES(NULL, @FileName, @FileSize, @File)";
-                        cmd.Connection = conn;
-                        cmd.CommandText = SQL;
-                        
-                        cmd.Parameters.AddWithValue("@Namw", Student.Name);
-                        cmd.Parameters.AddWithValue("@Email", FileSize);
-                        cmd.Parameters.AddWithValue("@<Name>+<CitizenID>", rawData);
-                        
-                        cmd.ExecuteNonQuery();
-
-                        MessageBox.Show("File Inserted into database successfully!",
-                            "Success!");
-
-                        conn.Close();
+                        StreamWriter writer = new StreamWriter("Student Users", false);
+                        string newStudent = null;
+                        List<string> newStudentAttributes = null;
+                        while ((newStudent = reader.ReadLine()) != null)
+                        {
+                            newStudentAttributes = newStudent.Split(',').ToList();
+                            AddStudent(ref newStudentAttributes);
+                            writer.WriteLine(newStudentAttributes[4] + "," + newStudentAttributes[5] + "," +
+                                                newStudentAttributes[4].Split(' ').Last().ToLower() + newStudentAttributes[7]);
+                        }
+                        writer.Close();
+                        reader.Close();
                     }
-                    catch (MySqlException ex)
-                    {
-                        MessageBox.Show("Error " + ex.Number + " has occurred: " + ex.Message);
-                    }
-                    */
-
-
                 }
-                else
+                catch (Exception e)
                 {
-                    FileStream fs = File.Create(filepath);
+                    MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             
-            public void AddStudent(string gender, byte type, string building, string roomNum,
-                                        string name, string email, string school, string studentID,
-                                            string vehicle, string citizenID, string birthdate, string phone, string homeAddress)
+            public void AddStudent(ref List<String> attributes)
             {
-                /* Build a algorithm to get each student his/her wishful room
+                /* string gender, byte type, string building, string roomNum,
+                 * string name, string email, string school, string studentID,
+                 * string vehicle, string citizenID, string birthdate, string phone, string homeAddress 
+                 * 
+                 * Build a algorithm to get each student his/her wishful room
                  * If that room cannot be found, then increase the type by 2, if there is out of room, notify the user
                  * Gender must be correct, type is second choice, building is third choice, and roomNum is fourth choice
                  * Support AddStudentList() above at creating the file */
-                
-
+                string gender = attributes[0], building = attributes[2], roomNum = attributes[3];
+                int type = Int16.Parse(attributes[1]);
+                conn.Open();
+                string sql = "SELECT Gender FROM Buildings WHERE Name = '" + building + "'";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    if (gender != reader.GetString("Gender")) building = null;
+                }
+                reader.Close();
+                conn.Close();
             }
 
             public void RemoveStudent(string studentID)
             {
                 // Remove student whose studentID is given out of table Students
+                conn.Open();
                 string sqlQuerry = " 'DELETE FROM Students WHERE Student ID = ' " + studentID;
                 MySqlCommand cmd = new MySqlCommand(sqlQuerry, conn);
                 int success = cmd.ExecuteNonQuery();
+                conn.Close();
                 if (success == 0)
                 {
-                   MessageBox.Show("Error! Non-exist student!");
+                   MessageBox.Show("Non-exist student!","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 
@@ -172,6 +163,7 @@ namespace DormitoryManagment
                     lateBills = new DataTable();
                     //string sql1 = "'SELECT ";
                 }
+                conn.Close();
             }
 
             public void ReviewBills(List<string> pending)
@@ -192,14 +184,62 @@ namespace DormitoryManagment
                 string sql = "'UPDATE Users SET " + field + " = " + value + "'";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 cmd.ExecuteNonQuery();
+                conn.Close();
             }
 
+            public void PrintWrongStudents()
+            {
+                /* Print the list of students staying at wrong building (the gender are not the same)
+                 * The list contains 5 column Name, Student ID, BUilding name, Room number, Student's gender */
+                //Create reverse Dictionary 
+                Dictionary<string, string> reverseDictionary = new Dictionary<string, string>();
+                conn.Open();
+                string sql = "SELECT * FROM Buildings";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    string buildingName = reader.GetString(0);
+                    string gender = reader.GetString(1);
+                    if (gender == "Male") gender = "Female";
+                    else if (gender == "Female") gender = "Male";
+                    reverseDictionary.Add(buildingName, gender);
+                }
+                reader.Close();
+                conn.Close();
+                if (reverseDictionary.Count == 0)
+                {
+                    MessageBox.Show("The dictionary is empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Write headers
+                StreamWriter streamWriter = new StreamWriter("Students staying at wrong building.csv", false);
+                streamWriter.WriteLine("Name, Student ID, Building name, Room number, Student's gender");
+
+                // Write records
+                foreach (KeyValuePair<string, string> pair in reverseDictionary)
+                {
+                    conn.Open();
+                    sql = "SELECT `Name`, `Student ID`, `Building name`, `Room number`, `Gender` FROM Students WHERE " +
+                        "`Building name`= '" + pair.Key + "' AND Gender = '" + pair.Value + "'";
+                    cmd = new MySqlCommand(sql, conn);
+                    reader = cmd.ExecuteReader();
+                    while (reader.Read()) streamWriter.WriteLine(reader.GetString(0) + ", " + reader.GetString(1) + ", " + reader.GetString(2) + ", " + reader.GetString(3) + ", " + reader.GetString(4));
+                    reader.Close();
+                    conn.Close();
+                }
+                streamWriter.Close();
+                MessageBox.Show("Print the list of students successfully!", "Print successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
             public override void SaveData()
             {
                 //Save the changes of Password, Name and Email to table Users
+                conn.Open();
                 string sql = "'UPDATE Users SET Password = '" + Password + "' WHERE Name = '" + Name + "' WHERE Email = '" + Email + "'";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 cmd.ExecuteNonQuery();
+                conn.Close();
             }
         }
     }

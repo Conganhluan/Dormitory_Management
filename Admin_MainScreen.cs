@@ -17,30 +17,6 @@ namespace DormitoryManagment
             InitializeComponent();
         }
 
-        private void AddBuilding_Click(object sender, EventArgs e)
-        {
-            DMForm nextForm = new AddBuilding();
-            Navigate(ref nextForm);
-        }
-
-        private void ModifyBuilding_Click(object sender, EventArgs e)
-        {
-            DMForm nextForm = new ModifyBuilding();
-            Navigate(ref nextForm);
-        }
-
-        private void AddUsers_Click(object sender, EventArgs e)
-        {
-            DMForm nextForm = new AddUsers();
-            Navigate(ref nextForm);
-        }
-
-        private void RemoveUsers_Click(object sender, EventArgs e)
-        {
-            DMForm nextForm = new RemoveUsers();
-            Navigate(ref nextForm);
-        }
-
         private void HomePic_Click(object sender, EventArgs e)
         {
             DMForm changePass = new ChangePass(Program.admin, "Admin");
@@ -57,6 +33,30 @@ namespace DormitoryManagment
         private void AdminMainScreen_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void AddBuilding_Click_1(object sender, EventArgs e)
+        {
+            DMForm nextForm = new AddBuilding();
+            Navigate(ref nextForm);
+        }
+
+        private void ModifyBuilding_Click_1(object sender, EventArgs e)
+        {
+            DMForm nextForm = new ModifyBuilding();
+            Navigate(ref nextForm);
+        }
+
+        private void AddUsers_Click_1(object sender, EventArgs e)
+        {
+            DMForm nextForm = new AddUsers();
+            Navigate(ref nextForm);
+        }
+
+        private void RemoveUsers_Click_1(object sender, EventArgs e)
+        {
+            DMForm nextForm = new RemoveUsers();
+            Navigate(ref nextForm);
         }
     }
 }

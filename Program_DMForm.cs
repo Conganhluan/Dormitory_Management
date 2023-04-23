@@ -24,11 +24,12 @@ namespace DormitoryManagment
 
         protected override void OnFormClosing(System.Windows.Forms.FormClosingEventArgs e)
         {
-            if (Program.conn.State == System.Data.ConnectionState.Closed) { return; }
-            if (Program.student != null) { Program.student.LogOut(); }
-            if (Program.manager != null) { Program.manager.LogOut(); }
-            if (Program.admin != null) { Program.admin.LogOut(); }
-            Program.conn.Close();
+            if (e.CloseReason != CloseReason.FormOwnerClosing)
+            {
+                if (Program.admin != null) Program.admin.LogOut();
+                if (Program.manager != null) Program.manager.LogOut();
+                if (Program.student != null) Program.student.LogOut();
+            }
         }
     }
 }

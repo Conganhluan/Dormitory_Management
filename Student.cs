@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Numerics;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -32,6 +33,7 @@ namespace DormitoryManagment
                 public string PhoneNumber;
                 public string Vehice;
                 public string HomeAddress;
+                public DateTime BirthDate;
             }
 
             public Room r;
@@ -40,6 +42,7 @@ namespace DormitoryManagment
             public Student(string username)
             {
                 Username = username;
+                conn.Open();
                 string sql = "SELECT * FROM Users " +
                              "CROSS JOIN Students ON Students.Email = Users.Email " +
                              "WHERE Username = '" + Username + "'";
@@ -59,6 +62,7 @@ namespace DormitoryManagment
                     p.PhoneNumber = reader.GetString("Phone number");
                     p.Vehice = reader.GetString("Vehicle plate number");
                     p.HomeAddress = reader.GetString("Home address");
+                    p.BirthDate = reader.GetDateTime("Date of birth");
                     r.Building = reader.GetString("Building name");
                     r.RoomNum = reader.GetString("Room number");
                 }
@@ -75,26 +79,50 @@ namespace DormitoryManagment
                     r.BillTime = reader.GetDateTime("Last bill Time");
                 }
                 reader.Close();
+                conn.Close();
+            }
+
+            public string GetEmail()
+            {
+                return Email;
             }
 
             public void PayRequest()
             {
                 /* Add a request string formatted as below:
                  *      "building roomNum"
-                 * to the table Requests */
-                /*string sql = "INSERT INTO Requests (Username, Request) VALUES ('" + Username + "', '" + r.Building + " " + r.RoomNum + "')";
+                 * to the table Requests, payer will be the student's name */
+
+                string request = r.Building + " " + r.RoomNum;
+                conn.Open();
+                string sql = "SELECT * FROM Requests WHERE Request = '" + request + "'";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
-                cmd.ExecuteNonQuery();*/
+                MySqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    MessageBox.Show("There is already a pending pay request for your room", "Caution", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    reader.Close();
+                    conn.Close();
+                    return;
+                }
+                reader.Close();
+                sql = "INSERT INTO Requests VALUES ('" + r.Building + " " + r.RoomNum + "', '" + Username + "')";
+                cmd = new MySqlCommand(sql, conn);
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                MessageBox.Show("Request to pay the bill is sent\nWhen the manager accept your request, the bill will be updated!",
+                            "Request Sent", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             public override void SaveData()
             {
                 // Save the changes of Password into table Users
+                conn.Open();
                 string sql = "UPDATE Users SET Password = '" + Password + "' WHERE Username = '" + Username + "'";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 cmd.ExecuteNonQuery();
+                conn.Close();
             }
-
         }
     }
     

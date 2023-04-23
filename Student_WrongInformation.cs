@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DormitoryManagment
 {
-    public partial class UpdateData : DMForm
+    public partial class WrongInformation : DMForm
     {
-        public UpdateData()
+        public WrongInformation()
         {
             InitializeComponent();
         }

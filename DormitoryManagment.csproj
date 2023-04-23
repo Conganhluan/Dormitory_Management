@@ -39,17 +39,6 @@
     <Reference Include="BouncyCastle.Crypto, Version=1.9.0.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
       <HintPath>packages\Portable.BouncyCastle.1.9.0\lib\net40\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
-    <Reference Include="Devart.Data, Version=5.0.3075.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
-    <Reference Include="Devart.Data.Design, Version=5.0.3075.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
-    <Reference Include="Devart.Data.MySql, Version=9.1.134.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
-    <Reference Include="Devart.Data.MySql.Vs.14, Version=9.1.134.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
-    <Reference Include="Devart.Data.Synchronization, Version=5.0.3075.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
-    <Reference Include="Devart.Data.Universal, Version=4.0.134.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
-    <Reference Include="Devart.Data.Universal.Design, Version=4.0.134.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
-    <Reference Include="Devart.Data.Universal.Vs, Version=4.0.134.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
-    <Reference Include="Devart.Data.Universal.Vs.14, Version=4.0.134.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
-    <Reference Include="Devart.Data.Vs, Version=5.0.3075.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
-    <Reference Include="Devart.Data.Vs.14, Version=5.0.3075.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -132,6 +121,12 @@
     <Compile Include="Program_DMForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Student_WrongInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student_WrongInformation.Designer.cs">
+      <DependentUpon>Student_WrongInformation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -150,12 +145,6 @@
     <Compile Include="Admin_AddBuilding.Designer.cs">
       <DependentUpon>Admin_AddBuilding.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin_AddFloor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin_AddFloor.Designer.cs">
-      <DependentUpon>Admin_AddFloor.cs</DependentUpon>
-    </Compile>
     <Compile Include="Admin_ModifyBuilding.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,12 +156,6 @@
     </Compile>
     <Compile Include="Admin_AddUsers.Designer.cs">
       <DependentUpon>Admin_AddUsers.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admin_UpdateData.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin_UpdateData.Designer.cs">
-      <DependentUpon>Admin_UpdateData.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin_RemoveUsers.cs">
       <SubType>Form</SubType>
@@ -210,13 +193,13 @@
     <Compile Include="Manager_StudentsManagement.Designer.cs">
       <DependentUpon>Manager_StudentsManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="Template.cs">
+    <Compile Include="Program_Template.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Template.Designer.cs">
-      <DependentUpon>Template.cs</DependentUpon>
+    <Compile Include="Program_Template.Designer.cs">
+      <DependentUpon>Program_Template.cs</DependentUpon>
     </Compile>
-    <Compile Include="User.cs" />
+    <Compile Include="Program_User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program_StartScreen.cs">
@@ -237,6 +220,9 @@
     <EmbeddedResource Include="Manager_MainScreen.resx">
       <DependentUpon>Manager_MainScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Student_WrongInformation.resx">
+      <DependentUpon>Student_WrongInformation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -251,17 +237,11 @@
     <EmbeddedResource Include="Admin_AddBuilding.resx">
       <DependentUpon>Admin_AddBuilding.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin_AddFloor.resx">
-      <DependentUpon>Admin_AddFloor.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Admin_ModifyBuilding.resx">
       <DependentUpon>Admin_ModifyBuilding.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin_AddUsers.resx">
       <DependentUpon>Admin_AddUsers.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin_UpdateData.resx">
-      <DependentUpon>Admin_UpdateData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin_RemoveUsers.resx">
       <DependentUpon>Admin_RemoveUsers.cs</DependentUpon>
@@ -281,8 +261,8 @@
     <EmbeddedResource Include="Manager_StudentsManagement.resx">
       <DependentUpon>Manager_StudentsManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Template.resx">
-      <DependentUpon>Template.cs</DependentUpon>
+    <EmbeddedResource Include="Program_Template.resx">
+      <DependentUpon>Program_Template.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

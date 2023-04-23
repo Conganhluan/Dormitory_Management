@@ -32,16 +32,18 @@
             this.LogOut = new System.Windows.Forms.LinkLabel();
             this.HomePic = new System.Windows.Forms.PictureBox();
             this.Information = new System.Windows.Forms.Label();
-            this.AddBuilding = new System.Windows.Forms.Button();
-            this.ModifyBuilding = new System.Windows.Forms.Button();
-            this.RemoveUsers = new System.Windows.Forms.Button();
-            this.AddUsers = new System.Windows.Forms.Button();
             this.Crucial = new System.Windows.Forms.Label();
             this.Background = new System.Windows.Forms.PictureBox();
             this.BigLogo = new System.Windows.Forms.PictureBox();
+            this.AddUsers = new System.Windows.Forms.Button();
+            this.RemoveUsers = new System.Windows.Forms.Button();
+            this.ModifyBuilding = new System.Windows.Forms.Button();
+            this.AddBuilding = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.HomePic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Background)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BigLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // LogOut
@@ -79,50 +81,6 @@
             this.Information.TabIndex = 21;
             this.Information.Text = "Welcome back Application Admin!";
             // 
-            // AddBuilding
-            // 
-            this.AddBuilding.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddBuilding.Location = new System.Drawing.Point(12, 131);
-            this.AddBuilding.Name = "AddBuilding";
-            this.AddBuilding.Size = new System.Drawing.Size(217, 98);
-            this.AddBuilding.TabIndex = 22;
-            this.AddBuilding.Text = "Add a new \r\nbuilding";
-            this.AddBuilding.UseVisualStyleBackColor = true;
-            this.AddBuilding.Click += new System.EventHandler(this.AddBuilding_Click);
-            // 
-            // ModifyBuilding
-            // 
-            this.ModifyBuilding.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ModifyBuilding.Location = new System.Drawing.Point(12, 235);
-            this.ModifyBuilding.Name = "ModifyBuilding";
-            this.ModifyBuilding.Size = new System.Drawing.Size(217, 98);
-            this.ModifyBuilding.TabIndex = 23;
-            this.ModifyBuilding.Text = "Modify\r\nbuildings";
-            this.ModifyBuilding.UseVisualStyleBackColor = true;
-            this.ModifyBuilding.Click += new System.EventHandler(this.ModifyBuilding_Click);
-            // 
-            // RemoveUsers
-            // 
-            this.RemoveUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RemoveUsers.Location = new System.Drawing.Point(12, 447);
-            this.RemoveUsers.Name = "RemoveUsers";
-            this.RemoveUsers.Size = new System.Drawing.Size(217, 98);
-            this.RemoveUsers.TabIndex = 24;
-            this.RemoveUsers.Text = "Remove a \r\nlist of users";
-            this.RemoveUsers.UseVisualStyleBackColor = true;
-            this.RemoveUsers.Click += new System.EventHandler(this.RemoveUsers_Click);
-            // 
-            // AddUsers
-            // 
-            this.AddUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddUsers.Location = new System.Drawing.Point(12, 343);
-            this.AddUsers.Name = "AddUsers";
-            this.AddUsers.Size = new System.Drawing.Size(217, 98);
-            this.AddUsers.TabIndex = 25;
-            this.AddUsers.Text = "Add a list\r\nof users";
-            this.AddUsers.UseVisualStyleBackColor = true;
-            this.AddUsers.Click += new System.EventHandler(this.AddUsers_Click);
-            // 
             // Crucial
             // 
             this.Crucial.AutoSize = true;
@@ -138,9 +96,9 @@
             // 
             this.Background.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Background.Image = ((System.Drawing.Image)(resources.GetObject("Background.Image")));
-            this.Background.Location = new System.Drawing.Point(235, 131);
+            this.Background.Location = new System.Drawing.Point(315, 153);
             this.Background.Name = "Background";
-            this.Background.Size = new System.Drawing.Size(787, 414);
+            this.Background.Size = new System.Drawing.Size(707, 372);
             this.Background.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Background.TabIndex = 31;
             this.Background.TabStop = false;
@@ -155,6 +113,66 @@
             this.BigLogo.TabIndex = 33;
             this.BigLogo.TabStop = false;
             // 
+            // AddUsers
+            // 
+            this.AddUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddUsers.Location = new System.Drawing.Point(12, 343);
+            this.AddUsers.Name = "AddUsers";
+            this.AddUsers.Size = new System.Drawing.Size(297, 98);
+            this.AddUsers.TabIndex = 51;
+            this.AddUsers.Text = "Add a list\r\nof users";
+            this.AddUsers.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.AddUsers.UseVisualStyleBackColor = true;
+            this.AddUsers.Click += new System.EventHandler(this.AddUsers_Click_1);
+            // 
+            // RemoveUsers
+            // 
+            this.RemoveUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RemoveUsers.Location = new System.Drawing.Point(12, 447);
+            this.RemoveUsers.Name = "RemoveUsers";
+            this.RemoveUsers.Size = new System.Drawing.Size(297, 98);
+            this.RemoveUsers.TabIndex = 50;
+            this.RemoveUsers.Text = "Remove a \r\nlist of users";
+            this.RemoveUsers.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.RemoveUsers.UseVisualStyleBackColor = true;
+            this.RemoveUsers.Click += new System.EventHandler(this.RemoveUsers_Click_1);
+            // 
+            // ModifyBuilding
+            // 
+            this.ModifyBuilding.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ModifyBuilding.Location = new System.Drawing.Point(12, 235);
+            this.ModifyBuilding.Name = "ModifyBuilding";
+            this.ModifyBuilding.Size = new System.Drawing.Size(297, 98);
+            this.ModifyBuilding.TabIndex = 49;
+            this.ModifyBuilding.Text = "Modify\r\nbuildings";
+            this.ModifyBuilding.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ModifyBuilding.UseVisualStyleBackColor = true;
+            this.ModifyBuilding.Click += new System.EventHandler(this.ModifyBuilding_Click_1);
+            // 
+            // AddBuilding
+            // 
+            this.AddBuilding.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddBuilding.Location = new System.Drawing.Point(12, 131);
+            this.AddBuilding.Name = "AddBuilding";
+            this.AddBuilding.Size = new System.Drawing.Size(297, 98);
+            this.AddBuilding.TabIndex = 48;
+            this.AddBuilding.Text = "Add a new \r\nbuilding";
+            this.AddBuilding.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.AddBuilding.UseVisualStyleBackColor = true;
+            this.AddBuilding.Click += new System.EventHandler(this.AddBuilding_Click_1);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.ErrorImage = null;
+            this.pictureBox1.InitialImage = null;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 82);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1010, 496);
+            this.pictureBox1.TabIndex = 52;
+            this.pictureBox1.TabStop = false;
+            // 
             // AdminMainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -163,13 +181,14 @@
             this.Controls.Add(this.BigLogo);
             this.Controls.Add(this.Background);
             this.Controls.Add(this.Crucial);
+            this.Controls.Add(this.Information);
+            this.Controls.Add(this.HomePic);
+            this.Controls.Add(this.LogOut);
             this.Controls.Add(this.AddUsers);
             this.Controls.Add(this.RemoveUsers);
             this.Controls.Add(this.ModifyBuilding);
             this.Controls.Add(this.AddBuilding);
-            this.Controls.Add(this.Information);
-            this.Controls.Add(this.HomePic);
-            this.Controls.Add(this.LogOut);
+            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AdminMainScreen";
@@ -179,6 +198,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.HomePic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Background)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BigLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,12 +208,13 @@
         private System.Windows.Forms.LinkLabel LogOut;
         private System.Windows.Forms.PictureBox HomePic;
         private System.Windows.Forms.Label Information;
-        private System.Windows.Forms.Button AddBuilding;
-        private System.Windows.Forms.Button ModifyBuilding;
-        private System.Windows.Forms.Button RemoveUsers;
-        private System.Windows.Forms.Button AddUsers;
         private System.Windows.Forms.Label Crucial;
         private System.Windows.Forms.PictureBox Background;
         private System.Windows.Forms.PictureBox BigLogo;
+        private System.Windows.Forms.Button AddUsers;
+        private System.Windows.Forms.Button RemoveUsers;
+        private System.Windows.Forms.Button ModifyBuilding;
+        private System.Windows.Forms.Button AddBuilding;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
