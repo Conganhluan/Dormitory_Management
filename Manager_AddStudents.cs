@@ -42,5 +42,10 @@ namespace DormitoryManagment
             DMForm nextForm = new ManageStudent();
             Navigate(ref nextForm);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Do nothing here
+        }
     }
 }

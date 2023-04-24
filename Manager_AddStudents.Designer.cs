@@ -87,7 +87,7 @@
             this.filepath.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.filepath.BackColor = System.Drawing.SystemColors.Window;
             this.filepath.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.filepath.ForeColor = System.Drawing.SystemColors.Window;
+            this.filepath.ForeColor = System.Drawing.SystemColors.WindowText;
             this.filepath.Location = new System.Drawing.Point(332, 112);
             this.filepath.Name = "filepath";
             this.filepath.Size = new System.Drawing.Size(670, 44);
@@ -197,6 +197,7 @@
             this.button1.Text = "Add a list\r\nof students";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 

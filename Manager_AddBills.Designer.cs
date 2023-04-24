@@ -43,6 +43,10 @@
             this.LogOut = new System.Windows.Forms.LinkLabel();
             this.Information = new System.Windows.Forms.Label();
             this.HomePic = new System.Windows.Forms.PictureBox();
+            this.form = new System.Windows.Forms.Label();
+            this.AddStudentsButton = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.filepath = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.RemoveUserPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AddUsersPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BuildingsPic)).BeginInit();
@@ -50,6 +54,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BigLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HomePic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // RemoveUserPic
@@ -121,6 +126,7 @@
             this.ReviewRequests.Text = "Review pay\r\nrequests";
             this.ReviewRequests.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ReviewRequests.UseVisualStyleBackColor = true;
+            this.ReviewRequests.Click += new System.EventHandler(this.ReviewRequests_Click);
             // 
             // ManageStudents
             // 
@@ -132,6 +138,7 @@
             this.ManageStudents.Text = "Students\r\nManage";
             this.ManageStudents.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ManageStudents.UseVisualStyleBackColor = true;
+            this.ManageStudents.Click += new System.EventHandler(this.ManageStudents_Click);
             // 
             // AddStudents
             // 
@@ -143,6 +150,7 @@
             this.AddStudents.Text = "Add a list\r\nof students";
             this.AddStudents.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.AddStudents.UseVisualStyleBackColor = true;
+            this.AddStudents.Click += new System.EventHandler(this.AddStudents_Click);
             // 
             // pictureBox1
             // 
@@ -187,6 +195,7 @@
             this.LogOut.TabIndex = 72;
             this.LogOut.TabStop = true;
             this.LogOut.Text = "Log out";
+            this.LogOut.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LogOut_LinkClicked);
             // 
             // Information
             // 
@@ -209,12 +218,65 @@
             this.HomePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.HomePic.TabIndex = 70;
             this.HomePic.TabStop = false;
+            this.HomePic.Click += new System.EventHandler(this.HomePic_Click);
+            // 
+            // form
+            // 
+            this.form.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.form.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.form.Location = new System.Drawing.Point(350, 250);
+            this.form.Name = "form";
+            this.form.Size = new System.Drawing.Size(642, 159);
+            this.form.TabIndex = 84;
+            this.form.Text = "The file\'s format need to be as following:\r\nbuilding_1, roomNum_1, bill_1,\r\nbuild" +
+    "ing_2, roomNum_2, bill_2,\r\nbuilding_3, roomNum_3, bill_3, ...";
+            // 
+            // AddStudentsButton
+            // 
+            this.AddStudentsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddStudentsButton.Location = new System.Drawing.Point(504, 477);
+            this.AddStudentsButton.Name = "AddStudentsButton";
+            this.AddStudentsButton.Size = new System.Drawing.Size(337, 45);
+            this.AddStudentsButton.TabIndex = 87;
+            this.AddStudentsButton.Text = "Add monthly bills";
+            this.AddStudentsButton.UseVisualStyleBackColor = true;
+            this.AddStudentsButton.Click += new System.EventHandler(this.AddStudentsButton_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(334, 114);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 85;
+            this.pictureBox2.TabStop = false;
+            // 
+            // filepath
+            // 
+            this.filepath.AcceptsTab = true;
+            this.filepath.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.filepath.BackColor = System.Drawing.SystemColors.Window;
+            this.filepath.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.filepath.ForeColor = System.Drawing.SystemColors.Window;
+            this.filepath.Location = new System.Drawing.Point(332, 112);
+            this.filepath.Name = "filepath";
+            this.filepath.Size = new System.Drawing.Size(670, 44);
+            this.filepath.TabIndex = 86;
+            this.filepath.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.filepath.WordWrap = false;
             // 
             // AddBills
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1034, 661);
+            this.Controls.Add(this.form);
+            this.Controls.Add(this.AddStudentsButton);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.filepath);
             this.Controls.Add(this.RemoveUserPic);
             this.Controls.Add(this.AddUsersPic);
             this.Controls.Add(this.BuildingsPic);
@@ -241,6 +303,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BigLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HomePic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -262,5 +325,9 @@
         private System.Windows.Forms.LinkLabel LogOut;
         private System.Windows.Forms.Label Information;
         private System.Windows.Forms.PictureBox HomePic;
+        private System.Windows.Forms.Label form;
+        private System.Windows.Forms.Button AddStudentsButton;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox filepath;
     }
 }

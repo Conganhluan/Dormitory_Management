@@ -25,7 +25,6 @@ namespace DormitoryManagment
                 
                 Program.adapter = new MySqlDataAdapter(sql, tableConn);
                 Program.adapter.Fill(dt);
-                return dt;
             }
             catch (Exception e)
             {

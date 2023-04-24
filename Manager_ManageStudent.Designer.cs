@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageStudent));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.RemoveUserPic = new System.Windows.Forms.PictureBox();
             this.AddUsersPic = new System.Windows.Forms.PictureBox();
             this.BuildingsPic = new System.Windows.Forms.PictureBox();
@@ -43,6 +46,14 @@
             this.LogOut = new System.Windows.Forms.LinkLabel();
             this.Information = new System.Windows.Forms.Label();
             this.HomePic = new System.Windows.Forms.PictureBox();
+            this.Table = new System.Windows.Forms.DataGridView();
+            this.Delete = new System.Windows.Forms.Button();
+            this.Add = new System.Windows.Forms.Button();
+            this.NameBox = new System.Windows.Forms.GroupBox();
+            this.applyButton = new System.Windows.Forms.Button();
+            this.Value = new System.Windows.Forms.RichTextBox();
+            this.Key = new System.Windows.Forms.ComboBox();
+            this.Save = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.RemoveUserPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AddUsersPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BuildingsPic)).BeginInit();
@@ -50,6 +61,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BigLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HomePic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Table)).BeginInit();
+            this.NameBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // RemoveUserPic
@@ -210,12 +223,144 @@
             this.HomePic.TabIndex = 70;
             this.HomePic.TabStop = false;
             // 
+            // Table
+            // 
+            this.Table.AllowUserToAddRows = false;
+            this.Table.AllowUserToDeleteRows = false;
+            this.Table.AllowUserToResizeColumns = false;
+            this.Table.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Table.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.Table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.Table.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Table.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Table.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Table.Location = new System.Drawing.Point(327, 95);
+            this.Table.Name = "Table";
+            this.Table.ReadOnly = true;
+            this.Table.RowHeadersVisible = false;
+            this.Table.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.Table.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Table.Size = new System.Drawing.Size(680, 308);
+            this.Table.TabIndex = 86;
+            // 
+            // Delete
+            // 
+            this.Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Delete.Location = new System.Drawing.Point(837, 458);
+            this.Delete.Name = "Delete";
+            this.Delete.Size = new System.Drawing.Size(170, 45);
+            this.Delete.TabIndex = 87;
+            this.Delete.Text = "Delete";
+            this.Delete.UseVisualStyleBackColor = true;
+            // 
+            // Add
+            // 
+            this.Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Add.Location = new System.Drawing.Point(837, 409);
+            this.Add.Name = "Add";
+            this.Add.Size = new System.Drawing.Size(170, 45);
+            this.Add.TabIndex = 88;
+            this.Add.Text = "Add";
+            this.Add.UseVisualStyleBackColor = true;
+            // 
+            // NameBox
+            // 
+            this.NameBox.Controls.Add(this.applyButton);
+            this.NameBox.Controls.Add(this.Value);
+            this.NameBox.Controls.Add(this.Key);
+            this.NameBox.Location = new System.Drawing.Point(327, 422);
+            this.NameBox.Name = "NameBox";
+            this.NameBox.Size = new System.Drawing.Size(479, 123);
+            this.NameBox.TabIndex = 89;
+            this.NameBox.TabStop = false;
+            this.NameBox.Text = "Filter";
+            // 
+            // applyButton
+            // 
+            this.applyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.applyButton.Location = new System.Drawing.Point(347, 47);
+            this.applyButton.Name = "applyButton";
+            this.applyButton.Size = new System.Drawing.Size(115, 41);
+            this.applyButton.TabIndex = 1;
+            this.applyButton.Text = "Apply";
+            this.applyButton.UseVisualStyleBackColor = true;
+            // 
+            // Value
+            // 
+            this.Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Value.Location = new System.Drawing.Point(6, 71);
+            this.Value.MaxLength = 15;
+            this.Value.Multiline = false;
+            this.Value.Name = "Value";
+            this.Value.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Value.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.Value.Size = new System.Drawing.Size(322, 41);
+            this.Value.TabIndex = 3;
+            this.Value.Text = "";
+            // 
+            // Key
+            // 
+            this.Key.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Key.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Key.FormattingEnabled = true;
+            this.Key.Items.AddRange(new object[] {
+            "None",
+            "Gender",
+            "Building name",
+            "Room number",
+            "Name",
+            "Email",
+            "School",
+            "Student ID",
+            "Vehicle plate number",
+            "citizen ID",
+            "Date of birth",
+            "Phone number",
+            "Home address"});
+            this.Key.Location = new System.Drawing.Point(6, 19);
+            this.Key.Name = "Key";
+            this.Key.Size = new System.Drawing.Size(322, 41);
+            this.Key.TabIndex = 0;
+            // 
+            // Save
+            // 
+            this.Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Save.Location = new System.Drawing.Point(837, 511);
+            this.Save.Name = "Save";
+            this.Save.Size = new System.Drawing.Size(170, 45);
+            this.Save.TabIndex = 90;
+            this.Save.Text = "Save";
+            this.Save.UseVisualStyleBackColor = true;
+            // 
             // ManageStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1034, 661);
+            this.Controls.Add(this.Save);
+            this.Controls.Add(this.NameBox);
+            this.Controls.Add(this.Add);
+            this.Controls.Add(this.Table);
             this.Controls.Add(this.RemoveUserPic);
+            this.Controls.Add(this.Delete);
             this.Controls.Add(this.AddUsersPic);
             this.Controls.Add(this.BuildingsPic);
             this.Controls.Add(this.BuildingPic);
@@ -241,6 +386,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BigLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HomePic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Table)).EndInit();
+            this.NameBox.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -262,5 +409,13 @@
         private System.Windows.Forms.LinkLabel LogOut;
         private System.Windows.Forms.Label Information;
         private System.Windows.Forms.PictureBox HomePic;
+        private System.Windows.Forms.DataGridView Table;
+        private System.Windows.Forms.Button Delete;
+        private System.Windows.Forms.Button Add;
+        private System.Windows.Forms.GroupBox NameBox;
+        private System.Windows.Forms.Button applyButton;
+        private System.Windows.Forms.RichTextBox Value;
+        private System.Windows.Forms.ComboBox Key;
+        private System.Windows.Forms.Button Save;
     }
 }
