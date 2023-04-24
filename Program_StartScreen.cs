@@ -68,7 +68,7 @@ namespace DormitoryManagment
             }
             else
             {
-                if (role == "") { MessageBox.Show("Cannot specify the role for this user!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                if (role == null) { MessageBox.Show("Cannot specify the role for this user!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
                 else if (onlineStatus) { MessageBox.Show("You can't login into 1 account many times simultaneously", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
                 else
                 {
