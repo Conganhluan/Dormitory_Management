@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageStudent));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.RemoveUserPic = new System.Windows.Forms.PictureBox();
             this.AddUsersPic = new System.Windows.Forms.PictureBox();
             this.BuildingsPic = new System.Windows.Forms.PictureBox();
@@ -48,12 +48,13 @@
             this.HomePic = new System.Windows.Forms.PictureBox();
             this.Table = new System.Windows.Forms.DataGridView();
             this.Delete = new System.Windows.Forms.Button();
-            this.Add = new System.Windows.Forms.Button();
             this.NameBox = new System.Windows.Forms.GroupBox();
             this.applyButton = new System.Windows.Forms.Button();
             this.Value = new System.Windows.Forms.RichTextBox();
             this.Key = new System.Windows.Forms.ComboBox();
             this.Save = new System.Windows.Forms.Button();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.PageTotal = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.RemoveUserPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AddUsersPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BuildingsPic)).BeginInit();
@@ -63,6 +64,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.HomePic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Table)).BeginInit();
             this.NameBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // RemoveUserPic
@@ -123,6 +125,7 @@
             this.AddBills.Text = "Add a list\r\nof new bills";
             this.AddBills.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.AddBills.UseVisualStyleBackColor = true;
+            this.AddBills.Click += new System.EventHandler(this.AddBills_Click);
             // 
             // ReviewRequests
             // 
@@ -134,6 +137,7 @@
             this.ReviewRequests.Text = "Review pay\r\nrequests";
             this.ReviewRequests.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ReviewRequests.UseVisualStyleBackColor = true;
+            this.ReviewRequests.Click += new System.EventHandler(this.ReviewRequests_Click);
             // 
             // ManageStudents
             // 
@@ -156,6 +160,7 @@
             this.AddStudents.Text = "Add a list\r\nof students";
             this.AddStudents.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.AddStudents.UseVisualStyleBackColor = true;
+            this.AddStudents.Click += new System.EventHandler(this.AddStudents_Click);
             // 
             // pictureBox1
             // 
@@ -200,6 +205,7 @@
             this.LogOut.TabIndex = 72;
             this.LogOut.TabStop = true;
             this.LogOut.Text = "Log out";
+            this.LogOut.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LogOut_LinkClicked);
             // 
             // Information
             // 
@@ -222,6 +228,7 @@
             this.HomePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.HomePic.TabIndex = 70;
             this.HomePic.TabStop = false;
+            this.HomePic.Click += new System.EventHandler(this.HomePic_Click);
             // 
             // Table
             // 
@@ -229,32 +236,31 @@
             this.Table.AllowUserToDeleteRows = false;
             this.Table.AllowUserToResizeColumns = false;
             this.Table.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Table.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Table.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.Table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.Table.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Table.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Table.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Table.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Table.DefaultCellStyle = dataGridViewCellStyle6;
             this.Table.Location = new System.Drawing.Point(327, 95);
             this.Table.Name = "Table";
-            this.Table.ReadOnly = true;
             this.Table.RowHeadersVisible = false;
             this.Table.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Table.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -264,34 +270,25 @@
             // Delete
             // 
             this.Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Delete.Location = new System.Drawing.Point(837, 458);
+            this.Delete.Location = new System.Drawing.Point(837, 447);
             this.Delete.Name = "Delete";
             this.Delete.Size = new System.Drawing.Size(170, 45);
             this.Delete.TabIndex = 87;
             this.Delete.Text = "Delete";
             this.Delete.UseVisualStyleBackColor = true;
-            // 
-            // Add
-            // 
-            this.Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Add.Location = new System.Drawing.Point(837, 409);
-            this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(170, 45);
-            this.Add.TabIndex = 88;
-            this.Add.Text = "Add";
-            this.Add.UseVisualStyleBackColor = true;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
             // 
             // NameBox
             // 
             this.NameBox.Controls.Add(this.applyButton);
             this.NameBox.Controls.Add(this.Value);
             this.NameBox.Controls.Add(this.Key);
-            this.NameBox.Location = new System.Drawing.Point(327, 422);
+            this.NameBox.Location = new System.Drawing.Point(327, 447);
             this.NameBox.Name = "NameBox";
             this.NameBox.Size = new System.Drawing.Size(479, 123);
             this.NameBox.TabIndex = 89;
             this.NameBox.TabStop = false;
-            this.NameBox.Text = "Filter";
+            this.NameBox.Text = "Find by fields";
             // 
             // applyButton
             // 
@@ -302,6 +299,7 @@
             this.applyButton.TabIndex = 1;
             this.applyButton.Text = "Apply";
             this.applyButton.UseVisualStyleBackColor = true;
+            this.applyButton.Click += new System.EventHandler(this.applyButton_Click);
             // 
             // Value
             // 
@@ -331,7 +329,7 @@
             "School",
             "Student ID",
             "Vehicle plate number",
-            "citizen ID",
+            "Citizen ID",
             "Date of birth",
             "Phone number",
             "Home address"});
@@ -343,21 +341,53 @@
             // Save
             // 
             this.Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Save.Location = new System.Drawing.Point(837, 511);
+            this.Save.Location = new System.Drawing.Point(837, 525);
             this.Save.Name = "Save";
             this.Save.Size = new System.Drawing.Size(170, 45);
             this.Save.TabIndex = 90;
             this.Save.Text = "Save";
             this.Save.UseVisualStyleBackColor = true;
+            this.Save.Click += new System.EventHandler(this.Save_Click);
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown1.Location = new System.Drawing.Point(598, 408);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(62, 29);
+            this.numericUpDown1.TabIndex = 91;
+            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            // 
+            // PageTotal
+            // 
+            this.PageTotal.AutoSize = true;
+            this.PageTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PageTotal.Location = new System.Drawing.Point(661, 411);
+            this.PageTotal.Name = "PageTotal";
+            this.PageTotal.Size = new System.Drawing.Size(103, 24);
+            this.PageTotal.TabIndex = 92;
+            this.PageTotal.Text = "/200 Pages";
             // 
             // ManageStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1034, 661);
+            this.Controls.Add(this.PageTotal);
+            this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.Save);
             this.Controls.Add(this.NameBox);
-            this.Controls.Add(this.Add);
             this.Controls.Add(this.Table);
             this.Controls.Add(this.RemoveUserPic);
             this.Controls.Add(this.Delete);
@@ -388,6 +418,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.HomePic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Table)).EndInit();
             this.NameBox.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -411,11 +442,12 @@
         private System.Windows.Forms.PictureBox HomePic;
         private System.Windows.Forms.DataGridView Table;
         private System.Windows.Forms.Button Delete;
-        private System.Windows.Forms.Button Add;
         private System.Windows.Forms.GroupBox NameBox;
         private System.Windows.Forms.Button applyButton;
         private System.Windows.Forms.RichTextBox Value;
         private System.Windows.Forms.ComboBox Key;
         private System.Windows.Forms.Button Save;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label PageTotal;
     }
 }

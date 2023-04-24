@@ -151,13 +151,15 @@ namespace DormitoryManagment
                             reader = cmd.ExecuteReader();
                             if (reader.HasRows)
                             {
-                                reader.Read();
-                                roomNum = reader.GetString(0);
-                                building = chosenBuilding;
-                                isFound = true;
-                                currentStaying = reader.GetInt32(1);
+                                while (reader.Read())
+                                {
+                                    roomNum = reader.GetString(0);
+                                    building = chosenBuilding;
+                                    isFound = true;
+                                    currentStaying = reader.GetInt32(1);
+                                }
+                                reader.Close();
                             }
-                            reader.Close();
                             if (isFound) break;
                         }
                         if (isFound) break;
@@ -188,18 +190,23 @@ namespace DormitoryManagment
                 return true;
             }
 
-            public void RemoveStudent(string studentID)
+            public void RemoveStudent(string building, string roomNum)
             {
-                // Remove student whose studentID is given out of table Students
+                // Decrease the Current staying of the room before remove the student
+                int currentStaying = 0;
                 conn.Open();
-                string sqlQuerry = " 'DELETE FROM Students WHERE Student ID = ' " + studentID;
-                MySqlCommand cmd = new MySqlCommand(sqlQuerry, conn);
-                int success = cmd.ExecuteNonQuery();
-                conn.Close();
-                if (success == 0)
+                string sql = "SELECT `Current staying` FROM Rooms WHERE Building = '" + building + "' AND Number = '" + roomNum + "'";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
                 {
-                   MessageBox.Show("Non-exist student!","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    currentStaying = reader.GetInt32(0);
                 }
+                reader.Close();
+                sql = "UPDATE Rooms SET `Current staying` = " + (currentStaying-1).ToString() + " WHERE Building = '" + building + "' AND Number = '" + roomNum + "'";
+                cmd = new MySqlCommand(sql, conn);
+                cmd.ExecuteNonQuery();
+                reader.Close();
             }
 
             public void AddBills(string filepath)
