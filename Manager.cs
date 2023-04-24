@@ -43,7 +43,7 @@ namespace DormitoryManagment
                 conn.Close();
             }
 
-            public void AddStudentList(string filepath, ref ProgressBar progressBar, ref PictureBox pictureBox)
+            public void AddStudentList(string filepath, ref ProgressBar progressBar, ref Label label)
             {
                 /* You should see the file format in advance on the Figma - Interface diagram
                  * Use AddStudent() below to support this method
@@ -52,7 +52,7 @@ namespace DormitoryManagment
                 try
                 {
                     progressBar.Visible = true;
-                    pictureBox.Visible = true;
+                    label.Visible = false;
                     progressBar.Value = 0;
                     for (int i=0;i<10;i++)
                     {
@@ -60,9 +60,9 @@ namespace DormitoryManagment
                         progressBar.Value += 10;
                     }
                     progressBar.Visible = false;
-                    pictureBox.Visible = false;
+                    label.Visible = true;
                     /*progressBar.Visible = true;
-                    pictureBox.Visible = true;
+                    label.Visible = false;
                     progressBar.Value = 0;
                     int lineCount = File.ReadLines(filepath).Count();
                     double step = 100 / (float)lineCount;
@@ -90,7 +90,7 @@ namespace DormitoryManagment
                     }
                     MessageBox.Show("Successfully add all students to dorm", "Add successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     progressBar.Visible = false;
-                    pictureBox.Visible = false;
+                    label.Visible = true;
                     writer.Close();
                     reader.Close();*/
                 }

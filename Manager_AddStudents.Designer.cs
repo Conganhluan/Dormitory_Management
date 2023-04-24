@@ -48,7 +48,6 @@
             this.Information = new System.Windows.Forms.Label();
             this.HomePic = new System.Windows.Forms.PictureBox();
             this.ProgressBar = new System.Windows.Forms.ProgressBar();
-            this.Blinding = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RemoveUserPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AddUsersPic)).BeginInit();
@@ -57,7 +56,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BigLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HomePic)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Blinding)).BeginInit();
             this.SuspendLayout();
             // 
             // AddStudentsButton
@@ -276,26 +274,12 @@
             this.ProgressBar.TabIndex = 89;
             this.ProgressBar.Visible = false;
             // 
-            // Blinding
-            // 
-            this.Blinding.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.Blinding.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Blinding.ErrorImage = null;
-            this.Blinding.InitialImage = null;
-            this.Blinding.Location = new System.Drawing.Point(334, 215);
-            this.Blinding.Name = "Blinding";
-            this.Blinding.Size = new System.Drawing.Size(668, 249);
-            this.Blinding.TabIndex = 90;
-            this.Blinding.TabStop = false;
-            this.Blinding.Visible = false;
-            // 
             // AddStudents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1034, 661);
             this.Controls.Add(this.ProgressBar);
-            this.Controls.Add(this.Blinding);
             this.Controls.Add(this.RemoveUserPic);
             this.Controls.Add(this.AddUsersPic);
             this.Controls.Add(this.BuildingsPic);
@@ -327,7 +311,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BigLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HomePic)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Blinding)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -353,6 +336,5 @@
         private System.Windows.Forms.Label Information;
         private System.Windows.Forms.PictureBox HomePic;
         public System.Windows.Forms.ProgressBar ProgressBar;
-        private System.Windows.Forms.PictureBox Blinding;
     }
 }

@@ -32,7 +32,7 @@ namespace DormitoryManagment
 
         private void AddStudentsButton_Click(object sender, EventArgs e)
         {
-            Program.manager.AddStudentList(filepath.Text, ref ProgressBar, ref Blinding);
+            Program.manager.AddStudentList(filepath.Text, ref ProgressBar, ref form);
         }
 
         private void ManageStudents_Click(object sender, EventArgs e)
