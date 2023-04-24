@@ -57,13 +57,33 @@ namespace DormitoryManagment
 
         private void SaveChanges(object sender, EventArgs e)
         {
+            DataTable oldDT = DataBase.GetDataSource("SELECT * FROM Buildings");
             foreach (DataGridViewRow row in Table.Rows)
             {
-                if (row.Cells[1].Value.ToString() != "Male" && row.Cells[1].Value.ToString() != "Female")
-                {
-                    MessageBox.Show("The gender of students staying at the building " + row.Cells[0].Value.ToString() + " is invalid!\n" +
-                                    "It is " + row.Cells[1].Value.ToString() + ", neither Male nor Female.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
+               if (row.Cells[1].Value.ToString() != oldDT.Rows[row.Index][1].ToString())
+                {   
+                    string building = row.Cells[0].Value.ToString(), gender = row.Cells[1].Value.ToString();
+                    if (gender != "Male" && gender != "Female")
+                    {
+                        MessageBox.Show("The gender of students staying at the building " + building + " is invalid!\n" +
+                                        "It is " + gender + ", neither Male nor Female.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    Program.conn.Open();
+                    string sql = "SELECT * FROM Students WHERE `Building name` = '" + building + "'";
+                    MySqlCommand cmd = new MySqlCommand(sql, Program.conn);
+                    MySqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        MessageBox.Show("There are students staying at this building, you can't change its gender!", "Warning",
+                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        UpdateTable();
+                        reader.Close();
+                        Program.conn.Close();
+                        return;
+                    }
+                    reader.Close();
+                    Program.conn.Close();
                 }
             }
             DataBase.SaveChanges(((DataView)Table.DataSource).Table.Copy());
@@ -103,6 +123,31 @@ namespace DormitoryManagment
         {
             DMForm nextForm = new RemoveUsers();
             Navigate(ref nextForm);
+        }
+
+        private void Delete_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in Table.SelectedRows)
+            {
+                string building = row.Cells[0].Value.ToString();
+                Program.conn.Open();
+                string sql = "SELECT * FROM Students WHERE `Building name` = '" + building + "'";
+                MySqlCommand cmd = new MySqlCommand(sql, Program.conn);
+                MySqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    MessageBox.Show("There are students staying at this building, you can't delete it!", "Warning",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    UpdateTable();
+                    reader.Close();
+                    Program.conn.Close();
+                    return;
+                }
+                Table.Rows.Remove(row);
+                DataBase.SaveChanges(((DataView)Table.DataSource).Table.Copy());
+                Program.conn.Close();
+            } 
+            
         }
     }
 }

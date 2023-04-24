@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageStudent));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.RemoveUserPic = new System.Windows.Forms.PictureBox();
             this.AddUsersPic = new System.Windows.Forms.PictureBox();
             this.BuildingsPic = new System.Windows.Forms.PictureBox();
@@ -55,7 +55,6 @@
             this.Save = new System.Windows.Forms.Button();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.PageTotal = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.RemoveUserPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AddUsersPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BuildingsPic)).BeginInit();
@@ -237,29 +236,29 @@
             this.Table.AllowUserToDeleteRows = false;
             this.Table.AllowUserToResizeColumns = false;
             this.Table.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Table.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Table.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.Table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.Table.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Table.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Table.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Table.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Table.DefaultCellStyle = dataGridViewCellStyle3;
             this.Table.Location = new System.Drawing.Point(327, 95);
             this.Table.Name = "Table";
             this.Table.RowHeadersVisible = false;
@@ -271,7 +270,7 @@
             // Delete
             // 
             this.Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Delete.Location = new System.Drawing.Point(837, 470);
+            this.Delete.Location = new System.Drawing.Point(837, 449);
             this.Delete.Name = "Delete";
             this.Delete.Size = new System.Drawing.Size(170, 45);
             this.Delete.TabIndex = 87;
@@ -284,7 +283,7 @@
             this.NameBox.Controls.Add(this.applyButton);
             this.NameBox.Controls.Add(this.Value);
             this.NameBox.Controls.Add(this.Key);
-            this.NameBox.Location = new System.Drawing.Point(327, 470);
+            this.NameBox.Location = new System.Drawing.Point(327, 449);
             this.NameBox.Name = "NameBox";
             this.NameBox.Size = new System.Drawing.Size(479, 108);
             this.NameBox.TabIndex = 89;
@@ -342,7 +341,7 @@
             // Save
             // 
             this.Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Save.Location = new System.Drawing.Point(837, 521);
+            this.Save.Location = new System.Drawing.Point(837, 512);
             this.Save.Name = "Save";
             this.Save.Size = new System.Drawing.Size(170, 45);
             this.Save.TabIndex = 90;
@@ -353,7 +352,7 @@
             // numericUpDown1
             // 
             this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(326, 408);
+            this.numericUpDown1.Location = new System.Drawing.Point(579, 414);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             1,
             0,
@@ -374,29 +373,17 @@
             // 
             this.PageTotal.AutoSize = true;
             this.PageTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PageTotal.Location = new System.Drawing.Point(389, 411);
+            this.PageTotal.Location = new System.Drawing.Point(642, 417);
             this.PageTotal.Name = "PageTotal";
             this.PageTotal.Size = new System.Drawing.Size(103, 24);
             this.PageTotal.TabIndex = 92;
             this.PageTotal.Text = "/200 Pages";
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(589, 419);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(418, 45);
-            this.button1.TabIndex = 93;
-            this.button1.Text = "Print wrong gender student";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ManageStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1034, 661);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.PageTotal);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.Save);
@@ -462,6 +449,5 @@
         private System.Windows.Forms.Button Save;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label PageTotal;
-        private System.Windows.Forms.Button button1;
     }
 }

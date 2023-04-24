@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReviewRequests));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.RemoveUserPic = new System.Windows.Forms.PictureBox();
             this.AddUsersPic = new System.Windows.Forms.PictureBox();
             this.BuildingsPic = new System.Windows.Forms.PictureBox();
@@ -43,6 +46,9 @@
             this.LogOut = new System.Windows.Forms.LinkLabel();
             this.Information = new System.Windows.Forms.Label();
             this.HomePic = new System.Windows.Forms.PictureBox();
+            this.Table = new System.Windows.Forms.DataGridView();
+            this.Delete = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.RemoveUserPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AddUsersPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BuildingsPic)).BeginInit();
@@ -50,6 +56,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BigLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HomePic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Table)).BeginInit();
             this.SuspendLayout();
             // 
             // RemoveUserPic
@@ -110,6 +117,7 @@
             this.AddBills.Text = "Add a list\r\nof new bills";
             this.AddBills.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.AddBills.UseVisualStyleBackColor = true;
+            this.AddBills.Click += new System.EventHandler(this.AddBills_Click);
             // 
             // button1
             // 
@@ -132,6 +140,7 @@
             this.ManageStudents.Text = "Students\r\nManage";
             this.ManageStudents.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ManageStudents.UseVisualStyleBackColor = true;
+            this.ManageStudents.Click += new System.EventHandler(this.ManageStudents_Click);
             // 
             // AddStudents
             // 
@@ -143,6 +152,7 @@
             this.AddStudents.Text = "Add a list\r\nof students";
             this.AddStudents.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.AddStudents.UseVisualStyleBackColor = true;
+            this.AddStudents.Click += new System.EventHandler(this.AddStudents_Click);
             // 
             // pictureBox1
             // 
@@ -187,6 +197,7 @@
             this.LogOut.TabIndex = 72;
             this.LogOut.TabStop = true;
             this.LogOut.Text = "Log out";
+            this.LogOut.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LogOut_LinkClicked);
             // 
             // Information
             // 
@@ -209,12 +220,76 @@
             this.HomePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.HomePic.TabIndex = 70;
             this.HomePic.TabStop = false;
+            this.HomePic.Click += new System.EventHandler(this.HomePic_Click);
+            // 
+            // Table
+            // 
+            this.Table.AllowUserToAddRows = false;
+            this.Table.AllowUserToDeleteRows = false;
+            this.Table.AllowUserToResizeColumns = false;
+            this.Table.AllowUserToResizeRows = false;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Table.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.Table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.Table.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Table.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Table.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Table.Location = new System.Drawing.Point(327, 98);
+            this.Table.Name = "Table";
+            this.Table.RowHeadersVisible = false;
+            this.Table.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.Table.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.Table.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Table.Size = new System.Drawing.Size(675, 418);
+            this.Table.TabIndex = 87;
+            // 
+            // Delete
+            // 
+            this.Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Delete.Location = new System.Drawing.Point(327, 522);
+            this.Delete.Name = "Delete";
+            this.Delete.Size = new System.Drawing.Size(320, 45);
+            this.Delete.TabIndex = 88;
+            this.Delete.Text = "I have reviewed all";
+            this.Delete.UseVisualStyleBackColor = true;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(682, 522);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(320, 45);
+            this.button2.TabIndex = 89;
+            this.button2.Text = "Print late bills";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // ReviewRequests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1034, 661);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.Delete);
+            this.Controls.Add(this.Table);
             this.Controls.Add(this.RemoveUserPic);
             this.Controls.Add(this.AddUsersPic);
             this.Controls.Add(this.BuildingsPic);
@@ -241,6 +316,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BigLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HomePic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Table)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -262,5 +338,8 @@
         private System.Windows.Forms.LinkLabel LogOut;
         private System.Windows.Forms.Label Information;
         private System.Windows.Forms.PictureBox HomePic;
+        private System.Windows.Forms.DataGridView Table;
+        private System.Windows.Forms.Button Delete;
+        private System.Windows.Forms.Button button2;
     }
 }

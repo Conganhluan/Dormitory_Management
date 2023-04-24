@@ -47,5 +47,11 @@ namespace DormitoryManagment
         {
             // Do nothing here
         }
+
+        private void ReviewRequests_Click(object sender, EventArgs e)
+        {
+            DMForm nextForm = new ReviewRequests();
+            Navigate(ref nextForm);
+        }
     }
 }

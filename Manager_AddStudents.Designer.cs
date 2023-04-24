@@ -174,6 +174,7 @@
             this.ReviewRequests.Text = "Review pay\r\nrequests";
             this.ReviewRequests.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ReviewRequests.UseVisualStyleBackColor = true;
+            this.ReviewRequests.Click += new System.EventHandler(this.ReviewRequests_Click);
             // 
             // ManageStudents
             // 

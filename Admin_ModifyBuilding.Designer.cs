@@ -48,6 +48,7 @@
             this.applyButton = new System.Windows.Forms.Button();
             this.NameInput = new System.Windows.Forms.RichTextBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.Delete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Table)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HomePic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Background)).BeginInit();
@@ -88,7 +89,8 @@
             this.Table.Name = "Table";
             this.Table.RowHeadersVisible = false;
             this.Table.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Table.Size = new System.Drawing.Size(321, 466);
+            this.Table.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Table.Size = new System.Drawing.Size(321, 462);
             this.Table.TabIndex = 0;
             // 
             // Crucial
@@ -227,7 +229,7 @@
             this.NameBox.Controls.Add(this.applyButton);
             this.NameBox.Controls.Add(this.NameInput);
             this.NameBox.Controls.Add(this.comboBox1);
-            this.NameBox.Location = new System.Drawing.Point(716, 188);
+            this.NameBox.Location = new System.Drawing.Point(716, 166);
             this.NameBox.Name = "NameBox";
             this.NameBox.Size = new System.Drawing.Size(262, 123);
             this.NameBox.TabIndex = 45;
@@ -262,7 +264,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(716, 414);
+            this.button2.Location = new System.Drawing.Point(716, 461);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(262, 85);
             this.button2.TabIndex = 4;
@@ -270,11 +272,23 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.SaveChanges);
             // 
+            // Delete
+            // 
+            this.Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Delete.Location = new System.Drawing.Point(716, 335);
+            this.Delete.Name = "Delete";
+            this.Delete.Size = new System.Drawing.Size(262, 85);
+            this.Delete.TabIndex = 46;
+            this.Delete.Text = "Delete buildling";
+            this.Delete.UseVisualStyleBackColor = true;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
+            // 
             // ModifyBuilding
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1034, 661);
+            this.Controls.Add(this.Delete);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.NameBox);
             this.Controls.Add(this.AddUsers);
@@ -322,5 +336,6 @@
         private System.Windows.Forms.RichTextBox NameInput;
         private System.Windows.Forms.Button applyButton;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Delete;
     }
 }

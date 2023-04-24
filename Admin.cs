@@ -61,7 +61,7 @@ namespace DormitoryManagment
                         if (i < 10) { numberRoom = "0" + i.ToString(); }
                         else { numberRoom = i.ToString(); }
                         conn.Open();
-                        querry = "INSERT INTO Rooms VALUES('" + name + "', '" + numberFloor + numberRoom + "', " + typeRoom + ", 0, now(), '')";
+                        querry = "INSERT INTO Rooms VALUES('" + name + "', '" + numberFloor + numberRoom + "', " + typeRoom + ", 0, 0, now(), '')";
                         cmd.CommandText = querry;
                         cmd.ExecuteNonQuery();
                         conn.Close();

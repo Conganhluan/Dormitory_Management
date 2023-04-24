@@ -101,10 +101,5 @@ namespace DormitoryManagment
             page = Convert.ToInt32(numericUpDown1.Value);
             UpdateTable();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Program.manager.PrintWrongStudents();
-        }
     }
 }

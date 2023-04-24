@@ -56,7 +56,7 @@ namespace DormitoryManagment
                     double step = 100 / (float)lineCount;
                     double value = 0;
                     StreamReader reader = new StreamReader(filepath);
-                    StreamWriter writer = new StreamWriter("Student Users.csv", false);
+                    StreamWriter writer = new StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Student Users.csv", false);
                     string newStudent = null;
                     List<string> newStudentAttributes = null;
                     while ((newStudent = reader.ReadLine()) != null)
@@ -247,9 +247,10 @@ namespace DormitoryManagment
                  *     building_2, roomNum_2, bill_2, lateTime_2,...
                  * the data will be from the table Rooms. */
 
-                StreamWriter streamWriter = new StreamWriter("Late bills.csv", false);
+                StreamWriter streamWriter = new StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Late bills.csv", false);
+                streamWriter.WriteLine("Building, Room number, Bill, Date of bill");
                 conn.Open();
-                string sql = "SELECT `Building`, `Number`, `Bill`, `Last bill Time` FROM Rooms";
+                string sql = "SELECT `Building`, `Number`, `Bill`, `Last bill Time` FROM Rooms WHERE Bill > 0";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 MySqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
@@ -271,18 +272,20 @@ namespace DormitoryManagment
                 conn.Open();
                 string sql = null;
                 MySqlCommand cmd = null;
+                List<DataRow> deletedRows = new List<DataRow>();
                 foreach (DataRow row in billList.Rows)
                 {
                     if (Convert.ToBoolean(row["isPending"]) == false)
                     {
                         string request = row["Request"].ToString();
-                        string building = request.Substring(0, 3), room = request.Substring(4, 4);
+                        string building = request.Split(' ').First(), room = request.Split(' ').Last();
                         sql = "UPDATE Rooms SET Bill = 0, Reviewer = '" + Name + "' WHERE Building = '" + building + "' AND Number = '" + room + "'";
                         cmd = new MySqlCommand(sql, conn);
                         cmd.ExecuteNonQuery();
-                        row.Delete();
+                        deletedRows.Add(row);
                     }
                 }
+                foreach (DataRow row in deletedRows) billList.Rows.Remove(row);
                 sql = "DELETE FROM Requests WHERE 1";
                 cmd = new MySqlCommand(sql, conn);
                 cmd.ExecuteNonQuery();
@@ -323,7 +326,7 @@ namespace DormitoryManagment
                 }
 
                 // Write headers
-                StreamWriter streamWriter = new StreamWriter("Students staying at wrong building.csv", false);
+                StreamWriter streamWriter = new StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Students staying at wrong building.csv", false);
                 streamWriter.WriteLine("Name, Student ID, Building name, Room number, Student's gender");
 
                 // Write records
