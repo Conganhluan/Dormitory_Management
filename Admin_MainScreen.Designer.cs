@@ -40,10 +40,18 @@
             this.ModifyBuilding = new System.Windows.Forms.Button();
             this.AddBuilding = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.RemoveUserPic = new System.Windows.Forms.PictureBox();
+            this.AddUsersPic = new System.Windows.Forms.PictureBox();
+            this.BuildingsPic = new System.Windows.Forms.PictureBox();
+            this.BuildingPic = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.HomePic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Background)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BigLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RemoveUserPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AddUsersPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BuildingsPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BuildingPic)).BeginInit();
             this.SuspendLayout();
             // 
             // LogOut
@@ -173,11 +181,63 @@
             this.pictureBox1.TabIndex = 52;
             this.pictureBox1.TabStop = false;
             // 
+            // RemoveUserPic
+            // 
+            this.RemoveUserPic.BackColor = System.Drawing.SystemColors.Control;
+            this.RemoveUserPic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.RemoveUserPic.Image = ((System.Drawing.Image)(resources.GetObject("RemoveUserPic.Image")));
+            this.RemoveUserPic.Location = new System.Drawing.Point(24, 462);
+            this.RemoveUserPic.Name = "RemoveUserPic";
+            this.RemoveUserPic.Size = new System.Drawing.Size(72, 72);
+            this.RemoveUserPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.RemoveUserPic.TabIndex = 65;
+            this.RemoveUserPic.TabStop = false;
+            // 
+            // AddUsersPic
+            // 
+            this.AddUsersPic.BackColor = System.Drawing.SystemColors.Control;
+            this.AddUsersPic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.AddUsersPic.Image = ((System.Drawing.Image)(resources.GetObject("AddUsersPic.Image")));
+            this.AddUsersPic.Location = new System.Drawing.Point(24, 359);
+            this.AddUsersPic.Name = "AddUsersPic";
+            this.AddUsersPic.Size = new System.Drawing.Size(72, 72);
+            this.AddUsersPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.AddUsersPic.TabIndex = 64;
+            this.AddUsersPic.TabStop = false;
+            // 
+            // BuildingsPic
+            // 
+            this.BuildingsPic.BackColor = System.Drawing.SystemColors.Control;
+            this.BuildingsPic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BuildingsPic.Image = ((System.Drawing.Image)(resources.GetObject("BuildingsPic.Image")));
+            this.BuildingsPic.Location = new System.Drawing.Point(24, 250);
+            this.BuildingsPic.Name = "BuildingsPic";
+            this.BuildingsPic.Size = new System.Drawing.Size(72, 72);
+            this.BuildingsPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.BuildingsPic.TabIndex = 63;
+            this.BuildingsPic.TabStop = false;
+            // 
+            // BuildingPic
+            // 
+            this.BuildingPic.BackColor = System.Drawing.SystemColors.Control;
+            this.BuildingPic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BuildingPic.Image = ((System.Drawing.Image)(resources.GetObject("BuildingPic.Image")));
+            this.BuildingPic.Location = new System.Drawing.Point(24, 146);
+            this.BuildingPic.Name = "BuildingPic";
+            this.BuildingPic.Size = new System.Drawing.Size(72, 72);
+            this.BuildingPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.BuildingPic.TabIndex = 62;
+            this.BuildingPic.TabStop = false;
+            // 
             // AdminMainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1034, 661);
+            this.Controls.Add(this.RemoveUserPic);
+            this.Controls.Add(this.AddUsersPic);
+            this.Controls.Add(this.BuildingsPic);
+            this.Controls.Add(this.BuildingPic);
             this.Controls.Add(this.BigLogo);
             this.Controls.Add(this.Background);
             this.Controls.Add(this.Crucial);
@@ -199,6 +259,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.Background)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BigLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RemoveUserPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AddUsersPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BuildingsPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BuildingPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -216,5 +280,9 @@
         private System.Windows.Forms.Button ModifyBuilding;
         private System.Windows.Forms.Button AddBuilding;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox RemoveUserPic;
+        private System.Windows.Forms.PictureBox AddUsersPic;
+        private System.Windows.Forms.PictureBox BuildingsPic;
+        private System.Windows.Forms.PictureBox BuildingPic;
     }
 }

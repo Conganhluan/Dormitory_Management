@@ -32,14 +32,26 @@
             this.LogOut = new System.Windows.Forms.LinkLabel();
             this.Information = new System.Windows.Forms.Label();
             this.HomePic = new System.Windows.Forms.PictureBox();
-            this.Students = new System.Windows.Forms.Button();
-            this.Rooms = new System.Windows.Forms.Button();
-            this.Background = new System.Windows.Forms.PictureBox();
             this.Crucial = new System.Windows.Forms.Label();
             this.BigLogo = new System.Windows.Forms.PictureBox();
+            this.Background = new System.Windows.Forms.PictureBox();
+            this.AddUsers = new System.Windows.Forms.Button();
+            this.RemoveUsers = new System.Windows.Forms.Button();
+            this.ModifyBuilding = new System.Windows.Forms.Button();
+            this.AddBuilding = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.RemoveUserPic = new System.Windows.Forms.PictureBox();
+            this.AddUsersPic = new System.Windows.Forms.PictureBox();
+            this.BuildingsPic = new System.Windows.Forms.PictureBox();
+            this.BuildingPic = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.HomePic)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Background)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BigLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Background)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RemoveUserPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AddUsersPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BuildingsPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BuildingPic)).BeginInit();
             this.SuspendLayout();
             // 
             // LogOut
@@ -77,39 +89,6 @@
             this.HomePic.TabStop = false;
             this.HomePic.Click += new System.EventHandler(this.HomePic_Click);
             // 
-            // Students
-            // 
-            this.Students.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Students.Location = new System.Drawing.Point(12, 105);
-            this.Students.Name = "Students";
-            this.Students.Size = new System.Drawing.Size(141, 223);
-            this.Students.TabIndex = 27;
-            this.Students.Text = "Students\r\nmanage";
-            this.Students.UseVisualStyleBackColor = true;
-            this.Students.Click += new System.EventHandler(this.Students_Click);
-            // 
-            // Rooms
-            // 
-            this.Rooms.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Rooms.Location = new System.Drawing.Point(12, 335);
-            this.Rooms.Name = "Rooms";
-            this.Rooms.Size = new System.Drawing.Size(141, 223);
-            this.Rooms.TabIndex = 28;
-            this.Rooms.Text = "Bills\r\nmanage";
-            this.Rooms.UseVisualStyleBackColor = true;
-            this.Rooms.Click += new System.EventHandler(this.Rooms_Click);
-            // 
-            // Background
-            // 
-            this.Background.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Background.Image = ((System.Drawing.Image)(resources.GetObject("Background.Image")));
-            this.Background.Location = new System.Drawing.Point(159, 105);
-            this.Background.Name = "Background";
-            this.Background.Size = new System.Drawing.Size(863, 453);
-            this.Background.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Background.TabIndex = 30;
-            this.Background.TabStop = false;
-            // 
             // Crucial
             // 
             this.Crucial.AutoSize = true;
@@ -131,16 +110,138 @@
             this.BigLogo.TabIndex = 32;
             this.BigLogo.TabStop = false;
             // 
+            // Background
+            // 
+            this.Background.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Background.Image = ((System.Drawing.Image)(resources.GetObject("Background.Image")));
+            this.Background.Location = new System.Drawing.Point(315, 153);
+            this.Background.Name = "Background";
+            this.Background.Size = new System.Drawing.Size(707, 372);
+            this.Background.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Background.TabIndex = 53;
+            this.Background.TabStop = false;
+            // 
+            // AddUsers
+            // 
+            this.AddUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddUsers.Location = new System.Drawing.Point(12, 343);
+            this.AddUsers.Name = "AddUsers";
+            this.AddUsers.Size = new System.Drawing.Size(297, 98);
+            this.AddUsers.TabIndex = 57;
+            this.AddUsers.Text = "Add a list\r\nof new bills";
+            this.AddUsers.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.AddUsers.UseVisualStyleBackColor = true;
+            // 
+            // RemoveUsers
+            // 
+            this.RemoveUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RemoveUsers.Location = new System.Drawing.Point(12, 447);
+            this.RemoveUsers.Name = "RemoveUsers";
+            this.RemoveUsers.Size = new System.Drawing.Size(297, 98);
+            this.RemoveUsers.TabIndex = 56;
+            this.RemoveUsers.Text = "Review pay\r\nrequests";
+            this.RemoveUsers.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.RemoveUsers.UseVisualStyleBackColor = true;
+            // 
+            // ModifyBuilding
+            // 
+            this.ModifyBuilding.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ModifyBuilding.Location = new System.Drawing.Point(12, 235);
+            this.ModifyBuilding.Name = "ModifyBuilding";
+            this.ModifyBuilding.Size = new System.Drawing.Size(297, 98);
+            this.ModifyBuilding.TabIndex = 55;
+            this.ModifyBuilding.Text = "Students\r\nManage";
+            this.ModifyBuilding.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ModifyBuilding.UseVisualStyleBackColor = true;
+            // 
+            // AddBuilding
+            // 
+            this.AddBuilding.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddBuilding.Location = new System.Drawing.Point(12, 131);
+            this.AddBuilding.Name = "AddBuilding";
+            this.AddBuilding.Size = new System.Drawing.Size(297, 98);
+            this.AddBuilding.TabIndex = 54;
+            this.AddBuilding.Text = "Add a list\r\nof students";
+            this.AddBuilding.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.AddBuilding.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.ErrorImage = null;
+            this.pictureBox1.InitialImage = null;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 82);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1010, 496);
+            this.pictureBox1.TabIndex = 58;
+            this.pictureBox1.TabStop = false;
+            // 
+            // RemoveUserPic
+            // 
+            this.RemoveUserPic.BackColor = System.Drawing.SystemColors.Control;
+            this.RemoveUserPic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.RemoveUserPic.Image = ((System.Drawing.Image)(resources.GetObject("RemoveUserPic.Image")));
+            this.RemoveUserPic.Location = new System.Drawing.Point(24, 462);
+            this.RemoveUserPic.Name = "RemoveUserPic";
+            this.RemoveUserPic.Size = new System.Drawing.Size(72, 72);
+            this.RemoveUserPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.RemoveUserPic.TabIndex = 69;
+            this.RemoveUserPic.TabStop = false;
+            // 
+            // AddUsersPic
+            // 
+            this.AddUsersPic.BackColor = System.Drawing.SystemColors.Control;
+            this.AddUsersPic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.AddUsersPic.Image = ((System.Drawing.Image)(resources.GetObject("AddUsersPic.Image")));
+            this.AddUsersPic.Location = new System.Drawing.Point(24, 359);
+            this.AddUsersPic.Name = "AddUsersPic";
+            this.AddUsersPic.Size = new System.Drawing.Size(72, 72);
+            this.AddUsersPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.AddUsersPic.TabIndex = 68;
+            this.AddUsersPic.TabStop = false;
+            // 
+            // BuildingsPic
+            // 
+            this.BuildingsPic.BackColor = System.Drawing.SystemColors.Control;
+            this.BuildingsPic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BuildingsPic.Image = ((System.Drawing.Image)(resources.GetObject("BuildingsPic.Image")));
+            this.BuildingsPic.Location = new System.Drawing.Point(24, 250);
+            this.BuildingsPic.Name = "BuildingsPic";
+            this.BuildingsPic.Size = new System.Drawing.Size(72, 72);
+            this.BuildingsPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.BuildingsPic.TabIndex = 67;
+            this.BuildingsPic.TabStop = false;
+            // 
+            // BuildingPic
+            // 
+            this.BuildingPic.BackColor = System.Drawing.SystemColors.Control;
+            this.BuildingPic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BuildingPic.Image = ((System.Drawing.Image)(resources.GetObject("BuildingPic.Image")));
+            this.BuildingPic.Location = new System.Drawing.Point(24, 146);
+            this.BuildingPic.Name = "BuildingPic";
+            this.BuildingPic.Size = new System.Drawing.Size(72, 72);
+            this.BuildingPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.BuildingPic.TabIndex = 66;
+            this.BuildingPic.TabStop = false;
+            // 
             // ManagerMainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1034, 661);
+            this.Controls.Add(this.RemoveUserPic);
+            this.Controls.Add(this.AddUsersPic);
+            this.Controls.Add(this.BuildingsPic);
+            this.Controls.Add(this.BuildingPic);
+            this.Controls.Add(this.Background);
+            this.Controls.Add(this.AddUsers);
+            this.Controls.Add(this.RemoveUsers);
+            this.Controls.Add(this.ModifyBuilding);
+            this.Controls.Add(this.AddBuilding);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BigLogo);
             this.Controls.Add(this.Crucial);
-            this.Controls.Add(this.Background);
-            this.Controls.Add(this.Rooms);
-            this.Controls.Add(this.Students);
             this.Controls.Add(this.LogOut);
             this.Controls.Add(this.Information);
             this.Controls.Add(this.HomePic);
@@ -150,8 +251,13 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dormitory Management";
             ((System.ComponentModel.ISupportInitialize)(this.HomePic)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Background)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BigLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Background)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RemoveUserPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AddUsersPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BuildingsPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BuildingPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,10 +268,17 @@
         private System.Windows.Forms.LinkLabel LogOut;
         private System.Windows.Forms.Label Information;
         private System.Windows.Forms.PictureBox HomePic;
-        private System.Windows.Forms.Button Students;
-        private System.Windows.Forms.Button Rooms;
-        private System.Windows.Forms.PictureBox Background;
         private System.Windows.Forms.Label Crucial;
         private System.Windows.Forms.PictureBox BigLogo;
+        private System.Windows.Forms.PictureBox Background;
+        private System.Windows.Forms.Button AddUsers;
+        private System.Windows.Forms.Button RemoveUsers;
+        private System.Windows.Forms.Button ModifyBuilding;
+        private System.Windows.Forms.Button AddBuilding;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox RemoveUserPic;
+        private System.Windows.Forms.PictureBox AddUsersPic;
+        private System.Windows.Forms.PictureBox BuildingsPic;
+        private System.Windows.Forms.PictureBox BuildingPic;
     }
 }

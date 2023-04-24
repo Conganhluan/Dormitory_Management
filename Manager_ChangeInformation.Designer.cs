@@ -1,6 +1,6 @@
 ﻿namespace DormitoryManagment
 {
-    partial class ViewInfoManager
+    partial class ChangeInformation
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewInfoManager));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChangeInformation));
             this.Return = new System.Windows.Forms.LinkLabel();
             this.Crucial = new System.Windows.Forms.Label();
             this.Information = new System.Windows.Forms.Label();
             this.HomePic = new System.Windows.Forms.PictureBox();
             this.LogOut = new System.Windows.Forms.LinkLabel();
-            this.Fields = new System.Windows.Forms.Label();
-            this.ChangePass = new System.Windows.Forms.LinkLabel();
-            this.SendReport = new System.Windows.Forms.LinkLabel();
+            this.Send = new System.Windows.Forms.Button();
+            this.EmailInput = new System.Windows.Forms.RichTextBox();
+            this.NameInput = new System.Windows.Forms.RichTextBox();
             this.BigLogo = new System.Windows.Forms.PictureBox();
-            this.Values = new System.Windows.Forms.Label();
+            this.Fields = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.HomePic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BigLogo)).BeginInit();
             this.SuspendLayout();
@@ -50,7 +50,7 @@
             this.Return.Location = new System.Drawing.Point(12, 610);
             this.Return.Name = "Return";
             this.Return.Size = new System.Drawing.Size(130, 42);
-            this.Return.TabIndex = 48;
+            this.Return.TabIndex = 49;
             this.Return.TabStop = true;
             this.Return.Text = "Return";
             this.Return.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Return_LinkClicked);
@@ -72,9 +72,9 @@
             this.Information.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Information.Location = new System.Drawing.Point(68, 23);
             this.Information.Name = "Information";
-            this.Information.Size = new System.Drawing.Size(313, 37);
+            this.Information.Size = new System.Drawing.Size(434, 37);
             this.Information.TabIndex = 45;
-            this.Information.Text = "Personal Information";
+            this.Information.Text = "Change Personal Information";
             // 
             // HomePic
             // 
@@ -100,40 +100,42 @@
             this.LogOut.Text = "Log out";
             this.LogOut.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LogOut_LinkClicked);
             // 
-            // Fields
+            // Send
             // 
-            this.Fields.AutoSize = true;
-            this.Fields.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Fields.Location = new System.Drawing.Point(214, 336);
-            this.Fields.Name = "Fields";
-            this.Fields.Size = new System.Drawing.Size(167, 111);
-            this.Fields.TabIndex = 49;
-            this.Fields.Text = "Full name:\r\n\r\nEmail:";
-            this.Fields.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Send.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Send.Location = new System.Drawing.Point(263, 505);
+            this.Send.Name = "Send";
+            this.Send.Size = new System.Drawing.Size(497, 54);
+            this.Send.TabIndex = 55;
+            this.Send.Text = "Change the information";
+            this.Send.UseVisualStyleBackColor = true;
+            this.Send.Click += new System.EventHandler(this.Send_Click);
             // 
-            // ChangePass
+            // EmailInput
             // 
-            this.ChangePass.AutoSize = true;
-            this.ChangePass.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChangePass.Location = new System.Drawing.Point(576, 518);
-            this.ChangePass.Name = "ChangePass";
-            this.ChangePass.Size = new System.Drawing.Size(321, 42);
-            this.ChangePass.TabIndex = 51;
-            this.ChangePass.TabStop = true;
-            this.ChangePass.Text = "Change password";
-            this.ChangePass.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ChangePass_LinkClicked);
+            this.EmailInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailInput.Location = new System.Drawing.Point(394, 401);
+            this.EmailInput.MaxLength = 15;
+            this.EmailInput.Multiline = false;
+            this.EmailInput.Name = "EmailInput";
+            this.EmailInput.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.EmailInput.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.EmailInput.Size = new System.Drawing.Size(544, 50);
+            this.EmailInput.TabIndex = 54;
+            this.EmailInput.Text = "adfads";
             // 
-            // SendReport
+            // NameInput
             // 
-            this.SendReport.AutoSize = true;
-            this.SendReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SendReport.Location = new System.Drawing.Point(121, 518);
-            this.SendReport.Name = "SendReport";
-            this.SendReport.Size = new System.Drawing.Size(343, 42);
-            this.SendReport.TabIndex = 50;
-            this.SendReport.TabStop = true;
-            this.SendReport.Text = "Change information";
-            this.SendReport.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.SendReport_LinkClicked);
+            this.NameInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NameInput.Location = new System.Drawing.Point(394, 327);
+            this.NameInput.MaxLength = 15;
+            this.NameInput.Multiline = false;
+            this.NameInput.Name = "NameInput";
+            this.NameInput.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.NameInput.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.NameInput.Size = new System.Drawing.Size(544, 50);
+            this.NameInput.TabIndex = 53;
+            this.NameInput.Text = "adfads";
             // 
             // BigLogo
             // 
@@ -142,31 +144,30 @@
             this.BigLogo.Name = "BigLogo";
             this.BigLogo.Size = new System.Drawing.Size(180, 180);
             this.BigLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.BigLogo.TabIndex = 52;
+            this.BigLogo.TabIndex = 56;
             this.BigLogo.TabStop = false;
             // 
-            // Values
+            // Fields
             // 
-            this.Values.AutoSize = true;
-            this.Values.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Values.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.Values.Location = new System.Drawing.Point(403, 336);
-            this.Values.Name = "Values";
-            this.Values.Size = new System.Drawing.Size(167, 111);
-            this.Values.TabIndex = 53;
-            this.Values.Text = "Full name:\r\n\r\nEmail:";
-            this.Values.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Fields.AutoSize = true;
+            this.Fields.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Fields.Location = new System.Drawing.Point(214, 336);
+            this.Fields.Name = "Fields";
+            this.Fields.Size = new System.Drawing.Size(167, 111);
+            this.Fields.TabIndex = 57;
+            this.Fields.Text = "Full name:\r\n\r\nEmail:";
+            this.Fields.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // ViewInfoManager
+            // ChangeInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1034, 661);
-            this.Controls.Add(this.Values);
-            this.Controls.Add(this.BigLogo);
-            this.Controls.Add(this.ChangePass);
-            this.Controls.Add(this.SendReport);
             this.Controls.Add(this.Fields);
+            this.Controls.Add(this.BigLogo);
+            this.Controls.Add(this.Send);
+            this.Controls.Add(this.EmailInput);
+            this.Controls.Add(this.NameInput);
             this.Controls.Add(this.Return);
             this.Controls.Add(this.Crucial);
             this.Controls.Add(this.Information);
@@ -174,7 +175,7 @@
             this.Controls.Add(this.LogOut);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "ViewInfoManager";
+            this.Name = "ChangeInformation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dormitory Management";
             ((System.ComponentModel.ISupportInitialize)(this.HomePic)).EndInit();
@@ -191,10 +192,10 @@
         private System.Windows.Forms.Label Information;
         private System.Windows.Forms.PictureBox HomePic;
         private System.Windows.Forms.LinkLabel LogOut;
-        private System.Windows.Forms.Label Fields;
-        private System.Windows.Forms.LinkLabel ChangePass;
-        private System.Windows.Forms.LinkLabel SendReport;
+        private System.Windows.Forms.Button Send;
+        private System.Windows.Forms.RichTextBox EmailInput;
+        private System.Windows.Forms.RichTextBox NameInput;
         private System.Windows.Forms.PictureBox BigLogo;
-        private System.Windows.Forms.Label Values;
+        private System.Windows.Forms.Label Fields;
     }
 }

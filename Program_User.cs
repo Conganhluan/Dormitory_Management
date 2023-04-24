@@ -28,6 +28,8 @@ namespace DormitoryManagment
 
             public string GetName() { return Name; }
 
+            public string GetEmail() { return Email; }
+
             public void ChangePassword(string oldPass, string newPass, string checkSame)
             {
                 if (oldPass != Password)
@@ -56,6 +58,7 @@ namespace DormitoryManagment
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 Console.WriteLine(cmd.ExecuteNonQuery());
                 conn.Close();
+                SaveData();
             }
         }
     }

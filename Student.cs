@@ -82,11 +82,6 @@ namespace DormitoryManagment
                 conn.Close();
             }
 
-            public string GetEmail()
-            {
-                return Email;
-            }
-
             public void PayRequest()
             {
                 /* Add a request string formatted as below:

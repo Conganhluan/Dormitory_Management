@@ -121,6 +121,12 @@
     <Compile Include="Program_DMForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Manager_ChangeInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager_ChangeInformation.Designer.cs">
+      <DependentUpon>Manager_ChangeInformation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Student_WrongInformation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Manager_MainScreen.resx">
       <DependentUpon>Manager_MainScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager_ChangeInformation.resx">
+      <DependentUpon>Manager_ChangeInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Student_WrongInformation.resx">
       <DependentUpon>Student_WrongInformation.cs</DependentUpon>
