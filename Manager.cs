@@ -229,7 +229,8 @@ namespace DormitoryManagment
                         late = DateTime.Today - reader.GetDateTime("Last bill Time");
                     }
                     reader.Close();
-                    bill = Convert.ToInt32(Math.Round(oldBill * (1 + 0.01 * Math.Max(5,late.TotalMinutes/ 1440)) + bill));
+                    if (late.TotalMinutes/1440 < 5) bill = oldBill + bill;
+                    else bill = Convert.ToInt32(Math.Round(oldBill * (1 + 0.01 * late.TotalMinutes / 1440) + bill));
                     sql = "UPDATE Rooms SET Bill = " + bill.ToString() + " WHERE Building = '" + building + "' AND '" + room + "'";
                     cmd = new MySqlCommand(sql, conn);
                     cmd.ExecuteNonQuery();
