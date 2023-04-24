@@ -118,7 +118,7 @@ namespace DormitoryManagment
                 cmd.ExecuteNonQuery();
 
                 //Save the personal information into table Students
-                sql = "UPDATE Students SET `Date of birth` = '" + p.BirthDate.ToString() + "', " +
+                sql = "UPDATE Students SET `Date of birth` = '" + p.BirthDate.ToString("yyyy-MM-dd") + "', " +
                                           "`Citizen ID` = '" + p.CitizenID + "', " +
                                           "`Phone number` = '" + p.PhoneNumber + "', " +
                                           "`Vehicle plate number` = '" + p.Vehice + "', " +
