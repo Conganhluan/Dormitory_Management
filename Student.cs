@@ -123,7 +123,7 @@ namespace DormitoryManagment
                                           "`Phone number` = '" + p.PhoneNumber + "', " +
                                           "`Vehicle plate number` = '" + p.Vehice + "', " +
                                           "`Home address` = '" + p.HomeAddress + "' " +
-                      "WHERE Username = '" + Username + "'";
+                      "WHERE Email = '" + Email + "'";
                 cmd = new MySqlCommand(sql, conn);
                 cmd.ExecuteNonQuery();
                 conn.Close();
