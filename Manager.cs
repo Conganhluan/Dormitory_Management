@@ -207,6 +207,7 @@ namespace DormitoryManagment
                 cmd = new MySqlCommand(sql, conn);
                 cmd.ExecuteNonQuery();
                 reader.Close();
+                conn.Close();
             }
 
             public void AddBills(string filepath)
