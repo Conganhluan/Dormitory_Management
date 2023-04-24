@@ -236,6 +236,7 @@ namespace DormitoryManagment
                     conn.Close();
                 }
                 streamReader.Close();
+                MessageBox.Show("Add bills for rooms successfully", "Update successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             public void PrintLateBills()

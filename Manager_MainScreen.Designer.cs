@@ -131,6 +131,7 @@
             this.AddBills.Text = "Add a list\r\nof new bills";
             this.AddBills.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.AddBills.UseVisualStyleBackColor = true;
+            this.AddBills.Click += new System.EventHandler(this.AddBills_Click);
             // 
             // ReviewRequests
             // 
