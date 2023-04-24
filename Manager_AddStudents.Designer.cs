@@ -61,7 +61,7 @@
             // AddStudentsButton
             // 
             this.AddStudentsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddStudentsButton.Location = new System.Drawing.Point(533, 501);
+            this.AddStudentsButton.Location = new System.Drawing.Point(527, 500);
             this.AddStudentsButton.Name = "AddStudentsButton";
             this.AddStudentsButton.Size = new System.Drawing.Size(265, 45);
             this.AddStudentsButton.TabIndex = 74;
@@ -99,7 +99,7 @@
             // 
             this.form.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.form.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.form.Location = new System.Drawing.Point(347, 215);
+            this.form.Location = new System.Drawing.Point(351, 224);
             this.form.Name = "form";
             this.form.Size = new System.Drawing.Size(642, 239);
             this.form.TabIndex = 2;
@@ -268,11 +268,10 @@
             // 
             // ProgressBar
             // 
-            this.ProgressBar.Location = new System.Drawing.Point(381, 289);
+            this.ProgressBar.Location = new System.Drawing.Point(439, 162);
             this.ProgressBar.Name = "ProgressBar";
-            this.ProgressBar.Size = new System.Drawing.Size(541, 72);
+            this.ProgressBar.Size = new System.Drawing.Size(444, 28);
             this.ProgressBar.TabIndex = 89;
-            this.ProgressBar.Visible = false;
             // 
             // AddStudents
             // 

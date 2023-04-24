@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DormitoryManagment
 {
@@ -16,6 +17,7 @@ namespace DormitoryManagment
         {
             InitializeComponent();
             Information.Text = "Welcome back " + Program.manager.GetName();
+            ProgressBar.Value = 0;
         }
 
         private void HomePic_Click(object sender, EventArgs e)
@@ -32,7 +34,7 @@ namespace DormitoryManagment
 
         private void AddStudentsButton_Click(object sender, EventArgs e)
         {
-            Program.manager.AddStudentList(filepath.Text, ref ProgressBar, ref form);
+            Program.manager.AddStudentList(filepath.Text, ref ProgressBar);
         }
 
         private void ManageStudents_Click(object sender, EventArgs e)
