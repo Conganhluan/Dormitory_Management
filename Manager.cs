@@ -52,17 +52,11 @@ namespace DormitoryManagment
                 try
                 {
                     progressBar.Value = 0;
-                    for (int i=0;i<100;i++)
-                    {
-                        Thread.Sleep(100);
-                        progressBar.Value += 1;
-                    }
-                    /*progressBar.Value = 0;
                     int lineCount = File.ReadLines(filepath).Count();
                     double step = 100 / (float)lineCount;
                     double value = 0;
                     StreamReader reader = new StreamReader(filepath);
-                    StreamWriter writer = new StreamWriter("Student Users", false);
+                    StreamWriter writer = new StreamWriter("Student Users.csv", false);
                     string newStudent = null;
                     List<string> newStudentAttributes = null;
                     while ((newStudent = reader.ReadLine()) != null)
@@ -84,8 +78,7 @@ namespace DormitoryManagment
                     }
                     MessageBox.Show("Successfully add all students to dorm", "Add successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     writer.Close();
-                    reader.Close();*/
-                }
+                    reader.Close();                }
                 catch (Exception e)
                 {
                     MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -236,7 +229,7 @@ namespace DormitoryManagment
                         late = DateTime.Today - reader.GetDateTime("Last bill Time");
                     }
                     reader.Close();
-                    bill = Convert.ToInt32(Math.Round(oldBill * (1 + 0.01 * late.TotalMinutes/ 1440) + bill));
+                    bill = Convert.ToInt32(Math.Round(oldBill * (1 + 0.01 * Math.Max(5,late.TotalMinutes/ 1440)) + bill));
                     sql = "UPDATE Rooms SET Bill = " + bill.ToString() + " WHERE Building = '" + building + "' AND '" + room + "'";
                     cmd = new MySqlCommand(sql, conn);
                     cmd.ExecuteNonQuery();
