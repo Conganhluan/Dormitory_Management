@@ -20,6 +20,9 @@ namespace DormitoryManagment
         public StartScreen()
         {
             InitializeComponent();
+            if (Program.admin != null) Program.admin.LogOut();
+            if (Program.manager != null) Program.manager.LogOut();
+            if (Program.student != null) Program.student.LogOut();
             Program.admin = null;
             Program.manager = null;
             Program.student = null;

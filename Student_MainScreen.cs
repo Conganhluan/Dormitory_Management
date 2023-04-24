@@ -46,7 +46,6 @@ namespace DormitoryManagment
 
         private void LogOut_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Program.student.LogOut();
             DMForm startScreen = new StartScreen();
             Navigate(ref startScreen);
         }

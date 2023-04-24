@@ -21,7 +21,6 @@ namespace DormitoryManagment
 
         private void LogOut_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Program.manager.LogOut();
             DMForm startScreen = new StartScreen();
             Navigate(ref startScreen);
         }
@@ -34,13 +33,31 @@ namespace DormitoryManagment
 
         private void Students_Click(object sender, EventArgs e)
         {
-            DMForm nextForm = new StudentManage();
+            DMForm nextForm = new ManageStudent();
             Navigate(ref nextForm);
         }
 
         private void Rooms_Click(object sender, EventArgs e)
         {
-            DMForm nextForm = new BillManage();
+            DMForm nextForm = new AddBills();
+            Navigate(ref nextForm);
+        }
+
+        private void AddBuilding_Click(object sender, EventArgs e)
+        {
+            DMForm nextForm = new AddStudents();
+            Navigate(ref nextForm);
+        }
+
+        private void ReviewRequests_Click(object sender, EventArgs e)
+        {
+            DMForm nextForm = new ReviewRequests();
+            Navigate(ref nextForm);
+        }
+
+        private void ManageStudents_Click(object sender, EventArgs e)
+        {
+            DMForm nextForm = new ManageStudent();
             Navigate(ref nextForm);
         }
     }

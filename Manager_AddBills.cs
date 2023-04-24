@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DormitoryManagment
 {
-    public partial class ReviewRequests : DMForm
+    public partial class AddBills : DMForm
     {
-        public ReviewRequests()
+        public AddBills()
         {
             InitializeComponent();
         }

@@ -17,6 +17,7 @@ using static DormitoryManagment.Program.Student;
 using static DormitoryManagment.Program;
 using System.Xml.Linq;
 using System.Data.Entity.Core.Metadata.Edm;
+using System.Threading;
 
 namespace DormitoryManagment
 {
@@ -42,7 +43,7 @@ namespace DormitoryManagment
                 conn.Close();
             }
 
-            public void AddStudentList(string filepath, ref ProgressBar progressBar)
+            public void AddStudentList(string filepath, ref ProgressBar progressBar, ref PictureBox pictureBox)
             {
                 /* You should see the file format in advance on the Figma - Interface diagram
                  * Use AddStudent() below to support this method
@@ -51,6 +52,17 @@ namespace DormitoryManagment
                 try
                 {
                     progressBar.Visible = true;
+                    pictureBox.Visible = true;
+                    progressBar.Value = 0;
+                    for (int i=0;i<10;i++)
+                    {
+                        Thread.Sleep(1000);
+                        progressBar.Value += 10;
+                    }
+                    progressBar.Visible = false;
+                    pictureBox.Visible = false;
+                    /*progressBar.Visible = true;
+                    pictureBox.Visible = true;
                     progressBar.Value = 0;
                     int lineCount = File.ReadLines(filepath).Count();
                     double step = 100 / (float)lineCount;
@@ -78,8 +90,9 @@ namespace DormitoryManagment
                     }
                     MessageBox.Show("Successfully add all students to dorm", "Add successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     progressBar.Visible = false;
+                    pictureBox.Visible = false;
                     writer.Close();
-                    reader.Close();
+                    reader.Close();*/
                 }
                 catch (Exception e)
                 {
@@ -344,7 +357,7 @@ namespace DormitoryManagment
             {
                 //Save the changes of Password, Name and Email to table Users
                 conn.Open();
-                string sql = "'UPDATE Users SET Password = '" + Password + "' WHERE Name = '" + Name + "' WHERE Email = '" + Email + "'";
+                string sql = "UPDATE Users SET Password = '" + Password + "', Name = '" + Name + "', Email = '" + Email + "' WHERE Username = '" + Username + "'";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 cmd.ExecuteNonQuery();
                 conn.Close();

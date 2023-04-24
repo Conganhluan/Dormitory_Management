@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DormitoryManagment
 {
-    public partial class StudentManage : DMForm
+    public partial class ManageStudent : DMForm
     {
-        public StudentManage()
+        public ManageStudent()
         {
             InitializeComponent();
         }

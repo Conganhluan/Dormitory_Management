@@ -1,6 +1,6 @@
 ﻿namespace DormitoryManagment
 {
-    partial class ReviewRequests
+    partial class ManageStudent
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReviewRequests));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageStudent));
             this.RemoveUserPic = new System.Windows.Forms.PictureBox();
             this.AddUsersPic = new System.Windows.Forms.PictureBox();
             this.BuildingsPic = new System.Windows.Forms.PictureBox();
             this.BuildingPic = new System.Windows.Forms.PictureBox();
             this.AddBills = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.ReviewRequests = new System.Windows.Forms.Button();
             this.ManageStudents = new System.Windows.Forms.Button();
             this.AddStudents = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -111,16 +111,16 @@
             this.AddBills.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.AddBills.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // ReviewRequests
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(12, 447);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(297, 98);
-            this.button1.TabIndex = 77;
-            this.button1.Text = "Review pay\r\nrequests";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
+            this.ReviewRequests.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReviewRequests.Location = new System.Drawing.Point(12, 447);
+            this.ReviewRequests.Name = "ReviewRequests";
+            this.ReviewRequests.Size = new System.Drawing.Size(297, 98);
+            this.ReviewRequests.TabIndex = 77;
+            this.ReviewRequests.Text = "Review pay\r\nrequests";
+            this.ReviewRequests.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ReviewRequests.UseVisualStyleBackColor = true;
             // 
             // ManageStudents
             // 
@@ -210,7 +210,7 @@
             this.HomePic.TabIndex = 70;
             this.HomePic.TabStop = false;
             // 
-            // ReviewRequests
+            // ManageStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -220,7 +220,7 @@
             this.Controls.Add(this.BuildingsPic);
             this.Controls.Add(this.BuildingPic);
             this.Controls.Add(this.AddBills);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.ReviewRequests);
             this.Controls.Add(this.ManageStudents);
             this.Controls.Add(this.AddStudents);
             this.Controls.Add(this.pictureBox1);
@@ -231,7 +231,7 @@
             this.Controls.Add(this.HomePic);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "ReviewRequests";
+            this.Name = "ManageStudent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dormitory Management";
             ((System.ComponentModel.ISupportInitialize)(this.RemoveUserPic)).EndInit();
@@ -253,7 +253,7 @@
         private System.Windows.Forms.PictureBox BuildingsPic;
         private System.Windows.Forms.PictureBox BuildingPic;
         private System.Windows.Forms.Button AddBills;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button ReviewRequests;
         private System.Windows.Forms.Button ManageStudents;
         private System.Windows.Forms.Button AddStudents;
         private System.Windows.Forms.PictureBox pictureBox1;

@@ -35,10 +35,10 @@
             this.Crucial = new System.Windows.Forms.Label();
             this.BigLogo = new System.Windows.Forms.PictureBox();
             this.Background = new System.Windows.Forms.PictureBox();
-            this.AddUsers = new System.Windows.Forms.Button();
-            this.RemoveUsers = new System.Windows.Forms.Button();
-            this.ModifyBuilding = new System.Windows.Forms.Button();
-            this.AddBuilding = new System.Windows.Forms.Button();
+            this.AddBills = new System.Windows.Forms.Button();
+            this.ReviewRequests = new System.Windows.Forms.Button();
+            this.ManageStudents = new System.Windows.Forms.Button();
+            this.AddStudents = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.RemoveUserPic = new System.Windows.Forms.PictureBox();
             this.AddUsersPic = new System.Windows.Forms.PictureBox();
@@ -121,49 +121,52 @@
             this.Background.TabIndex = 53;
             this.Background.TabStop = false;
             // 
-            // AddUsers
+            // AddBills
             // 
-            this.AddUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddUsers.Location = new System.Drawing.Point(12, 343);
-            this.AddUsers.Name = "AddUsers";
-            this.AddUsers.Size = new System.Drawing.Size(297, 98);
-            this.AddUsers.TabIndex = 57;
-            this.AddUsers.Text = "Add a list\r\nof new bills";
-            this.AddUsers.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.AddUsers.UseVisualStyleBackColor = true;
+            this.AddBills.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddBills.Location = new System.Drawing.Point(12, 343);
+            this.AddBills.Name = "AddBills";
+            this.AddBills.Size = new System.Drawing.Size(297, 98);
+            this.AddBills.TabIndex = 57;
+            this.AddBills.Text = "Add a list\r\nof new bills";
+            this.AddBills.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.AddBills.UseVisualStyleBackColor = true;
             // 
-            // RemoveUsers
+            // ReviewRequests
             // 
-            this.RemoveUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RemoveUsers.Location = new System.Drawing.Point(12, 447);
-            this.RemoveUsers.Name = "RemoveUsers";
-            this.RemoveUsers.Size = new System.Drawing.Size(297, 98);
-            this.RemoveUsers.TabIndex = 56;
-            this.RemoveUsers.Text = "Review pay\r\nrequests";
-            this.RemoveUsers.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.RemoveUsers.UseVisualStyleBackColor = true;
+            this.ReviewRequests.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReviewRequests.Location = new System.Drawing.Point(12, 447);
+            this.ReviewRequests.Name = "ReviewRequests";
+            this.ReviewRequests.Size = new System.Drawing.Size(297, 98);
+            this.ReviewRequests.TabIndex = 56;
+            this.ReviewRequests.Text = "Review pay\r\nrequests";
+            this.ReviewRequests.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ReviewRequests.UseVisualStyleBackColor = true;
+            this.ReviewRequests.Click += new System.EventHandler(this.ReviewRequests_Click);
             // 
-            // ModifyBuilding
+            // ManageStudents
             // 
-            this.ModifyBuilding.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ModifyBuilding.Location = new System.Drawing.Point(12, 235);
-            this.ModifyBuilding.Name = "ModifyBuilding";
-            this.ModifyBuilding.Size = new System.Drawing.Size(297, 98);
-            this.ModifyBuilding.TabIndex = 55;
-            this.ModifyBuilding.Text = "Students\r\nManage";
-            this.ModifyBuilding.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ModifyBuilding.UseVisualStyleBackColor = true;
+            this.ManageStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ManageStudents.Location = new System.Drawing.Point(12, 235);
+            this.ManageStudents.Name = "ManageStudents";
+            this.ManageStudents.Size = new System.Drawing.Size(297, 98);
+            this.ManageStudents.TabIndex = 55;
+            this.ManageStudents.Text = "Students\r\nManage";
+            this.ManageStudents.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ManageStudents.UseVisualStyleBackColor = true;
+            this.ManageStudents.Click += new System.EventHandler(this.ManageStudents_Click);
             // 
-            // AddBuilding
+            // AddStudents
             // 
-            this.AddBuilding.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddBuilding.Location = new System.Drawing.Point(12, 131);
-            this.AddBuilding.Name = "AddBuilding";
-            this.AddBuilding.Size = new System.Drawing.Size(297, 98);
-            this.AddBuilding.TabIndex = 54;
-            this.AddBuilding.Text = "Add a list\r\nof students";
-            this.AddBuilding.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.AddBuilding.UseVisualStyleBackColor = true;
+            this.AddStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddStudents.Location = new System.Drawing.Point(12, 131);
+            this.AddStudents.Name = "AddStudents";
+            this.AddStudents.Size = new System.Drawing.Size(297, 98);
+            this.AddStudents.TabIndex = 54;
+            this.AddStudents.Text = "Add a list\r\nof students";
+            this.AddStudents.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.AddStudents.UseVisualStyleBackColor = true;
+            this.AddStudents.Click += new System.EventHandler(this.AddBuilding_Click);
             // 
             // pictureBox1
             // 
@@ -235,10 +238,10 @@
             this.Controls.Add(this.BuildingsPic);
             this.Controls.Add(this.BuildingPic);
             this.Controls.Add(this.Background);
-            this.Controls.Add(this.AddUsers);
-            this.Controls.Add(this.RemoveUsers);
-            this.Controls.Add(this.ModifyBuilding);
-            this.Controls.Add(this.AddBuilding);
+            this.Controls.Add(this.AddBills);
+            this.Controls.Add(this.ReviewRequests);
+            this.Controls.Add(this.ManageStudents);
+            this.Controls.Add(this.AddStudents);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BigLogo);
             this.Controls.Add(this.Crucial);
@@ -271,10 +274,10 @@
         private System.Windows.Forms.Label Crucial;
         private System.Windows.Forms.PictureBox BigLogo;
         private System.Windows.Forms.PictureBox Background;
-        private System.Windows.Forms.Button AddUsers;
-        private System.Windows.Forms.Button RemoveUsers;
-        private System.Windows.Forms.Button ModifyBuilding;
-        private System.Windows.Forms.Button AddBuilding;
+        private System.Windows.Forms.Button AddBills;
+        private System.Windows.Forms.Button ReviewRequests;
+        private System.Windows.Forms.Button ManageStudents;
+        private System.Windows.Forms.Button AddStudents;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox RemoveUserPic;
         private System.Windows.Forms.PictureBox AddUsersPic;

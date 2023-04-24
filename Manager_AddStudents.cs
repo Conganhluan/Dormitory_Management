@@ -10,16 +10,15 @@ using System.Windows.Forms;
 
 namespace DormitoryManagment
 {
-    public partial class ChangeInformation : DMForm
+    public partial class AddStudents : DMForm
     {
-        public ChangeInformation()
+        public AddStudents()
         {
             InitializeComponent();
-            NameInput.Text = Program.manager.GetName();
-            EmailInput.Text = Program.manager.GetEmail();
+            Information.Text = "Welcome back " + Program.manager.GetName();
         }
 
-        private void Return_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void HomePic_Click(object sender, EventArgs e)
         {
             DMForm nextForm = new ViewInfoManager();
             Navigate(ref nextForm);
@@ -31,10 +30,14 @@ namespace DormitoryManagment
             Navigate(ref startScreen);
         }
 
-        private void Send_Click(object sender, EventArgs e)
+        private void AddStudentsButton_Click(object sender, EventArgs e)
         {
-            Program.manager.updateData(NameInput.Text, EmailInput.Text);
-            MessageBox.Show("Change the information successfully!", "Update successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Program.manager.AddStudentList(filepath.Text, ref ProgressBar, ref Blinding);
+        }
+
+        private void ManageStudents_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
