@@ -220,7 +220,7 @@ namespace DormitoryManagment
                     int bill = Convert.ToInt32(information[2]), oldBill = 0;
                     TimeSpan late = new TimeSpan();
                     conn.Open();
-                    string sql = "SELECT * FROM Rooms WHERE Building = '" + building + "' AND '" + room + "'";
+                    string sql = "SELECT * FROM Rooms WHERE Building = '" + building + "' AND Number = '" + room + "'";
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
                     MySqlDataReader reader = cmd.ExecuteReader();
                     while (reader.Read())
