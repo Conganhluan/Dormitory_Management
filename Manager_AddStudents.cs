@@ -37,7 +37,8 @@ namespace DormitoryManagment
 
         private void ManageStudents_Click(object sender, EventArgs e)
         {
-
+            DMForm nextForm = new ManageStudent();
+            Navigate(ref nextForm);
         }
     }
 }

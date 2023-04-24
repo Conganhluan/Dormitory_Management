@@ -101,7 +101,7 @@ namespace DormitoryManagment
                             // set default password and role = 'manager'
                             conn.Open();
                             string sqlQuerry = "INSERT INTO Users VALUES('" + manager[1] + "', '"
-                                + manager[0] + "', 'manager', '" + manager[2] + "', 'manager', 0)";
+                                + manager[0] + "', 'manager', '" + manager[2] + "', 'Manager', 0)";
                             MySqlCommand cmd = new MySqlCommand(sqlQuerry, conn);
                             cmd.ExecuteNonQuery();
                             conn.Close();
@@ -134,7 +134,7 @@ namespace DormitoryManagment
                             // set default password and role = 'student'
                             conn.Open();
                             string sqlQuerry = "INSERT INTO Users VALUES('" + student[1] + "', '"
-                                + student[0] + "', 'student', '" + student[2] + "', 'student', 0)";
+                                + student[0] + "', 'student', '" + student[2] + "', 'Student', 0)";
                             MySqlCommand cmd = new MySqlCommand(sqlQuerry, conn);
                             cmd.ExecuteNonQuery();
                             conn.Close();
