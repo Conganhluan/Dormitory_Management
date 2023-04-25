@@ -107,13 +107,14 @@
             // 
             this.Return.AutoSize = true;
             this.Return.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Return.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.Return.LinkColor = System.Drawing.SystemColors.MenuHighlight;
             this.Return.Location = new System.Drawing.Point(12, 610);
             this.Return.Name = "Return";
-            this.Return.Size = new System.Drawing.Size(212, 42);
+            this.Return.Size = new System.Drawing.Size(130, 42);
             this.Return.TabIndex = 19;
             this.Return.TabStop = true;
-            this.Return.Text = "Mainscreen";
+            this.Return.Text = "Return";
             this.Return.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Return_LinkClicked);
             // 
             // label1
@@ -151,6 +152,7 @@
             // 
             this.Confirm.AutoSize = true;
             this.Confirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Confirm.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.Confirm.LinkColor = System.Drawing.SystemColors.MenuHighlight;
             this.Confirm.Location = new System.Drawing.Point(262, 509);
             this.Confirm.Name = "Confirm";
@@ -164,6 +166,7 @@
             // 
             this.LogOut.AutoSize = true;
             this.LogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LogOut.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.LogOut.Location = new System.Drawing.Point(879, 17);
             this.LogOut.Name = "LogOut";
             this.LogOut.Size = new System.Drawing.Size(143, 42);

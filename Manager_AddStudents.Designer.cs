@@ -241,6 +241,7 @@
             this.LogOut.AutoSize = true;
             this.LogOut.BackColor = System.Drawing.Color.Turquoise;
             this.LogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LogOut.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.LogOut.LinkColor = System.Drawing.Color.Black;
             this.LogOut.Location = new System.Drawing.Point(879, 17);
             this.LogOut.Name = "LogOut";
@@ -284,10 +285,10 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Turquoise;
-            this.panel2.Location = new System.Drawing.Point(12, 4);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Location = new System.Drawing.Point(-11, -8);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1010, 72);
+            this.panel2.Size = new System.Drawing.Size(1054, 84);
             this.panel2.TabIndex = 90;
             // 
             // AddStudents

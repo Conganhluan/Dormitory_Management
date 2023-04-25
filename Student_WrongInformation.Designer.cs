@@ -42,6 +42,7 @@
             this.HomeAddressInput = new System.Windows.Forms.RichTextBox();
             this.Send = new System.Windows.Forms.Button();
             this.BirthdateInput = new System.Windows.Forms.DateTimePicker();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.BigLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HomePic)).BeginInit();
             this.SuspendLayout();
@@ -50,6 +51,7 @@
             // 
             this.Return.AutoSize = true;
             this.Return.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Return.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.Return.Location = new System.Drawing.Point(12, 610);
             this.Return.Name = "Return";
             this.Return.Size = new System.Drawing.Size(130, 42);
@@ -117,6 +119,7 @@
             // 
             this.LogOut.AutoSize = true;
             this.LogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LogOut.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.LogOut.Location = new System.Drawing.Point(879, 17);
             this.LogOut.Name = "LogOut";
             this.LogOut.Size = new System.Drawing.Size(143, 42);
@@ -201,6 +204,15 @@
             this.BirthdateInput.TabIndex = 56;
             this.BirthdateInput.ValueChanged += new System.EventHandler(this.BirthdateInput_ValueChanged);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Turquoise;
+            this.panel2.Location = new System.Drawing.Point(-11, -8);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1054, 84);
+            this.panel2.TabIndex = 91;
+            // 
             // WrongInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -220,6 +232,7 @@
             this.Controls.Add(this.Information);
             this.Controls.Add(this.HomePic);
             this.Controls.Add(this.LogOut);
+            this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "WrongInformation";
@@ -247,5 +260,6 @@
         private System.Windows.Forms.RichTextBox HomeAddressInput;
         private System.Windows.Forms.Button Send;
         private System.Windows.Forms.DateTimePicker BirthdateInput;
+        private System.Windows.Forms.Panel panel2;
     }
 }

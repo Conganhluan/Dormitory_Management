@@ -39,6 +39,7 @@
             this.NameInput = new System.Windows.Forms.RichTextBox();
             this.BigLogo = new System.Windows.Forms.PictureBox();
             this.Fields = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.HomePic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BigLogo)).BeginInit();
             this.SuspendLayout();
@@ -47,6 +48,7 @@
             // 
             this.Return.AutoSize = true;
             this.Return.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Return.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.Return.Location = new System.Drawing.Point(12, 610);
             this.Return.Name = "Return";
             this.Return.Size = new System.Drawing.Size(130, 42);
@@ -92,6 +94,7 @@
             // 
             this.LogOut.AutoSize = true;
             this.LogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LogOut.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.LogOut.Location = new System.Drawing.Point(879, 17);
             this.LogOut.Name = "LogOut";
             this.LogOut.Size = new System.Drawing.Size(152, 44);
@@ -158,6 +161,15 @@
             this.Fields.Text = "Full name:\r\n\r\nEmail:";
             this.Fields.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Turquoise;
+            this.panel2.Location = new System.Drawing.Point(-11, -8);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1054, 84);
+            this.panel2.TabIndex = 91;
+            // 
             // ChangeInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -174,6 +186,7 @@
             this.Controls.Add(this.Information);
             this.Controls.Add(this.HomePic);
             this.Controls.Add(this.LogOut);
+            this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ChangeInformation";
@@ -198,5 +211,6 @@
         private System.Windows.Forms.RichTextBox NameInput;
         private System.Windows.Forms.PictureBox BigLogo;
         private System.Windows.Forms.Label Fields;
+        private System.Windows.Forms.Panel panel2;
     }
 }
