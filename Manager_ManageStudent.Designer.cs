@@ -73,10 +73,9 @@
             this.RemoveUserPic.BackColor = System.Drawing.SystemColors.Window;
             this.RemoveUserPic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.RemoveUserPic.Image = ((System.Drawing.Image)(resources.GetObject("RemoveUserPic.Image")));
-            this.RemoveUserPic.Location = new System.Drawing.Point(32, 569);
-            this.RemoveUserPic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RemoveUserPic.Location = new System.Drawing.Point(24, 462);
             this.RemoveUserPic.Name = "RemoveUserPic";
-            this.RemoveUserPic.Size = new System.Drawing.Size(96, 89);
+            this.RemoveUserPic.Size = new System.Drawing.Size(72, 72);
             this.RemoveUserPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.RemoveUserPic.TabIndex = 83;
             this.RemoveUserPic.TabStop = false;
@@ -86,10 +85,9 @@
             this.AddUsersPic.BackColor = System.Drawing.SystemColors.Window;
             this.AddUsersPic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.AddUsersPic.Image = ((System.Drawing.Image)(resources.GetObject("AddUsersPic.Image")));
-            this.AddUsersPic.Location = new System.Drawing.Point(32, 442);
-            this.AddUsersPic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AddUsersPic.Location = new System.Drawing.Point(24, 359);
             this.AddUsersPic.Name = "AddUsersPic";
-            this.AddUsersPic.Size = new System.Drawing.Size(96, 89);
+            this.AddUsersPic.Size = new System.Drawing.Size(72, 72);
             this.AddUsersPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.AddUsersPic.TabIndex = 82;
             this.AddUsersPic.TabStop = false;
@@ -99,10 +97,9 @@
             this.BuildingsPic.BackColor = System.Drawing.SystemColors.Window;
             this.BuildingsPic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.BuildingsPic.Image = ((System.Drawing.Image)(resources.GetObject("BuildingsPic.Image")));
-            this.BuildingsPic.Location = new System.Drawing.Point(32, 308);
-            this.BuildingsPic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BuildingsPic.Location = new System.Drawing.Point(24, 250);
             this.BuildingsPic.Name = "BuildingsPic";
-            this.BuildingsPic.Size = new System.Drawing.Size(96, 89);
+            this.BuildingsPic.Size = new System.Drawing.Size(72, 72);
             this.BuildingsPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BuildingsPic.TabIndex = 81;
             this.BuildingsPic.TabStop = false;
@@ -112,10 +109,9 @@
             this.BuildingPic.BackColor = System.Drawing.SystemColors.Window;
             this.BuildingPic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.BuildingPic.Image = ((System.Drawing.Image)(resources.GetObject("BuildingPic.Image")));
-            this.BuildingPic.Location = new System.Drawing.Point(32, 180);
-            this.BuildingPic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BuildingPic.Location = new System.Drawing.Point(24, 146);
             this.BuildingPic.Name = "BuildingPic";
-            this.BuildingPic.Size = new System.Drawing.Size(96, 89);
+            this.BuildingPic.Size = new System.Drawing.Size(72, 72);
             this.BuildingPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BuildingPic.TabIndex = 80;
             this.BuildingPic.TabStop = false;
@@ -123,10 +119,9 @@
             // AddBills
             // 
             this.AddBills.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddBills.Location = new System.Drawing.Point(16, 422);
-            this.AddBills.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AddBills.Location = new System.Drawing.Point(12, 343);
             this.AddBills.Name = "AddBills";
-            this.AddBills.Size = new System.Drawing.Size(396, 121);
+            this.AddBills.Size = new System.Drawing.Size(297, 98);
             this.AddBills.TabIndex = 78;
             this.AddBills.Text = "Add a list\r\nof new bills";
             this.AddBills.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -136,10 +131,9 @@
             // ReviewRequests
             // 
             this.ReviewRequests.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReviewRequests.Location = new System.Drawing.Point(16, 550);
-            this.ReviewRequests.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ReviewRequests.Location = new System.Drawing.Point(12, 447);
             this.ReviewRequests.Name = "ReviewRequests";
-            this.ReviewRequests.Size = new System.Drawing.Size(396, 121);
+            this.ReviewRequests.Size = new System.Drawing.Size(297, 98);
             this.ReviewRequests.TabIndex = 77;
             this.ReviewRequests.Text = "Review pay\r\nrequests";
             this.ReviewRequests.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -149,10 +143,9 @@
             // ManageStudents
             // 
             this.ManageStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ManageStudents.Location = new System.Drawing.Point(16, 289);
-            this.ManageStudents.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ManageStudents.Location = new System.Drawing.Point(12, 235);
             this.ManageStudents.Name = "ManageStudents";
-            this.ManageStudents.Size = new System.Drawing.Size(396, 121);
+            this.ManageStudents.Size = new System.Drawing.Size(297, 98);
             this.ManageStudents.TabIndex = 76;
             this.ManageStudents.Text = "Students\r\nManage";
             this.ManageStudents.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -161,10 +154,9 @@
             // AddStudents
             // 
             this.AddStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddStudents.Location = new System.Drawing.Point(16, 161);
-            this.AddStudents.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AddStudents.Location = new System.Drawing.Point(12, 131);
             this.AddStudents.Name = "AddStudents";
-            this.AddStudents.Size = new System.Drawing.Size(396, 121);
+            this.AddStudents.Size = new System.Drawing.Size(297, 98);
             this.AddStudents.TabIndex = 75;
             this.AddStudents.Text = "Add a list\r\nof students";
             this.AddStudents.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -177,20 +169,18 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.ErrorImage = null;
             this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 101);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 82);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1347, 610);
+            this.pictureBox1.Size = new System.Drawing.Size(1010, 496);
             this.pictureBox1.TabIndex = 79;
             this.pictureBox1.TabStop = false;
             // 
             // BigLogo
             // 
             this.BigLogo.Image = ((System.Drawing.Image)(resources.GetObject("BigLogo.Image")));
-            this.BigLogo.Location = new System.Drawing.Point(1296, 737);
-            this.BigLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BigLogo.Location = new System.Drawing.Point(972, 599);
             this.BigLogo.Name = "BigLogo";
-            this.BigLogo.Size = new System.Drawing.Size(67, 62);
+            this.BigLogo.Size = new System.Drawing.Size(50, 50);
             this.BigLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BigLogo.TabIndex = 74;
             this.BigLogo.TabStop = false;
@@ -200,10 +190,9 @@
             this.Crucial.AutoSize = true;
             this.Crucial.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Crucial.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Crucial.Location = new System.Drawing.Point(413, 731);
-            this.Crucial.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Crucial.Location = new System.Drawing.Point(310, 594);
             this.Crucial.Name = "Crucial";
-            this.Crucial.Size = new System.Drawing.Size(517, 72);
+            this.Crucial.Size = new System.Drawing.Size(413, 58);
             this.Crucial.TabIndex = 73;
             this.Crucial.Text = "Ho Chi Minh University of Technology\r\nAdvanced Programming Assignment";
             this.Crucial.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -214,10 +203,9 @@
             this.LogOut.BackColor = System.Drawing.Color.Turquoise;
             this.LogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogOut.LinkColor = System.Drawing.Color.White;
-            this.LogOut.Location = new System.Drawing.Point(1172, 21);
-            this.LogOut.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LogOut.Location = new System.Drawing.Point(879, 17);
             this.LogOut.Name = "LogOut";
-            this.LogOut.Size = new System.Drawing.Size(185, 54);
+            this.LogOut.Size = new System.Drawing.Size(152, 44);
             this.LogOut.TabIndex = 72;
             this.LogOut.TabStop = true;
             this.LogOut.Text = "Log out";
@@ -228,10 +216,9 @@
             this.Information.AutoSize = true;
             this.Information.BackColor = System.Drawing.Color.Turquoise;
             this.Information.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Information.Location = new System.Drawing.Point(91, 28);
-            this.Information.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Information.Location = new System.Drawing.Point(68, 23);
             this.Information.Name = "Information";
-            this.Information.Size = new System.Drawing.Size(356, 46);
+            this.Information.Size = new System.Drawing.Size(289, 37);
             this.Information.TabIndex = 71;
             this.Information.Text = "Welcome back ....";
             // 
@@ -240,10 +227,9 @@
             this.HomePic.BackColor = System.Drawing.Color.Turquoise;
             this.HomePic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.HomePic.Image = ((System.Drawing.Image)(resources.GetObject("HomePic.Image")));
-            this.HomePic.Location = new System.Drawing.Point(16, 11);
-            this.HomePic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.HomePic.Location = new System.Drawing.Point(12, 9);
             this.HomePic.Name = "HomePic";
-            this.HomePic.Size = new System.Drawing.Size(67, 62);
+            this.HomePic.Size = new System.Drawing.Size(50, 50);
             this.HomePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.HomePic.TabIndex = 70;
             this.HomePic.TabStop = false;
@@ -279,24 +265,22 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.Table.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Table.Location = new System.Drawing.Point(436, 117);
-            this.Table.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Table.Location = new System.Drawing.Point(327, 95);
             this.Table.Name = "Table";
             this.Table.RowHeadersVisible = false;
             this.Table.RowHeadersWidth = 51;
             this.Table.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Table.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Table.Size = new System.Drawing.Size(907, 379);
+            this.Table.Size = new System.Drawing.Size(680, 308);
             this.Table.TabIndex = 86;
             // 
             // Delete
             // 
             this.Delete.BackColor = System.Drawing.Color.Salmon;
             this.Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Delete.Location = new System.Drawing.Point(1116, 553);
-            this.Delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Delete.Location = new System.Drawing.Point(837, 449);
             this.Delete.Name = "Delete";
-            this.Delete.Size = new System.Drawing.Size(227, 55);
+            this.Delete.Size = new System.Drawing.Size(170, 45);
             this.Delete.TabIndex = 87;
             this.Delete.Text = "Delete";
             this.Delete.UseVisualStyleBackColor = false;
@@ -308,11 +292,9 @@
             this.NameBox.Controls.Add(this.applyButton);
             this.NameBox.Controls.Add(this.Value);
             this.NameBox.Controls.Add(this.Key);
-            this.NameBox.Location = new System.Drawing.Point(436, 553);
-            this.NameBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NameBox.Location = new System.Drawing.Point(327, 449);
             this.NameBox.Name = "NameBox";
-            this.NameBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.NameBox.Size = new System.Drawing.Size(639, 133);
+            this.NameBox.Size = new System.Drawing.Size(479, 108);
             this.NameBox.TabIndex = 89;
             this.NameBox.TabStop = false;
             this.NameBox.Text = "Find by fields";
@@ -322,10 +304,9 @@
             this.applyButton.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.applyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.applyButton.ForeColor = System.Drawing.SystemColors.Window;
-            this.applyButton.Location = new System.Drawing.Point(451, 52);
-            this.applyButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.applyButton.Location = new System.Drawing.Point(347, 35);
             this.applyButton.Name = "applyButton";
-            this.applyButton.Size = new System.Drawing.Size(153, 50);
+            this.applyButton.Size = new System.Drawing.Size(115, 54);
             this.applyButton.TabIndex = 1;
             this.applyButton.Text = "Apply";
             this.applyButton.UseVisualStyleBackColor = false;
@@ -334,14 +315,13 @@
             // Value
             // 
             this.Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Value.Location = new System.Drawing.Point(8, 78);
-            this.Value.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Value.Location = new System.Drawing.Point(6, 63);
             this.Value.MaxLength = 15;
             this.Value.Multiline = false;
             this.Value.Name = "Value";
             this.Value.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Value.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.Value.Size = new System.Drawing.Size(428, 50);
+            this.Value.Size = new System.Drawing.Size(322, 41);
             this.Value.TabIndex = 3;
             this.Value.Text = "";
             // 
@@ -364,20 +344,18 @@
             "Date of birth",
             "Phone number",
             "Home address"});
-            this.Key.Location = new System.Drawing.Point(8, 20);
-            this.Key.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Key.Location = new System.Drawing.Point(6, 16);
             this.Key.Name = "Key";
-            this.Key.Size = new System.Drawing.Size(428, 48);
+            this.Key.Size = new System.Drawing.Size(322, 41);
             this.Key.TabIndex = 0;
             // 
             // Save
             // 
             this.Save.BackColor = System.Drawing.Color.Aquamarine;
             this.Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Save.Location = new System.Drawing.Point(1116, 630);
-            this.Save.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Save.Location = new System.Drawing.Point(837, 512);
             this.Save.Name = "Save";
-            this.Save.Size = new System.Drawing.Size(227, 55);
+            this.Save.Size = new System.Drawing.Size(170, 45);
             this.Save.TabIndex = 90;
             this.Save.Text = "Save";
             this.Save.UseVisualStyleBackColor = false;
@@ -386,15 +364,14 @@
             // numericUpDown1
             // 
             this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(772, 510);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown1.Location = new System.Drawing.Point(579, 414);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(83, 34);
+            this.numericUpDown1.Size = new System.Drawing.Size(62, 29);
             this.numericUpDown1.TabIndex = 91;
             this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numericUpDown1.Value = new decimal(new int[] {
@@ -409,27 +386,27 @@
             this.PageTotal.AutoSize = true;
             this.PageTotal.BackColor = System.Drawing.SystemColors.Window;
             this.PageTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PageTotal.Location = new System.Drawing.Point(856, 513);
-            this.PageTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.PageTotal.Location = new System.Drawing.Point(642, 417);
             this.PageTotal.Name = "PageTotal";
-            this.PageTotal.Size = new System.Drawing.Size(134, 29);
+            this.PageTotal.Size = new System.Drawing.Size(103, 24);
             this.PageTotal.TabIndex = 92;
             this.PageTotal.Text = "/200 Pages";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Turquoise;
-            this.panel2.Location = new System.Drawing.Point(16, 5);
+            this.panel2.Location = new System.Drawing.Point(12, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1347, 89);
+            this.panel2.Size = new System.Drawing.Size(1010, 72);
             this.panel2.TabIndex = 93;
             // 
             // ManageStudent
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1379, 814);
+            this.ClientSize = new System.Drawing.Size(1034, 661);
             this.Controls.Add(this.PageTotal);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.Save);
@@ -453,7 +430,6 @@
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ManageStudent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dormitory Management";

@@ -56,5 +56,11 @@ namespace DormitoryManagment
             }
             Navigate(ref mainScreen);
         }
+
+        private void LogOut_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            DMForm startScreen = new StartScreen();
+            Navigate(ref startScreen);
+        }
     }
 }

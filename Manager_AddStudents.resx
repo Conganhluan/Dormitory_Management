@@ -245,7 +245,7 @@
   </data>
   <data name="form.Text" xml:space="preserve">
     <value>The file's format need to be as following for each student:
-gender, wanted type of room, wanted building, wanted number of room, name, email, school, student ID, vehicle, citizenID, birthdate, phone, home address </value>
+gender, wanted type of room, wanted building, wanted number of room, name, email, school, student ID, vehicle, citizenID, birthdate (yyyy-mm-dd), phone, home address </value>
   </data>
   <data name="RemoveUserPic.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

@@ -16,7 +16,7 @@ namespace DormitoryManagment
         public AddStudents()
         {
             InitializeComponent();
-            Information.Text = "Welcome back " + Program.manager.GetName();
+            Information.Text = Program.manager.GetName() + " - Students Adding";
             ProgressBar.Value = 0;
         }
 

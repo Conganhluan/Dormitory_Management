@@ -24,6 +24,7 @@ namespace DormitoryManagment
                 row["isPending"] = false;
             }
             Table.DataSource = dataTable;
+            Information.Text = Program.manager.GetName() + " - Request Reviewing";
         }
 
         private void HomePic_Click(object sender, EventArgs e)

@@ -17,6 +17,7 @@ namespace DormitoryManagment
             InitializeComponent();
             NameInput.Text = Program.manager.GetName();
             EmailInput.Text = Program.manager.GetEmail();
+            Information.Text = "Change personal information";
         }
 
         private void Return_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

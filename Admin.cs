@@ -162,7 +162,7 @@ namespace DormitoryManagment
 
                         // set default password and role = 'student'
                         conn.Open();
-                        string sqlQuerry = "DELETE FROM Users WHERE Username = " + user[0];
+                        string sqlQuerry = "DELETE FROM Users WHERE Username = '" + user[0] + "'";
                         MySqlCommand cmd = new MySqlCommand(sqlQuerry, conn);
                         int success = cmd.ExecuteNonQuery();
                         conn.Close();

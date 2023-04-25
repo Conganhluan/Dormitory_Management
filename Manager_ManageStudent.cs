@@ -23,8 +23,8 @@ namespace DormitoryManagment
         {
             InitializeComponent();
             UpdateTable();
-            Information.Text = "Welcome back " + Program.manager.GetName();
-            numericUpDown1.Maximum = count;
+            numericUpDown1.Minimum = 0;
+            Information.Text = Program.manager.GetName() + " - Students Management";
         }
 
         private void UpdateTable()
@@ -33,13 +33,21 @@ namespace DormitoryManagment
             if (Key.SelectedItem == null || Key.Text == "None") filter = "1";
             else filter = "BINARY `" + Key.Text + "` LIKE BINARY '%" + Value.Text + "%'"; 
             sql += " WHERE " + filter + " LIMIT " + ((page-1)*numberOfLines).ToString() + "," + numberOfLines.ToString();
-            dataTable = DataBase.GetDataSource(sql);
+            try
+            {
+                dataTable = DataBase.GetDataSource(sql);
+            }
+            catch
+            {
+                MessageBox.Show("There is 1 student having invalid birthdate, just continue to ignore the error", "Caution", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
             Table.DataSource = dataTable;
             Program.conn.Open();
             MySqlCommand cmd = new MySqlCommand("SELECT COUNT(*) FROM Students" + " WHERE " + filter, Program.conn);
             MySqlDataReader reader = cmd.ExecuteReader();
             reader.Read();
             count = reader.GetInt64(0);
+            numericUpDown1.Maximum = count;
             reader.Close();
             Program.conn.Close();
             PageTotal.Text = "/" + (count / numberOfLines + 1).ToString() + " Pages";
@@ -91,7 +99,12 @@ namespace DormitoryManagment
             foreach (DataGridViewRow row in Table.SelectedRows)
             {
                 Program.manager.RemoveStudent(row.Cells[5].ToString(), row.Cells[6].ToString());
-                DataBase.SaveChanges(dataTable);
+                Program.conn.Open();
+                string sql = "DELETE FROM Students WHERE Email = '" + row.Cells["Email"].Value.ToString() + "'";
+                MySqlCommand cmd = new MySqlCommand(sql, Program.conn);
+                cmd.ExecuteNonQuery();
+                Program.conn.Close();
+                MessageBox.Show("Successfully delete the chosen student!", "Delete successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 UpdateTable();
             }
         }

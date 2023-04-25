@@ -16,6 +16,7 @@ namespace DormitoryManagment
         {
             InitializeComponent();
             Values.Text = Program.manager.GetName() + "\n\n" + Program.manager.GetEmail();
+            Information.Text = Program.manager.GetName() + " - Personal Information";
         }
 
         private void LogOut_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
