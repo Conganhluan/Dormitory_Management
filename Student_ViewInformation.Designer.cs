@@ -47,9 +47,10 @@
             // 
             this.LogOut.AutoSize = true;
             this.LogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LogOut.Location = new System.Drawing.Point(879, 17);
+            this.LogOut.Location = new System.Drawing.Point(1172, 21);
+            this.LogOut.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LogOut.Name = "LogOut";
-            this.LogOut.Size = new System.Drawing.Size(143, 42);
+            this.LogOut.Size = new System.Drawing.Size(178, 54);
             this.LogOut.TabIndex = 24;
             this.LogOut.TabStop = true;
             this.LogOut.Text = "Log out";
@@ -60,9 +61,10 @@
             this.HomePic.BackColor = System.Drawing.SystemColors.Control;
             this.HomePic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.HomePic.Image = ((System.Drawing.Image)(resources.GetObject("HomePic.Image")));
-            this.HomePic.Location = new System.Drawing.Point(12, 9);
+            this.HomePic.Location = new System.Drawing.Point(16, 11);
+            this.HomePic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.HomePic.Name = "HomePic";
-            this.HomePic.Size = new System.Drawing.Size(50, 50);
+            this.HomePic.Size = new System.Drawing.Size(67, 62);
             this.HomePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.HomePic.TabIndex = 25;
             this.HomePic.TabStop = false;
@@ -71,9 +73,10 @@
             // 
             this.Information.AutoSize = true;
             this.Information.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Information.Location = new System.Drawing.Point(68, 23);
+            this.Information.Location = new System.Drawing.Point(91, 28);
+            this.Information.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Information.Name = "Information";
-            this.Information.Size = new System.Drawing.Size(313, 37);
+            this.Information.Size = new System.Drawing.Size(388, 46);
             this.Information.TabIndex = 26;
             this.Information.Text = "Personal Information";
             // 
@@ -81,9 +84,10 @@
             // 
             this.Crucial.AutoSize = true;
             this.Crucial.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Crucial.Location = new System.Drawing.Point(310, 594);
+            this.Crucial.Location = new System.Drawing.Point(413, 731);
+            this.Crucial.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Crucial.Name = "Crucial";
-            this.Crucial.Size = new System.Drawing.Size(413, 58);
+            this.Crucial.Size = new System.Drawing.Size(517, 72);
             this.Crucial.TabIndex = 27;
             this.Crucial.Text = "Ho Chi Minh University of Technology\r\nAdvanced Programming Assignment";
             this.Crucial.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -91,9 +95,10 @@
             // BigLogo
             // 
             this.BigLogo.Image = ((System.Drawing.Image)(resources.GetObject("BigLogo.Image")));
-            this.BigLogo.Location = new System.Drawing.Point(972, 599);
+            this.BigLogo.Location = new System.Drawing.Point(1296, 737);
+            this.BigLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BigLogo.Name = "BigLogo";
-            this.BigLogo.Size = new System.Drawing.Size(50, 50);
+            this.BigLogo.Size = new System.Drawing.Size(67, 62);
             this.BigLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BigLogo.TabIndex = 39;
             this.BigLogo.TabStop = false;
@@ -102,9 +107,10 @@
             // 
             this.Fields.AutoSize = true;
             this.Fields.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Fields.Location = new System.Drawing.Point(68, 101);
+            this.Fields.Location = new System.Drawing.Point(91, 124);
+            this.Fields.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Fields.Name = "Fields";
-            this.Fields.Size = new System.Drawing.Size(326, 333);
+            this.Fields.Size = new System.Drawing.Size(405, 414);
             this.Fields.TabIndex = 40;
             this.Fields.Text = "Name:\r\nEmail:\r\nDate of birth:\r\nCitizen ID:\r\nPhone number:\r\nVehicle plate number:\r" +
     "\nHome address:\r\nSchool:\r\nStudent ID:";
@@ -115,9 +121,10 @@
             this.Values.AutoSize = true;
             this.Values.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Values.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.Values.Location = new System.Drawing.Point(412, 101);
+            this.Values.Location = new System.Drawing.Point(549, 124);
+            this.Values.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Values.Name = "Values";
-            this.Values.Size = new System.Drawing.Size(317, 333);
+            this.Values.Size = new System.Drawing.Size(394, 414);
             this.Values.TabIndex = 41;
             this.Values.Text = "Name\r\nEmail\r\nDate of birth\r\nCitizen ID\r\nPhone number\r\nVehicle plate number\r\nHome " +
     "address\r\nSchool\r\nStudent ID";
@@ -127,9 +134,11 @@
             // 
             this.Return.AutoSize = true;
             this.Return.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Return.Location = new System.Drawing.Point(12, 610);
+            this.Return.LinkColor = System.Drawing.SystemColors.MenuHighlight;
+            this.Return.Location = new System.Drawing.Point(16, 751);
+            this.Return.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Return.Name = "Return";
-            this.Return.Size = new System.Drawing.Size(130, 42);
+            this.Return.Size = new System.Drawing.Size(164, 54);
             this.Return.TabIndex = 42;
             this.Return.TabStop = true;
             this.Return.Text = "Return";
@@ -139,9 +148,11 @@
             // 
             this.SendReport.AutoSize = true;
             this.SendReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SendReport.Location = new System.Drawing.Point(118, 476);
+            this.SendReport.LinkColor = System.Drawing.Color.MediumBlue;
+            this.SendReport.Location = new System.Drawing.Point(157, 586);
+            this.SendReport.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SendReport.Name = "SendReport";
-            this.SendReport.Size = new System.Drawing.Size(343, 42);
+            this.SendReport.Size = new System.Drawing.Size(430, 54);
             this.SendReport.TabIndex = 43;
             this.SendReport.TabStop = true;
             this.SendReport.Text = "Change information";
@@ -151,9 +162,11 @@
             // 
             this.ChangePass.AutoSize = true;
             this.ChangePass.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChangePass.Location = new System.Drawing.Point(573, 476);
+            this.ChangePass.LinkColor = System.Drawing.Color.MediumBlue;
+            this.ChangePass.Location = new System.Drawing.Point(764, 586);
+            this.ChangePass.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ChangePass.Name = "ChangePass";
-            this.ChangePass.Size = new System.Drawing.Size(321, 42);
+            this.ChangePass.Size = new System.Drawing.Size(401, 54);
             this.ChangePass.TabIndex = 44;
             this.ChangePass.TabStop = true;
             this.ChangePass.Text = "Change password";
@@ -161,9 +174,10 @@
             // 
             // ViewInfoStudent
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1034, 661);
+            this.BackColor = System.Drawing.SystemColors.Window;
+            this.ClientSize = new System.Drawing.Size(1379, 814);
             this.Controls.Add(this.ChangePass);
             this.Controls.Add(this.SendReport);
             this.Controls.Add(this.Return);
@@ -176,6 +190,7 @@
             this.Controls.Add(this.LogOut);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ViewInfoStudent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dormitory Management";
