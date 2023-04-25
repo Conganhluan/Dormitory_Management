@@ -49,6 +49,7 @@ namespace DormitoryManagment
             Program.admin.RemoveUsers(filepath.Text);
             this.filepath.Text = string.Empty;
             this.filepath_Leave(null, null);
+            UpdateTable();
         }
 
         private void HomePic_Click(object sender, EventArgs e)
