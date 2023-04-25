@@ -50,8 +50,9 @@
             Title.Dock = System.Windows.Forms.DockStyle.Top;
             Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             Title.Location = new System.Drawing.Point(0, 0);
+            Title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             Title.Name = "Title";
-            Title.Size = new System.Drawing.Size(1034, 73);
+            Title.Size = new System.Drawing.Size(1379, 90);
             Title.TabIndex = 0;
             Title.Text = "DORMITORY MANAGEMENT";
             Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -60,9 +61,10 @@
             // BigLogo
             // 
             this.BigLogo.Image = ((System.Drawing.Image)(resources.GetObject("BigLogo.Image")));
-            this.BigLogo.Location = new System.Drawing.Point(410, 100);
+            this.BigLogo.Location = new System.Drawing.Point(547, 123);
+            this.BigLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BigLogo.Name = "BigLogo";
-            this.BigLogo.Size = new System.Drawing.Size(180, 180);
+            this.BigLogo.Size = new System.Drawing.Size(240, 222);
             this.BigLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BigLogo.TabIndex = 1;
             this.BigLogo.TabStop = false;
@@ -70,13 +72,14 @@
             // UsernameInput
             // 
             this.UsernameInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsernameInput.Location = new System.Drawing.Point(262, 320);
+            this.UsernameInput.Location = new System.Drawing.Point(349, 394);
+            this.UsernameInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.UsernameInput.MaxLength = 15;
             this.UsernameInput.Multiline = false;
             this.UsernameInput.Name = "UsernameInput";
             this.UsernameInput.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.UsernameInput.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.UsernameInput.Size = new System.Drawing.Size(544, 50);
+            this.UsernameInput.Size = new System.Drawing.Size(724, 61);
             this.UsernameInput.TabIndex = 2;
             this.UsernameInput.Text = "";
             this.UsernameInput.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
@@ -85,37 +88,40 @@
             // PasswordInput
             // 
             this.PasswordInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordInput.Location = new System.Drawing.Point(262, 408);
+            this.PasswordInput.Location = new System.Drawing.Point(349, 502);
+            this.PasswordInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PasswordInput.MaxLength = 20;
             this.PasswordInput.Multiline = false;
             this.PasswordInput.Name = "PasswordInput";
             this.PasswordInput.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.PasswordInput.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.PasswordInput.Size = new System.Drawing.Size(544, 50);
+            this.PasswordInput.Size = new System.Drawing.Size(724, 61);
             this.PasswordInput.TabIndex = 3;
             this.PasswordInput.Text = "";
             this.PasswordInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PasswordInput_KeyDown);
             // 
             // UsernamePic
             // 
-            this.UsernamePic.BackColor = System.Drawing.SystemColors.Control;
+            this.UsernamePic.BackColor = System.Drawing.SystemColors.Window;
             this.UsernamePic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.UsernamePic.Image = ((System.Drawing.Image)(resources.GetObject("UsernamePic.Image")));
-            this.UsernamePic.Location = new System.Drawing.Point(206, 320);
+            this.UsernamePic.Location = new System.Drawing.Point(275, 394);
+            this.UsernamePic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.UsernamePic.Name = "UsernamePic";
-            this.UsernamePic.Size = new System.Drawing.Size(50, 50);
+            this.UsernamePic.Size = new System.Drawing.Size(67, 62);
             this.UsernamePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.UsernamePic.TabIndex = 4;
             this.UsernamePic.TabStop = false;
             // 
             // PasswordPic
             // 
-            this.PasswordPic.BackColor = System.Drawing.SystemColors.Control;
+            this.PasswordPic.BackColor = System.Drawing.SystemColors.Window;
             this.PasswordPic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.PasswordPic.Image = ((System.Drawing.Image)(resources.GetObject("PasswordPic.Image")));
-            this.PasswordPic.Location = new System.Drawing.Point(206, 408);
+            this.PasswordPic.Location = new System.Drawing.Point(275, 502);
+            this.PasswordPic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PasswordPic.Name = "PasswordPic";
-            this.PasswordPic.Size = new System.Drawing.Size(50, 50);
+            this.PasswordPic.Size = new System.Drawing.Size(67, 62);
             this.PasswordPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PasswordPic.TabIndex = 5;
             this.PasswordPic.TabStop = false;
@@ -123,9 +129,10 @@
             // Submit
             // 
             this.Submit.Image = ((System.Drawing.Image)(resources.GetObject("Submit.Image")));
-            this.Submit.Location = new System.Drawing.Point(829, 350);
+            this.Submit.Location = new System.Drawing.Point(1105, 431);
+            this.Submit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Submit.Name = "Submit";
-            this.Submit.Size = new System.Drawing.Size(70, 70);
+            this.Submit.Size = new System.Drawing.Size(93, 86);
             this.Submit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Submit.TabIndex = 6;
             this.Submit.TabStop = false;
@@ -135,9 +142,11 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(351, 479);
+            this.linkLabel1.LinkColor = System.Drawing.SystemColors.MenuHighlight;
+            this.linkLabel1.Location = new System.Drawing.Point(468, 590);
+            this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(313, 33);
+            this.linkLabel1.Size = new System.Drawing.Size(401, 42);
             this.linkLabel1.TabIndex = 7;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Forget your password?";
@@ -147,9 +156,10 @@
             // 
             this.Crucial.AutoSize = true;
             this.Crucial.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Crucial.Location = new System.Drawing.Point(310, 594);
+            this.Crucial.Location = new System.Drawing.Point(413, 731);
+            this.Crucial.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Crucial.Name = "Crucial";
-            this.Crucial.Size = new System.Drawing.Size(413, 58);
+            this.Crucial.Size = new System.Drawing.Size(517, 72);
             this.Crucial.TabIndex = 8;
             this.Crucial.Text = "Ho Chi Minh University of Technology\r\nAdvanced Programming Assignment";
             this.Crucial.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -157,11 +167,11 @@
             // 
             // StartScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.CausesValidation = false;
-            this.ClientSize = new System.Drawing.Size(1034, 661);
+            this.ClientSize = new System.Drawing.Size(1379, 814);
             this.Controls.Add(this.Crucial);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.Submit);
@@ -173,6 +183,7 @@
             this.Controls.Add(Title);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "StartScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dormitory Management";
