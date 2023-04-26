@@ -32,11 +32,11 @@ namespace DormitoryManagment
             string sql = "SELECT * FROM Students";
             if (Key.SelectedItem == null || Key.Text == "None") filter = "1";
             else filter = "BINARY `" + Key.Text + "` LIKE BINARY '%" + Value.Text + "%'";
-            if (page <= 0)
+            /*if (page <= 0)
             {
                 page = 1;
                 numericUpDown1.Value = page;
-            }
+            }*/
             sql += " WHERE " + filter + " LIMIT " + ((page - 1) * numberOfLines).ToString() + "," + numberOfLines.ToString();
             dataTable = DataBase.GetDataSource(sql);
             Table.DataSource = dataTable;
