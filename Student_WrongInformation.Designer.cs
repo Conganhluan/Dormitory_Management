@@ -50,11 +50,12 @@
             // Return
             // 
             this.Return.AutoSize = true;
-            this.Return.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Return.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Return.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.Return.Location = new System.Drawing.Point(12, 610);
+            this.Return.Location = new System.Drawing.Point(16, 751);
+            this.Return.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Return.Name = "Return";
-            this.Return.Size = new System.Drawing.Size(130, 42);
+            this.Return.Size = new System.Drawing.Size(170, 54);
             this.Return.TabIndex = 49;
             this.Return.TabStop = true;
             this.Return.Text = "Return";
@@ -64,9 +65,10 @@
             // 
             this.Fields.AutoSize = true;
             this.Fields.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Fields.Location = new System.Drawing.Point(12, 91);
+            this.Fields.Location = new System.Drawing.Point(16, 112);
+            this.Fields.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Fields.Name = "Fields";
-            this.Fields.Size = new System.Drawing.Size(378, 378);
+            this.Fields.Size = new System.Drawing.Size(473, 486);
             this.Fields.TabIndex = 48;
             this.Fields.Text = "Date of birth:\r\n\r\nCitizen ID:\r\n\r\nPhone number:\r\n\r\nVehicle plate number:\r\n\r\nHome a" +
     "ddress:\r\n";
@@ -75,9 +77,10 @@
             // BigLogo
             // 
             this.BigLogo.Image = ((System.Drawing.Image)(resources.GetObject("BigLogo.Image")));
-            this.BigLogo.Location = new System.Drawing.Point(972, 599);
+            this.BigLogo.Location = new System.Drawing.Point(1296, 737);
+            this.BigLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BigLogo.Name = "BigLogo";
-            this.BigLogo.Size = new System.Drawing.Size(50, 50);
+            this.BigLogo.Size = new System.Drawing.Size(67, 62);
             this.BigLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BigLogo.TabIndex = 47;
             this.BigLogo.TabStop = false;
@@ -86,9 +89,10 @@
             // 
             this.Crucial.AutoSize = true;
             this.Crucial.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Crucial.Location = new System.Drawing.Point(310, 594);
+            this.Crucial.Location = new System.Drawing.Point(413, 731);
+            this.Crucial.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Crucial.Name = "Crucial";
-            this.Crucial.Size = new System.Drawing.Size(413, 58);
+            this.Crucial.Size = new System.Drawing.Size(517, 72);
             this.Crucial.TabIndex = 46;
             this.Crucial.Text = "Ho Chi Minh University of Technology\r\nAdvanced Programming Assignment";
             this.Crucial.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -96,21 +100,25 @@
             // Information
             // 
             this.Information.AutoSize = true;
-            this.Information.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Information.Location = new System.Drawing.Point(68, 23);
+            this.Information.BackColor = System.Drawing.Color.LemonChiffon;
+            this.Information.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Information.ForeColor = System.Drawing.Color.Blue;
+            this.Information.Location = new System.Drawing.Point(91, 28);
+            this.Information.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Information.Name = "Information";
-            this.Information.Size = new System.Drawing.Size(434, 37);
+            this.Information.Size = new System.Drawing.Size(565, 46);
             this.Information.TabIndex = 45;
             this.Information.Text = "Change Personal Information";
             // 
             // HomePic
             // 
-            this.HomePic.BackColor = System.Drawing.SystemColors.Window;
+            this.HomePic.BackColor = System.Drawing.Color.LemonChiffon;
             this.HomePic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.HomePic.Image = ((System.Drawing.Image)(resources.GetObject("HomePic.Image")));
-            this.HomePic.Location = new System.Drawing.Point(12, 9);
+            this.HomePic.Location = new System.Drawing.Point(16, 11);
+            this.HomePic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.HomePic.Name = "HomePic";
-            this.HomePic.Size = new System.Drawing.Size(50, 50);
+            this.HomePic.Size = new System.Drawing.Size(67, 62);
             this.HomePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.HomePic.TabIndex = 44;
             this.HomePic.TabStop = false;
@@ -118,11 +126,13 @@
             // LogOut
             // 
             this.LogOut.AutoSize = true;
-            this.LogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LogOut.BackColor = System.Drawing.Color.LemonChiffon;
+            this.LogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogOut.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.LogOut.Location = new System.Drawing.Point(879, 17);
+            this.LogOut.Location = new System.Drawing.Point(1172, 21);
+            this.LogOut.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LogOut.Name = "LogOut";
-            this.LogOut.Size = new System.Drawing.Size(143, 42);
+            this.LogOut.Size = new System.Drawing.Size(185, 54);
             this.LogOut.TabIndex = 43;
             this.LogOut.TabStop = true;
             this.LogOut.Text = "Log out";
@@ -131,52 +141,56 @@
             // CitizenIDInput
             // 
             this.CitizenIDInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CitizenIDInput.Location = new System.Drawing.Point(396, 172);
+            this.CitizenIDInput.Location = new System.Drawing.Point(528, 212);
+            this.CitizenIDInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CitizenIDInput.MaxLength = 11;
             this.CitizenIDInput.Multiline = false;
             this.CitizenIDInput.Name = "CitizenIDInput";
             this.CitizenIDInput.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.CitizenIDInput.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.CitizenIDInput.Size = new System.Drawing.Size(544, 50);
+            this.CitizenIDInput.Size = new System.Drawing.Size(724, 61);
             this.CitizenIDInput.TabIndex = 51;
             this.CitizenIDInput.Text = "adfads";
             // 
             // PhoneInput
             // 
             this.PhoneInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PhoneInput.Location = new System.Drawing.Point(396, 256);
+            this.PhoneInput.Location = new System.Drawing.Point(528, 315);
+            this.PhoneInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PhoneInput.MaxLength = 10;
             this.PhoneInput.Multiline = false;
             this.PhoneInput.Name = "PhoneInput";
             this.PhoneInput.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.PhoneInput.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.PhoneInput.Size = new System.Drawing.Size(544, 50);
+            this.PhoneInput.Size = new System.Drawing.Size(724, 61);
             this.PhoneInput.TabIndex = 52;
             this.PhoneInput.Text = "adfads";
             // 
             // VehicleInput
             // 
             this.VehicleInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VehicleInput.Location = new System.Drawing.Point(396, 340);
+            this.VehicleInput.Location = new System.Drawing.Point(528, 418);
+            this.VehicleInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.VehicleInput.MaxLength = 10;
             this.VehicleInput.Multiline = false;
             this.VehicleInput.Name = "VehicleInput";
             this.VehicleInput.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.VehicleInput.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.VehicleInput.Size = new System.Drawing.Size(544, 50);
+            this.VehicleInput.Size = new System.Drawing.Size(724, 61);
             this.VehicleInput.TabIndex = 53;
             this.VehicleInput.Text = "adfads";
             // 
             // HomeAddressInput
             // 
             this.HomeAddressInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HomeAddressInput.Location = new System.Drawing.Point(396, 426);
+            this.HomeAddressInput.Location = new System.Drawing.Point(528, 524);
+            this.HomeAddressInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.HomeAddressInput.MaxLength = 100;
             this.HomeAddressInput.Multiline = false;
             this.HomeAddressInput.Name = "HomeAddressInput";
             this.HomeAddressInput.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.HomeAddressInput.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.HomeAddressInput.Size = new System.Drawing.Size(544, 50);
+            this.HomeAddressInput.Size = new System.Drawing.Size(724, 61);
             this.HomeAddressInput.TabIndex = 54;
             this.HomeAddressInput.Text = "adfads";
             // 
@@ -185,9 +199,10 @@
             this.Send.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.Send.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Send.ForeColor = System.Drawing.SystemColors.Window;
-            this.Send.Location = new System.Drawing.Point(263, 505);
+            this.Send.Location = new System.Drawing.Point(351, 622);
+            this.Send.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Send.Name = "Send";
-            this.Send.Size = new System.Drawing.Size(497, 54);
+            this.Send.Size = new System.Drawing.Size(663, 66);
             this.Send.TabIndex = 55;
             this.Send.Text = "Change the information";
             this.Send.UseVisualStyleBackColor = false;
@@ -197,28 +212,29 @@
             // 
             this.BirthdateInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BirthdateInput.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.BirthdateInput.Location = new System.Drawing.Point(396, 88);
+            this.BirthdateInput.Location = new System.Drawing.Point(528, 108);
+            this.BirthdateInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BirthdateInput.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.BirthdateInput.Name = "BirthdateInput";
-            this.BirthdateInput.Size = new System.Drawing.Size(230, 49);
+            this.BirthdateInput.Size = new System.Drawing.Size(305, 60);
             this.BirthdateInput.TabIndex = 56;
             this.BirthdateInput.ValueChanged += new System.EventHandler(this.BirthdateInput_ValueChanged);
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Turquoise;
-            this.panel2.Location = new System.Drawing.Point(-11, -8);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.BackColor = System.Drawing.Color.LemonChiffon;
+            this.panel2.Location = new System.Drawing.Point(-15, -10);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1054, 84);
+            this.panel2.Size = new System.Drawing.Size(1405, 103);
             this.panel2.TabIndex = 91;
             // 
             // WrongInformation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1034, 661);
+            this.ClientSize = new System.Drawing.Size(1379, 814);
             this.Controls.Add(this.BirthdateInput);
             this.Controls.Add(this.Send);
             this.Controls.Add(this.HomeAddressInput);
@@ -235,6 +251,7 @@
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "WrongInformation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dormitory Management";

@@ -204,6 +204,7 @@
             this.Information.AutoSize = true;
             this.Information.BackColor = System.Drawing.Color.Turquoise;
             this.Information.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Information.ForeColor = System.Drawing.Color.Black;
             this.Information.Location = new System.Drawing.Point(91, 28);
             this.Information.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Information.Name = "Information";

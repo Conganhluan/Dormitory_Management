@@ -47,7 +47,7 @@
             // LogOut
             // 
             this.LogOut.AutoSize = true;
-            this.LogOut.BackColor = System.Drawing.Color.Turquoise;
+            this.LogOut.BackColor = System.Drawing.Color.LemonChiffon;
             this.LogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogOut.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.LogOut.Location = new System.Drawing.Point(1172, 21);
@@ -61,11 +61,11 @@
             // 
             // HomePic
             // 
-            this.HomePic.BackColor = System.Drawing.Color.Turquoise;
+            this.HomePic.BackColor = System.Drawing.Color.LemonChiffon;
             this.HomePic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.HomePic.Image = ((System.Drawing.Image)(resources.GetObject("HomePic.Image")));
             this.HomePic.Location = new System.Drawing.Point(16, 11);
-            this.HomePic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.HomePic.Margin = new System.Windows.Forms.Padding(4);
             this.HomePic.Name = "HomePic";
             this.HomePic.Size = new System.Drawing.Size(67, 62);
             this.HomePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -75,8 +75,9 @@
             // Information
             // 
             this.Information.AutoSize = true;
-            this.Information.BackColor = System.Drawing.Color.Turquoise;
+            this.Information.BackColor = System.Drawing.Color.LemonChiffon;
             this.Information.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Information.ForeColor = System.Drawing.Color.Blue;
             this.Information.Location = new System.Drawing.Point(91, 28);
             this.Information.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Information.Name = "Information";
@@ -100,7 +101,7 @@
             // 
             this.BigLogo.Image = ((System.Drawing.Image)(resources.GetObject("BigLogo.Image")));
             this.BigLogo.Location = new System.Drawing.Point(1296, 737);
-            this.BigLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BigLogo.Margin = new System.Windows.Forms.Padding(4);
             this.BigLogo.Name = "BigLogo";
             this.BigLogo.Size = new System.Drawing.Size(67, 62);
             this.BigLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -181,7 +182,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Turquoise;
+            this.panel2.BackColor = System.Drawing.Color.LemonChiffon;
             this.panel2.Location = new System.Drawing.Point(-15, -10);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
@@ -207,7 +208,7 @@
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ViewInfoStudent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dormitory Management";
