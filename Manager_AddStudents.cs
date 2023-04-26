@@ -53,5 +53,11 @@ namespace DormitoryManagment
             DMForm nextForm = new ReviewRequests();
             Navigate(ref nextForm);
         }
+
+        private void BigLogo_Click(object sender, EventArgs e)
+        {
+            DMForm mainScreen = new ManagerMainScreen();
+            Navigate(ref mainScreen);
+        }
     }
 }

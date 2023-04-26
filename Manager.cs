@@ -56,7 +56,7 @@ namespace DormitoryManagment
                     double step = 100 / (float)lineCount;
                     double value = 0;
                     StreamReader reader = new StreamReader(filepath);
-                    StreamWriter writer = new StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Student Users.csv", false);
+                    StreamWriter writer = new StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Student Users.csv", false, Encoding.UTF8);
                     string newStudent = null;
                     List<string> newStudentAttributes = null;
                     while ((newStudent = reader.ReadLine()) != null)
@@ -247,7 +247,7 @@ namespace DormitoryManagment
                  *     building_2, roomNum_2, bill_2, lateTime_2,...
                  * the data will be from the table Rooms. */
 
-                StreamWriter streamWriter = new StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Late bills.csv", false);
+                StreamWriter streamWriter = new StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Late bills.csv", false, Encoding.UTF8);
                 streamWriter.WriteLine("Building, Room number, Bill, Date of bill");
                 conn.Open();
                 string sql = "SELECT `Building`, `Number`, `Bill`, `Last bill Time` FROM Rooms WHERE Bill > 0";
@@ -326,7 +326,7 @@ namespace DormitoryManagment
                 }
 
                 // Write headers
-                StreamWriter streamWriter = new StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Students staying at wrong building.csv", false);
+                StreamWriter streamWriter = new StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Students staying at wrong building.csv", false, Encoding.UTF8);
                 streamWriter.WriteLine("Name, Student ID, Building name, Room number, Student's gender");
 
                 // Write records

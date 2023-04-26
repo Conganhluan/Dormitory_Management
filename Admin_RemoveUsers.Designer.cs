@@ -73,7 +73,7 @@
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(431, 647);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(53, 49);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -85,12 +85,13 @@
             this.pictureBox1.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(1296, 737);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(67, 62);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // filepath
             // 
@@ -100,7 +101,7 @@
             this.filepath.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.filepath.ForeColor = System.Drawing.SystemColors.Window;
             this.filepath.Location = new System.Drawing.Point(428, 645);
-            this.filepath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.filepath.Margin = new System.Windows.Forms.Padding(4);
             this.filepath.Name = "filepath";
             this.filepath.Size = new System.Drawing.Size(905, 53);
             this.filepath.TabIndex = 11;
@@ -128,7 +129,7 @@
             this.HomePic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.HomePic.Image = ((System.Drawing.Image)(resources.GetObject("HomePic.Image")));
             this.HomePic.Location = new System.Drawing.Point(16, 11);
-            this.HomePic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.HomePic.Margin = new System.Windows.Forms.Padding(4);
             this.HomePic.Name = "HomePic";
             this.HomePic.Size = new System.Drawing.Size(67, 62);
             this.HomePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -172,7 +173,7 @@
             this.RemoveUserPic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.RemoveUserPic.Image = ((System.Drawing.Image)(resources.GetObject("RemoveUserPic.Image")));
             this.RemoveUserPic.Location = new System.Drawing.Point(41, 569);
-            this.RemoveUserPic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RemoveUserPic.Margin = new System.Windows.Forms.Padding(4);
             this.RemoveUserPic.Name = "RemoveUserPic";
             this.RemoveUserPic.Size = new System.Drawing.Size(96, 89);
             this.RemoveUserPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -185,7 +186,7 @@
             this.AddUsersPic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.AddUsersPic.Image = ((System.Drawing.Image)(resources.GetObject("AddUsersPic.Image")));
             this.AddUsersPic.Location = new System.Drawing.Point(41, 442);
-            this.AddUsersPic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AddUsersPic.Margin = new System.Windows.Forms.Padding(4);
             this.AddUsersPic.Name = "AddUsersPic";
             this.AddUsersPic.Size = new System.Drawing.Size(96, 89);
             this.AddUsersPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -198,7 +199,7 @@
             this.BuildingsPic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.BuildingsPic.Image = ((System.Drawing.Image)(resources.GetObject("BuildingsPic.Image")));
             this.BuildingsPic.Location = new System.Drawing.Point(41, 308);
-            this.BuildingsPic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BuildingsPic.Margin = new System.Windows.Forms.Padding(4);
             this.BuildingsPic.Name = "BuildingsPic";
             this.BuildingsPic.Size = new System.Drawing.Size(96, 89);
             this.BuildingsPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -211,7 +212,7 @@
             this.BuildingPic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.BuildingPic.Image = ((System.Drawing.Image)(resources.GetObject("BuildingPic.Image")));
             this.BuildingPic.Location = new System.Drawing.Point(41, 180);
-            this.BuildingPic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BuildingPic.Margin = new System.Windows.Forms.Padding(4);
             this.BuildingPic.Name = "BuildingPic";
             this.BuildingPic.Size = new System.Drawing.Size(96, 89);
             this.BuildingPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -222,7 +223,7 @@
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(16, 423);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(396, 121);
             this.button1.TabIndex = 80;
@@ -235,7 +236,7 @@
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(16, 551);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(396, 121);
             this.button2.TabIndex = 79;
@@ -247,7 +248,7 @@
             // 
             this.ModifyBuilding.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ModifyBuilding.Location = new System.Drawing.Point(16, 290);
-            this.ModifyBuilding.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ModifyBuilding.Margin = new System.Windows.Forms.Padding(4);
             this.ModifyBuilding.Name = "ModifyBuilding";
             this.ModifyBuilding.Size = new System.Drawing.Size(396, 121);
             this.ModifyBuilding.TabIndex = 78;
@@ -260,7 +261,7 @@
             // 
             this.AddBuilding.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddBuilding.Location = new System.Drawing.Point(16, 162);
-            this.AddBuilding.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AddBuilding.Margin = new System.Windows.Forms.Padding(4);
             this.AddBuilding.Name = "AddBuilding";
             this.AddBuilding.Size = new System.Drawing.Size(396, 121);
             this.AddBuilding.TabIndex = 77;
@@ -276,7 +277,7 @@
             this.Background.ErrorImage = null;
             this.Background.InitialImage = null;
             this.Background.Location = new System.Drawing.Point(16, 101);
-            this.Background.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Background.Margin = new System.Windows.Forms.Padding(4);
             this.Background.Name = "Background";
             this.Background.Size = new System.Drawing.Size(1347, 610);
             this.Background.TabIndex = 76;
@@ -313,7 +314,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.Table.DefaultCellStyle = dataGridViewCellStyle3;
             this.Table.Location = new System.Drawing.Point(428, 114);
-            this.Table.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Table.Margin = new System.Windows.Forms.Padding(4);
             this.Table.Name = "Table";
             this.Table.ReadOnly = true;
             this.Table.RowHeadersVisible = false;
@@ -327,7 +328,7 @@
             // 
             this.RemoveUserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RemoveUserButton.Location = new System.Drawing.Point(911, 502);
-            this.RemoveUserButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RemoveUserButton.Margin = new System.Windows.Forms.Padding(4);
             this.RemoveUserButton.Name = "RemoveUserButton";
             this.RemoveUserButton.Size = new System.Drawing.Size(424, 55);
             this.RemoveUserButton.TabIndex = 86;
@@ -339,7 +340,7 @@
             // 
             this.RemoveUsersButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RemoveUsersButton.Location = new System.Drawing.Point(911, 574);
-            this.RemoveUsersButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RemoveUsersButton.Margin = new System.Windows.Forms.Padding(4);
             this.RemoveUsersButton.Name = "RemoveUsersButton";
             this.RemoveUsersButton.Size = new System.Drawing.Size(424, 55);
             this.RemoveUsersButton.TabIndex = 87;
@@ -352,9 +353,9 @@
             this.NameBox.Controls.Add(this.applyButton);
             this.NameBox.Controls.Add(this.NameInput);
             this.NameBox.Location = new System.Drawing.Point(428, 487);
-            this.NameBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NameBox.Margin = new System.Windows.Forms.Padding(4);
             this.NameBox.Name = "NameBox";
-            this.NameBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NameBox.Padding = new System.Windows.Forms.Padding(4);
             this.NameBox.Size = new System.Drawing.Size(475, 150);
             this.NameBox.TabIndex = 88;
             this.NameBox.TabStop = false;
@@ -364,7 +365,7 @@
             // 
             this.applyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.applyButton.Location = new System.Drawing.Point(165, 89);
-            this.applyButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.applyButton.Margin = new System.Windows.Forms.Padding(4);
             this.applyButton.Name = "applyButton";
             this.applyButton.Size = new System.Drawing.Size(153, 50);
             this.applyButton.TabIndex = 1;
@@ -376,7 +377,7 @@
             // 
             this.NameInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NameInput.Location = new System.Drawing.Point(8, 31);
-            this.NameInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NameInput.Margin = new System.Windows.Forms.Padding(4);
             this.NameInput.MaxLength = 15;
             this.NameInput.Multiline = false;
             this.NameInput.Name = "NameInput";
@@ -424,7 +425,7 @@
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "RemoveUsers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Remove Users";

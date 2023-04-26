@@ -23,31 +23,29 @@ namespace DormitoryManagment
         {
             InitializeComponent();
             UpdateTable();
-            numericUpDown1.Minimum = 0;
             Information.Text = Program.manager.GetName() + " - Students Management";
         }
 
         private void UpdateTable()
         {
+            if (Program.conn.State == ConnectionState.Closed) Program.conn.Open();
             string sql = "SELECT * FROM Students";
             if (Key.SelectedItem == null || Key.Text == "None") filter = "1";
-            else filter = "BINARY `" + Key.Text + "` LIKE BINARY '%" + Value.Text + "%'"; 
-            sql += " WHERE " + filter + " LIMIT " + ((page-1)*numberOfLines).ToString() + "," + numberOfLines.ToString();
-            try
+            else filter = "BINARY `" + Key.Text + "` LIKE BINARY '%" + Value.Text + "%'";
+            if (page <= 0)
             {
-                dataTable = DataBase.GetDataSource(sql);
+                page = 1;
+                numericUpDown1.Value = page;
             }
-            catch
-            {
-                MessageBox.Show("There is 1 student having invalid birthdate, just continue to ignore the error", "Caution", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
+            sql += " WHERE " + filter + " LIMIT " + ((page - 1) * numberOfLines).ToString() + "," + numberOfLines.ToString();
+            dataTable = DataBase.GetDataSource(sql);
             Table.DataSource = dataTable;
-            Program.conn.Open();
             MySqlCommand cmd = new MySqlCommand("SELECT COUNT(*) FROM Students" + " WHERE " + filter, Program.conn);
             MySqlDataReader reader = cmd.ExecuteReader();
-            reader.Read();
-            count = reader.GetInt64(0);
-            numericUpDown1.Maximum = count;
+            while (reader.Read())
+            {
+                count = reader.GetInt64(0);
+            }
             reader.Close();
             Program.conn.Close();
             PageTotal.Text = "/" + (count / numberOfLines + 1).ToString() + " Pages";
@@ -113,6 +111,12 @@ namespace DormitoryManagment
         {
             page = Convert.ToInt32(numericUpDown1.Value);
             UpdateTable();
+        }
+
+        private void BigLogo_Click(object sender, EventArgs e)
+        {
+            DMForm mainScreen = new ManagerMainScreen();
+            Navigate(ref mainScreen);
         }
     }
 }

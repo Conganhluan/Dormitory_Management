@@ -10,6 +10,7 @@ using MySql.Data.MySqlClient;
 using Org.BouncyCastle.Crypto.Tls;
 using System.Net;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace DormitoryManagment
 {
@@ -30,7 +31,7 @@ namespace DormitoryManagment
 
         // Static needed attributes for connection
         internal static MySqlConnection conn = new MySqlConnection(
-            "server=103.200.22.212;user=luanapco_admin;database=luanapco_Database;port=3306;password=AWb@8AzpaqzH9Ev");
+            "server=103.200.22.212;user=luanapco_admin;database=luanapco_Database;port=3306;password=AWb@8AzpaqzH9Ev;charset=utf8");
 
         // Static needed attributes for interaction with tables
         internal static MySqlDataAdapter adapter = null;

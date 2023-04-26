@@ -101,7 +101,7 @@ namespace DormitoryManagment
                     return;
                 }
                 reader.Close();
-                sql = "INSERT INTO Requests VALUES ('" + r.Building + " " + r.RoomNum + "', '" + Username + "')";
+                sql = "INSERT INTO Requests VALUES ('" + r.Building + " " + r.RoomNum + "', '" + Name  + "')";
                 cmd = new MySqlCommand(sql, conn);
                 cmd.ExecuteNonQuery();
                 conn.Close();

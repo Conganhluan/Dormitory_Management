@@ -66,7 +66,7 @@
             this.RemoveUserPic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.RemoveUserPic.Image = ((System.Drawing.Image)(resources.GetObject("RemoveUserPic.Image")));
             this.RemoveUserPic.Location = new System.Drawing.Point(32, 569);
-            this.RemoveUserPic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RemoveUserPic.Margin = new System.Windows.Forms.Padding(4);
             this.RemoveUserPic.Name = "RemoveUserPic";
             this.RemoveUserPic.Size = new System.Drawing.Size(96, 89);
             this.RemoveUserPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -79,7 +79,7 @@
             this.AddUsersPic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.AddUsersPic.Image = ((System.Drawing.Image)(resources.GetObject("AddUsersPic.Image")));
             this.AddUsersPic.Location = new System.Drawing.Point(32, 442);
-            this.AddUsersPic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AddUsersPic.Margin = new System.Windows.Forms.Padding(4);
             this.AddUsersPic.Name = "AddUsersPic";
             this.AddUsersPic.Size = new System.Drawing.Size(96, 89);
             this.AddUsersPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -92,7 +92,7 @@
             this.BuildingsPic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.BuildingsPic.Image = ((System.Drawing.Image)(resources.GetObject("BuildingsPic.Image")));
             this.BuildingsPic.Location = new System.Drawing.Point(32, 308);
-            this.BuildingsPic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BuildingsPic.Margin = new System.Windows.Forms.Padding(4);
             this.BuildingsPic.Name = "BuildingsPic";
             this.BuildingsPic.Size = new System.Drawing.Size(96, 89);
             this.BuildingsPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -105,7 +105,7 @@
             this.BuildingPic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.BuildingPic.Image = ((System.Drawing.Image)(resources.GetObject("BuildingPic.Image")));
             this.BuildingPic.Location = new System.Drawing.Point(32, 180);
-            this.BuildingPic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BuildingPic.Margin = new System.Windows.Forms.Padding(4);
             this.BuildingPic.Name = "BuildingPic";
             this.BuildingPic.Size = new System.Drawing.Size(96, 89);
             this.BuildingPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -116,7 +116,7 @@
             // 
             this.AddBills.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddBills.Location = new System.Drawing.Point(16, 422);
-            this.AddBills.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AddBills.Margin = new System.Windows.Forms.Padding(4);
             this.AddBills.Name = "AddBills";
             this.AddBills.Size = new System.Drawing.Size(396, 121);
             this.AddBills.TabIndex = 78;
@@ -129,7 +129,7 @@
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(16, 550);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(396, 121);
             this.button1.TabIndex = 77;
@@ -141,7 +141,7 @@
             // 
             this.ManageStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ManageStudents.Location = new System.Drawing.Point(16, 289);
-            this.ManageStudents.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ManageStudents.Margin = new System.Windows.Forms.Padding(4);
             this.ManageStudents.Name = "ManageStudents";
             this.ManageStudents.Size = new System.Drawing.Size(396, 121);
             this.ManageStudents.TabIndex = 76;
@@ -154,7 +154,7 @@
             // 
             this.AddStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddStudents.Location = new System.Drawing.Point(16, 161);
-            this.AddStudents.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AddStudents.Margin = new System.Windows.Forms.Padding(4);
             this.AddStudents.Name = "AddStudents";
             this.AddStudents.Size = new System.Drawing.Size(396, 121);
             this.AddStudents.TabIndex = 75;
@@ -170,7 +170,7 @@
             this.pictureBox1.ErrorImage = null;
             this.pictureBox1.InitialImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(16, 101);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1347, 610);
             this.pictureBox1.TabIndex = 79;
@@ -180,12 +180,13 @@
             // 
             this.BigLogo.Image = ((System.Drawing.Image)(resources.GetObject("BigLogo.Image")));
             this.BigLogo.Location = new System.Drawing.Point(1296, 737);
-            this.BigLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BigLogo.Margin = new System.Windows.Forms.Padding(4);
             this.BigLogo.Name = "BigLogo";
             this.BigLogo.Size = new System.Drawing.Size(67, 62);
             this.BigLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BigLogo.TabIndex = 74;
             this.BigLogo.TabStop = false;
+            this.BigLogo.Click += new System.EventHandler(this.BigLogo_Click);
             // 
             // Crucial
             // 
@@ -234,7 +235,7 @@
             this.HomePic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.HomePic.Image = ((System.Drawing.Image)(resources.GetObject("HomePic.Image")));
             this.HomePic.Location = new System.Drawing.Point(16, 11);
-            this.HomePic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.HomePic.Margin = new System.Windows.Forms.Padding(4);
             this.HomePic.Name = "HomePic";
             this.HomePic.Size = new System.Drawing.Size(67, 62);
             this.HomePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -273,7 +274,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.Table.DefaultCellStyle = dataGridViewCellStyle3;
             this.Table.Location = new System.Drawing.Point(467, 121);
-            this.Table.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Table.Margin = new System.Windows.Forms.Padding(4);
             this.Table.Name = "Table";
             this.Table.RowHeadersVisible = false;
             this.Table.RowHeadersWidth = 51;
@@ -287,7 +288,7 @@
             // 
             this.Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Delete.Location = new System.Drawing.Point(467, 642);
-            this.Delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Delete.Margin = new System.Windows.Forms.Padding(4);
             this.Delete.Name = "Delete";
             this.Delete.Size = new System.Drawing.Size(396, 55);
             this.Delete.TabIndex = 88;
@@ -299,7 +300,7 @@
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(909, 642);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(399, 55);
             this.button2.TabIndex = 89;
@@ -342,7 +343,7 @@
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ReviewRequests";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dormitory Management";

@@ -57,5 +57,11 @@ namespace DormitoryManagment
             DMForm nextForm = new RemoveUsers();
             Navigate(ref nextForm);
         }
+
+        private void BigLogo_Click(object sender, EventArgs e)
+        {
+            DMForm mainScreen = new AdminMainScreen();
+            Navigate(ref mainScreen);
+        }
     }
 }

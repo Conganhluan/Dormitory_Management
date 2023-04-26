@@ -78,7 +78,7 @@
             this.HomePic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.HomePic.Image = ((System.Drawing.Image)(resources.GetObject("HomePic.Image")));
             this.HomePic.Location = new System.Drawing.Point(16, 11);
-            this.HomePic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.HomePic.Margin = new System.Windows.Forms.Padding(4);
             this.HomePic.Name = "HomePic";
             this.HomePic.Size = new System.Drawing.Size(67, 62);
             this.HomePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -117,7 +117,7 @@
             this.Background.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Background.Image = ((System.Drawing.Image)(resources.GetObject("Background.Image")));
             this.Background.Location = new System.Drawing.Point(420, 188);
-            this.Background.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Background.Margin = new System.Windows.Forms.Padding(4);
             this.Background.Name = "Background";
             this.Background.Size = new System.Drawing.Size(943, 458);
             this.Background.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -128,18 +128,19 @@
             // 
             this.BigLogo.Image = ((System.Drawing.Image)(resources.GetObject("BigLogo.Image")));
             this.BigLogo.Location = new System.Drawing.Point(1296, 737);
-            this.BigLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BigLogo.Margin = new System.Windows.Forms.Padding(4);
             this.BigLogo.Name = "BigLogo";
             this.BigLogo.Size = new System.Drawing.Size(67, 62);
             this.BigLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BigLogo.TabIndex = 33;
             this.BigLogo.TabStop = false;
+            this.BigLogo.Click += new System.EventHandler(this.BigLogo_Click);
             // 
             // AddUsers
             // 
             this.AddUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddUsers.Location = new System.Drawing.Point(16, 422);
-            this.AddUsers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AddUsers.Margin = new System.Windows.Forms.Padding(4);
             this.AddUsers.Name = "AddUsers";
             this.AddUsers.Size = new System.Drawing.Size(396, 121);
             this.AddUsers.TabIndex = 51;
@@ -152,7 +153,7 @@
             // 
             this.RemoveUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RemoveUsers.Location = new System.Drawing.Point(16, 550);
-            this.RemoveUsers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RemoveUsers.Margin = new System.Windows.Forms.Padding(4);
             this.RemoveUsers.Name = "RemoveUsers";
             this.RemoveUsers.Size = new System.Drawing.Size(396, 121);
             this.RemoveUsers.TabIndex = 50;
@@ -165,7 +166,7 @@
             // 
             this.ModifyBuilding.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ModifyBuilding.Location = new System.Drawing.Point(16, 289);
-            this.ModifyBuilding.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ModifyBuilding.Margin = new System.Windows.Forms.Padding(4);
             this.ModifyBuilding.Name = "ModifyBuilding";
             this.ModifyBuilding.Size = new System.Drawing.Size(396, 121);
             this.ModifyBuilding.TabIndex = 49;
@@ -178,7 +179,7 @@
             // 
             this.AddBuilding.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddBuilding.Location = new System.Drawing.Point(16, 161);
-            this.AddBuilding.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AddBuilding.Margin = new System.Windows.Forms.Padding(4);
             this.AddBuilding.Name = "AddBuilding";
             this.AddBuilding.Size = new System.Drawing.Size(396, 121);
             this.AddBuilding.TabIndex = 48;
@@ -194,7 +195,7 @@
             this.pictureBox1.ErrorImage = null;
             this.pictureBox1.InitialImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(16, 101);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1347, 610);
             this.pictureBox1.TabIndex = 52;
@@ -206,7 +207,7 @@
             this.RemoveUserPic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.RemoveUserPic.Image = ((System.Drawing.Image)(resources.GetObject("RemoveUserPic.Image")));
             this.RemoveUserPic.Location = new System.Drawing.Point(32, 569);
-            this.RemoveUserPic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RemoveUserPic.Margin = new System.Windows.Forms.Padding(4);
             this.RemoveUserPic.Name = "RemoveUserPic";
             this.RemoveUserPic.Size = new System.Drawing.Size(96, 89);
             this.RemoveUserPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -219,7 +220,7 @@
             this.AddUsersPic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.AddUsersPic.Image = ((System.Drawing.Image)(resources.GetObject("AddUsersPic.Image")));
             this.AddUsersPic.Location = new System.Drawing.Point(32, 442);
-            this.AddUsersPic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AddUsersPic.Margin = new System.Windows.Forms.Padding(4);
             this.AddUsersPic.Name = "AddUsersPic";
             this.AddUsersPic.Size = new System.Drawing.Size(96, 89);
             this.AddUsersPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -232,7 +233,7 @@
             this.BuildingsPic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.BuildingsPic.Image = ((System.Drawing.Image)(resources.GetObject("BuildingsPic.Image")));
             this.BuildingsPic.Location = new System.Drawing.Point(32, 308);
-            this.BuildingsPic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BuildingsPic.Margin = new System.Windows.Forms.Padding(4);
             this.BuildingsPic.Name = "BuildingsPic";
             this.BuildingsPic.Size = new System.Drawing.Size(96, 89);
             this.BuildingsPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -245,7 +246,7 @@
             this.BuildingPic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.BuildingPic.Image = ((System.Drawing.Image)(resources.GetObject("BuildingPic.Image")));
             this.BuildingPic.Location = new System.Drawing.Point(32, 180);
-            this.BuildingPic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BuildingPic.Margin = new System.Windows.Forms.Padding(4);
             this.BuildingPic.Name = "BuildingPic";
             this.BuildingPic.Size = new System.Drawing.Size(96, 89);
             this.BuildingPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -285,7 +286,7 @@
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdminMainScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dormitory Management";

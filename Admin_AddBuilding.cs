@@ -143,5 +143,16 @@ namespace DormitoryManagment
             }
             Table.DataSource = dataTable;
         }
+
+        private void BigLogo_Click(object sender, EventArgs e)
+        {
+            DMForm mainScreen = new AdminMainScreen();
+            Navigate(ref mainScreen);
+        }
+
+        private void AddBuilding_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

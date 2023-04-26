@@ -66,5 +66,11 @@ namespace DormitoryManagment
         {
             Program.manager.PrintLateBills();
         }
+
+        private void BigLogo_Click(object sender, EventArgs e)
+        {
+            DMForm mainScreen = new ManagerMainScreen();
+            Navigate(ref mainScreen);
+        }
     }
 }

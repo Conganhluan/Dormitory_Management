@@ -149,5 +149,11 @@ namespace DormitoryManagment
             } 
             
         }
+
+        private void BigLogo_Click(object sender, EventArgs e)
+        {
+            DMForm mainScreen = new AdminMainScreen();
+            Navigate(ref mainScreen);
+        }
     }
 }

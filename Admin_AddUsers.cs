@@ -104,5 +104,11 @@ namespace DormitoryManagment
             DMForm nextForm = new RemoveUsers();
             Navigate(ref nextForm);
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            DMForm mainScreen = new AdminMainScreen();
+            Navigate(ref mainScreen);
+        }
     }
 }

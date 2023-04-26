@@ -102,5 +102,11 @@ namespace DormitoryManagment
             else { filterName = "Name LIKE '*" + NameInput.Text + "*'"; }
             UpdateTable();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            DMForm mainScreen = new AdminMainScreen();
+            Navigate(ref mainScreen);
+        }
     }
 }
