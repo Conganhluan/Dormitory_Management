@@ -48,7 +48,7 @@ namespace DormitoryManagment
                 /* You should see the file format in advance on the Figma - Interface diagram
                  * Use AddStudent() below to support this method
                  * Create a file formatted as:
-                 *      name, email, <name>+<studentID> for every student each line */
+                 *     username, name, email for every student each line */
                 try
                 {
                     progressBar.Value = 0;
@@ -56,7 +56,7 @@ namespace DormitoryManagment
                     double step = 100 / (float)lineCount;
                     double value = 0;
                     StreamReader reader = new StreamReader(filepath);
-                    StreamWriter writer = new StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Student Users.csv", false, Encoding.UTF8);
+                    StreamWriter writer = new StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Student Users.csv", true, Encoding.UTF8);
                     string newStudent = null;
                     List<string> newStudentAttributes = null;
                     while ((newStudent = reader.ReadLine()) != null)
@@ -71,8 +71,8 @@ namespace DormitoryManagment
                             reader.Close();
                             return;
                         }
-                        writer.WriteLine(newStudentAttributes[4] + "," + newStudentAttributes[5] + "," +
-                                            newStudentAttributes[4].Split(' ').Last().ToLower() + newStudentAttributes[7]);
+                        writer.WriteLine(newStudentAttributes[4].Split(' ').Last().ToLower() + newStudentAttributes[7] + "," + newStudentAttributes[4] + "," +
+                                            newStudentAttributes[5]);
                         value += step;
                         progressBar.Value = Convert.ToInt32(Math.Round(value));
                     }
@@ -95,14 +95,16 @@ namespace DormitoryManagment
                  * If that room cannot be found, then increase the type by 2, if there is out of room, notify the user
                  * Gender must be correct, type is second choice, building is third choice, and roomNum is fourth choice 
                  * Create a file List of new students to know which building will these students stay at */
-                
-                string gender = attributes[0], building = attributes[2], roomNum = attributes[3];
+
+                MySqlConnection conn1 = new MySqlConnection(
+            "server=103.200.22.212;user=luanapco_admin;database=luanapco_Database;port=3306;password=AWb@8AzpaqzH9Ev;charset=utf8");
+            string gender = attributes[0], building = attributes[2], roomNum = attributes[3];
                 int type = Convert.ToInt32(attributes[1]);
                 bool isFound = false;
                 int currentStaying = 0;
-                conn.Open();
+                conn1.Open();
                 string sql = "SELECT Name FROM Buildings WHERE Gender = '" + gender + "'";
-                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlCommand cmd = new MySqlCommand(sql, conn1);
                 MySqlDataReader reader = cmd.ExecuteReader();
                 List<string> availableBuildings = new List<string>();
                 if (!reader.HasRows)
@@ -116,7 +118,7 @@ namespace DormitoryManagment
                 if (availableBuildings.Contains(building))
                 {
                     sql = "SELECT * FROM Rooms WHERE Building = '" + building + "' AND Number = '" + roomNum + "' AND `Current staying` < Type";
-                    cmd = new MySqlCommand(sql, conn);
+                    cmd = new MySqlCommand(sql, conn1);
                     reader = cmd.ExecuteReader();
                     if (reader.HasRows) isFound = true;
                     else roomNum = null;
@@ -140,7 +142,7 @@ namespace DormitoryManagment
                         foreach(string chosenBuilding in availableBuildings)
                         {
                             sql = "SELECT Number, `Current staying` FROM Rooms WHERE Building = '" + chosenBuilding + "' AND Type = " + type + " AND `Current staying` < Type";
-                            cmd = new MySqlCommand(sql, conn);
+                            cmd = new MySqlCommand(sql, conn1);
                             reader = cmd.ExecuteReader();
                             if (reader.HasRows)
                             {
@@ -151,8 +153,8 @@ namespace DormitoryManagment
                                     isFound = true;
                                     currentStaying = reader.GetInt32(1);
                                 }
-                                reader.Close();
                             }
+                            reader.Close();
                             if (isFound) break;
                         }
                         if (isFound) break;
@@ -164,22 +166,22 @@ namespace DormitoryManagment
                         + "Do you want to Ignore this error and continue?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                     if (reply == DialogResult.Cancel)
                     {
-                        conn.Close();
+                        conn1.Close();
                         return false;
                     }
                 }
                 else
                 {
                     sql = "INSERT INTO `Students`(`Gender`, `Building name`, `Room number`, `Name`, `Email`, `School`, `Student ID`, `Vehicle plate number`, `Citizen ID`, `Date of birth`, `Phone number`, `Home address`)" +
-                        "VALUES('" + attributes[0] + "', '" + attributes[2] + "', '" + attributes[3] + "', '" + attributes[4] + "', '" + attributes[5] + "', '" + attributes[6] + "', '" + attributes[7] + 
+                        "VALUES('" + attributes[0] + "', '" + building + "', '" + roomNum + "', '" + attributes[4] + "', '" + attributes[5] + "', '" + attributes[6] + "', '" + attributes[7] + 
                         "', '" + attributes[8] + "', '" + attributes[9] + "', '" + attributes[10] + "', '" + attributes[11] + "', '" + attributes[12] + "')";
-                    cmd = new MySqlCommand(sql, conn);
+                    cmd = new MySqlCommand(sql, conn1);
                     cmd.ExecuteNonQuery();
                     sql = "UPDATE Rooms SET `Current staying` = " + (currentStaying + 1).ToString() + " WHERE Building = '" + building + "' AND Number = '" + roomNum + "'";
-                    cmd = new MySqlCommand(sql, conn);
+                    cmd = new MySqlCommand(sql, conn1);
                     cmd.ExecuteNonQuery();
                 }
-                conn.Close();
+                conn1.Close();
                 return true;
             }
 

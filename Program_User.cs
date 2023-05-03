@@ -44,6 +44,11 @@ namespace DormitoryManagment
                                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
+                if (newPass == "")
+                {
+                    MessageBox.Show("The password can't be empty", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
                 Password = newPass;
                 MessageBox.Show("Update the new password successfully!", "Update success",MessageBoxButtons.OK, MessageBoxIcon.Information);
                 SaveData();
